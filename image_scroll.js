@@ -3,11 +3,9 @@ function initializeHobbies() {
     const imageNames = ['public.jpg', 'public2.png', 'public3.jpeg'];
     const idesc = ['public1desc', 'public2desc', 'public3desc'];
     const images = [];
-    for (let i=0;)
-    imageNames.forEach(image, index) => {
+    for (let i=0; i<imageNames.length; i++) {
         const img = new Image();
-        img.src = image;
-
+        img.src = imageNames[i];
     }
         
     const description = document.querySelector('.description');
