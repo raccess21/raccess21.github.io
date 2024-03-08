@@ -1,41 +1,72 @@
 function initializeHobbies() {
-    const images = document.querySelectorAll('.hobby-image');
+    // const images = document.querySelectorAll('.hobby-image');
+    const imageNames = ['public.jpg', 'public2.png', 'public3.jpeg'];
+    const idesc = ['public1desc', 'public2desc', 'public3desc'];
+    const images = [];
+    for (let i=0;)
+    imageNames.forEach(image, index) => {
+        const img = new Image();
+        img.src = image;
+
+    }
+        
     const description = document.querySelector('.description');
     const imageContainer = document.querySelector('.image-container');
-    const containerWidth = images.length * 100 + '%';
 
     let currentIndex = 0;
-
-    // Set width of image container to fit all images
-    imageContainer.style.width = containerWidth;
-
-    function showDescription(index) {
+    const imageWidth = images[0].clientWidth;
+    // const imageWidth = 500;
+    function changeHidden(index) {
         const descriptionText = images[index].getAttribute('data-description');
         description.innerText = descriptionText;
-        description.classList.remove('hidden');
+        if (description.classList.contains('hidden')) {
+            description.classList.remove('hidden');
+        } else {
+            description.classList.add('hidden');
+        }
     }
 
+    function showDescription(index) {
+        description.innerText = idesc[index];
+        description.style.zIndex = 999;
+        console.log(`${description.innerText}`);
+        // description.classList.remove('hidden');
+    }
+    
     function hideDescription() {
         description.classList.add('hidden');
     }
 
     function slideImages() {
-        const newPosition = -100 * currentIndex + '%';
+        const newPosition = -currentIndex * imageWidth;
         imageContainer.style.transition = 'transform 0.5s ease';
-        imageContainer.style.transform = 'translateX(' + newPosition + ')';
+        imageContainer.style.transform = 'translateX(' + newPosition + 'px)';
+    }
+
+    function showImage(index) {
+        img.onload = function() {
+            imageContainer.innerHTML = '';
+            imageContainer.appendChild(img);
+            showDescription(index);
+        };
+        
     }
 
     function loopImages() {
         setInterval(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            slideImages();
-        }, 3000);
+            // currentIndex = (currentIndex + 1) % images.length;
+            // slideImages();
+            // if (currentIndex >= images.length) {
+            //     currentIndex = 0;
+            // }
+            showImage(currentIndex++ % images.length);
+        }, 5000);
     }
 
     images.forEach((image, index) => {
         image.addEventListener('mouseenter', () => showDescription(index));
         image.addEventListener('mouseleave', hideDescription);
-        image.addEventListener('click', () => showDescription(index));
+        image.addEventListener('click', () => changeHidden(index));
     });
 
     loopImages();
