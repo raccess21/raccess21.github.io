@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <select id="languageSelector">
+        <option value="fr">French</option>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+    </select>
+    <div id="article">
+        <h1 id="heading"></h1>
+        <div id="content"></div>
+    </div>
+    <script>
+
+        function loadJson(callback) {
+            let xobj = new XMLHttpRequest();
+            xobj.overrideMimeType("application/json");
+            xobj.open('GET', './article1.json', true);
+            xobj.onreadystatechange = function () {
+                if (xobj.readyState == 4 && xobj.status == "200") {
+                    callback(xobj.responseText);
+                }
+            };
+            xobj.send(null);
+        }
+
+        loadJson(function (jsonArray) {
+            const jsonObj = JSON.parse(jsonArray);
+            const selector = document.getElementById("languageSelector");
+            selector.addEventListener("change", function () {
+                const lang = selector.value;
+                
+                let text = "";
+                for (let para of jsonObj[lang]) {
+                    text += `<p id='para'>${para}</p>`;
+                }
+                document.getElementById("article").innerHTML = text;
+            });
+        });
+
+    </script>
+</body>
+</html>
