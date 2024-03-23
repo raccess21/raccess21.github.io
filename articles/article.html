@@ -15,26 +15,26 @@
     <div id="article">
         <h1 id="heading"></h1>
         <div id="content">
-            <p id="para">"the",</p>
-            <p id="para">"be",</p>
-            <p id="para">"to",</p>
-            <p id="para">"of",</p>
-            <p id="para">"and",</p>
-            <p id="para">"a",</p>
-            <p id="para">"in",</p>
-            <p id="para">"that",</p>
-            <p id="para">"have",</p>
-            <p id="para">"I",</p>
-            <p id="para">"it",</p>
-            <p id="para">"for",</p>
-            <p id="para">"not",</p>
-            <p id="para">"on",</p>
-            <p id="para">"with",</p>
-            <p id="para">"he",</p>
-            <p id="para">"as",</p>
-            <p id="para">"you",</p>
-            <p id="para">"do",</p>
-            <p id="para">"at"</p>
+            <p class="para">"the",</p>
+            <p class="para">"be",</p>
+            <p class="para">"to",</p>
+            <p class="para">"of",</p>
+            <p class="para">"and",</p>
+            <p class="para">"a",</p>
+            <p class="para">"in",</p>
+            <p class="para">"that",</p>
+            <p class="para">"have",</p>
+            <p class="para">"I",</p>
+            <p class="para">"it",</p>
+            <p class="para">"for",</p>
+            <p class="para">"not",</p>
+            <p class="para">"on",</p>
+            <p class="para">"with",</p>
+            <p class="para">"he",</p>
+            <p class="para">"as",</p>
+            <p class="para">"you",</p>
+            <p class="para">"do",</p>
+            <p class="para">"at"</p>
         </div>
     </div>
     <script>
@@ -59,7 +59,7 @@
                 
                 let text = "";
                 for (let para of jsonObj[lang]) {
-                    text += `<p id='para'>${para}</p>`;
+                    text += `<p class='para'>${para}</p>`;
                 }
                 document.getElementById("article").innerHTML = text;
             });
