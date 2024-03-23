@@ -13,7 +13,7 @@
         <option value="hi" selected>Hindi</option>
     </select>
     <div id="article">
-        <h1 id="heading"></h1>
+        <h1 id="heading">Articles by @raccess21</h1>
         <div id="content">
         </div>
     </div>
@@ -21,25 +21,30 @@
         const selector = document.getElementById("languageSelector");
         const articleName = "apple";
         let lang = "hi"; //selector.value;
-        console.log(lang);
-        function loadJson() {
+        function loadArticles() {
             let xobj = new XMLHttpRequest();
-            xobj.overrideMimeType("application/json");
-            xobj.open('GET', `./articles/${articleName}/${lang}.json`, true);
+            xobj.open('GET', './articles/articles.json', true);
             xobj.onreadystatechange = function () {
                 if (xobj.readyState == 4 && xobj.status == "200") {
-                    createPara(JSON.parse(xobj.responseText));
+                    createArticleLinks(JSON.parse(xobj.responseText));
                 }
             };
             xobj.send(null);
         }
+
         
-        function createPara(jsonObj) {
+        function createArticleLinks(jsonObj) {
             let text = "";
-            for (let para of jsonObj) {
-                text += `<p class='para'>${para}</p>`;
+            for (let article of jsonObj) {
+                text += `<a class="aLink" href="article.html?article=${article}" onclick="openArticle(this.getAttribute('href'))">${article}</a><br>`;
             }
             document.getElementById("content").innerHTML = text;
+        };
+        function openArticle(articleLink) {
+            let linkArray = articleLink.split('=');
+            let articleName = linkArray[1];
+            localStorage.setItem('articleName', articleName);
+            window.location = articleLink;
         };
         
         selector.addEventListener("change", function () {
@@ -47,7 +52,7 @@
             loadJson();
         });
 
-        loadJson();
+        loadArticles();
 
     </script>
 </body>
