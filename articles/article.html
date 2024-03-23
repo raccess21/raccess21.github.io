@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <button id="theme" type="button" onclick="tBClick()">Theme</button>
     <select id="languageSelector">
         <option value="fr">French</option>
         <option value="en">English</option>
-        <option value="hi" selected>Hindi</option>
+        <option value="hi" ${lang ? '' : 'selected'}>Hindi</option>
     </select>
     <div id="article">
         <h1 id="heading"></h1>
@@ -18,10 +19,15 @@
         </div>
     </div>
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const articleName = urlParams.get('article') ? urlParams.get('article') : "apple";
+        let lang = localStorage.getItem('lang') || "hi"; //selector.value;
+        
+        let stylesheet = document.querySelector("link[rel='stylesheet']");
+        stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";
+        
         const selector = document.getElementById("languageSelector");
-        const articleName = "apple";
-        let lang = "hi"; //selector.value;
-        console.log(lang);
+        selector.value = lang;
         function loadJson() {
             let xobj = new XMLHttpRequest();
             xobj.overrideMimeType("application/json");
@@ -34,6 +40,11 @@
             xobj.send(null);
         }
         
+        const tBClick = function() {
+            stylesheet.href = stylesheet.href.includes("Dark") ? "styles/style.css" : "styles/styleDark.css";
+            localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+        };
+
         function createPara(jsonObj) {
             let text = "";
             for (let para of jsonObj) {
@@ -44,6 +55,7 @@
         
         selector.addEventListener("change", function () {
             lang = selector.value;
+            localStorage.setItem('lang', lang);
             loadJson();
         });
 
@@ -52,3 +64,4 @@
     </script>
 </body>
 </html>
+
