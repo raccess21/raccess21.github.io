@@ -1,4 +1,23 @@
 [
-    "apple",
-    "article1"
+    {
+        "name": "apple", 
+        "langs": ["hi", "en", "fr"], 
+        "tags": {
+            "Agriculture": 0.8,
+            "Horticulture": 0.7,
+            "Botany": 0.6,
+            "Fruit Cultivation": 0.8,
+            "Plant Propagation": 0.7,
+            "Genetic Engineering": 0.5,
+            "Culinary": 0.6,
+            "Food History": 0.5,
+            "Cultural Significance": 0.6,
+            "Genetic Sequencing": 0.4
+        }
+    },
+    {
+        "name": "article1", 
+        "langs": ["hi", "en", "fr"], 
+        "tags": []
+    }
 ]

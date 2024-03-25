@@ -15,18 +15,19 @@
     </select>
     <div id="article">
         <h1 id="heading"></h1>
-        <div id="content">
-        </div>
+        <div id="content"></div>
+        <div id="articleList"></div>
     </div>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const articleName = urlParams.get('article') ? urlParams.get('article') : "apple";
         let lang = localStorage.getItem('lang') || "hi"; //selector.value;
+        const selector = document.getElementById("languageSelector");
+        selector.selectedOptions[0].textContent = lang;
         
         let stylesheet = document.querySelector("link[rel='stylesheet']");
         stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";
         
-        const selector = document.getElementById("languageSelector");
         selector.value = lang;
         function loadJson() {
             let xobj = new XMLHttpRequest();
@@ -59,7 +60,9 @@
             loadJson();
         });
 
+
         loadJson();
+        console.log(localStorage.getItem("langs"));
 
     </script>
 </body>

@@ -11,19 +11,20 @@
     <select id="languageSelector">
         <option value="fr">French</option>
         <option value="en">English</option>
-        <option value="hi" selected>Hindi</option>
+        <option value="hi" >Hindi</option>
     </select>
     <div id="article">
         <h1 id="heading">Articles by @raccess21</h1>
-        <div id="content">
-        </div>
+        <div id="articleList"></div>
     </div>
+    <script src="script.js"></script>
     <script>
         const articleName = "apple";
 
         const selector = document.getElementById("languageSelector");
-        let lang = localStorage.getItem('lang') || "hi"; 
+        let lang = localStorage.getItem('lang') || "hi";
         selector.value = lang;
+        selector.selectedOptions[0].textContent = lang;
         
         const stylesheet = document.querySelector("link[rel='stylesheet']");
         stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";
@@ -44,25 +45,31 @@
             xobj.send(null);
         }
 
+        function createArticleLinks(jsonObj) {
+    let text = "";
+    for (let article of jsonObj) {
+        text += '<a class="aLink" href="javascript:openArticle' +
+            `('${article.name}&${article.langs}')">${article.name}</a><br>`;
+    }
+    document.getElementById("articleList").innerHTML = text;
+}
         
-        function createArticleLinks(jsonObj, currentTheme) {
-            let text = "";
-            for (let article of jsonObj) {
-                text += `<a class="aLink" href="javascript:openArticle('article.html?article=${article}')">${article}</a><br>`;
-            }
-            document.getElementById("content").innerHTML = text;
-        };
-        function openArticle(articleLink) {
+        function openArticle2(articleLink) {
             let linkArray = articleLink.split('=');
             let articleName = linkArray[1];
             localStorage.setItem('articleName', articleName);
             window.location = articleLink;
         };
         
+        function openArticle(articleLink) {
+            [articleName, langs] = [...articleLink.split('&')];
+            localStorage.setItem('articleName', articleName);
+            localStorage.setItem('articleLangs', langs);
+            window.location = `article.html?article=${articleName}`;
+        };
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            loadArticles();
         });
 
         loadArticles();
