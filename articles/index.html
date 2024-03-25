@@ -19,7 +19,6 @@
     </div>
     <script src="script.js"></script>
     <script>
-        const articleName = "apple";
 
         const selector = document.getElementById("languageSelector");
         let lang = localStorage.getItem('lang') || "hi";
@@ -34,45 +33,18 @@
             localStorage.setItem('themeName', stylesheet.getAttribute('href'));
         };
         
-        function loadArticles() {
-            let xobj = new XMLHttpRequest();
-            xobj.open('GET', './articles/articles.json', true);
-            xobj.onreadystatechange = function () {
-                if (xobj.readyState == 4 && xobj.status == "200") {
-                    createArticleLinks(JSON.parse(xobj.responseText));
-                }
-            };
-            xobj.send(null);
-        }
-
-        function createArticleLinks(jsonObj) {
-    let text = "";
-    for (let article of jsonObj) {
-        text += '<a class="aLink" href="javascript:openArticle' +
-            `('${article.name}&${article.langs}')">${article.name}</a><br>`;
-    }
-    document.getElementById("articleList").innerHTML = text;
-}
-        
-        function openArticle2(articleLink) {
-            let linkArray = articleLink.split('=');
-            let articleName = linkArray[1];
-            localStorage.setItem('articleName', articleName);
-            window.location = articleLink;
-        };
-        
         function openArticle(articleLink) {
             [articleName, langs] = [...articleLink.split('&')];
             localStorage.setItem('articleName', articleName);
             localStorage.setItem('articleLangs', langs);
-            window.location = `article.html?article=${articleName}`;
+            window.location = `article.html?article=${articleName}&lang=${lang}`;
         };
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
         });
 
-        loadArticles();
+        loadJson('./articles/articles.json', createArticleLinks, 'articleList');
 
     </script>
 </body>

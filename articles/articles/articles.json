@@ -18,6 +18,6 @@
     {
         "name": "article1", 
         "langs": ["hi", "en", "fr"], 
-        "tags": []
+        "tags": {}
     }
 ]
