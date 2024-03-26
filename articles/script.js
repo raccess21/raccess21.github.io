@@ -1,20 +1,29 @@
 function createArticleLinks(eId, jsonObj) {
     let text = "";
-    for (let article of jsonObj) {
-        text += `<a class="aLink" href="javascript:openArticle('` + article.name + 
-        '&' + article.langs.join('+') + `')">${article.name}</a><br>`;
-    }
+    Object.keys(jsonObj).forEach(article => {
+        text += `<a class="aLink" href="javascript:openArticle('` + article + 
+        '&' + jsonObj[article]["langs"].join('+') + `')">${article}</a><br>`;
+    });
     document.getElementById(eId).innerHTML = text;
 }
 
-function langSelector(langSelector, langs = ["en"]) {
+function langSelector(eId, jsonObj) {
+    const langs = jsonObj[localStorage.getItem("articleName")]["langs"];
+    const lang = localStorage.getItem("lang") || "en";
+    for (let i=0; i<langs.length; i++) {
+        if (langs[i] === lang) {
+            [langs[0], langs[i]] = [langs[i], langs[0]]
+            break;
+        }
+    }
+    
+    const selector = document.getElementById(eId);
     for (let lang of langs) {
         let option = document.createElement("option");
         option.value = lang;
         option.textContent = lang;
         selector.appendChild(option);
-    }
-    selector.selectedOptions[0].textContent = lang;
+    }    
 }
 
 function createPara(eId, jsonObj) {
@@ -25,13 +34,23 @@ function createPara(eId, jsonObj) {
     document.getElementById(eId).innerHTML = text;
 };
 
-function loadJson(path, callback, eId) {
+function loadJson(path, eId=false, callback=false) {
     let xobj = new XMLHttpRequest();
     xobj.open('GET', path, true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
-            callback(eId, JSON.parse(xobj.responseText));
+            if (callback) {
+                callback(eId, JSON.parse(xobj.responseText));
+            }
         }
     };
     xobj.send(null);
+}
+
+function changeSize(bulla, eId) {
+    const article = document.getElementById(eId);
+    const currentFontSize = parseInt(article.style.fontSize);
+    const newFontSize = (bulla ? currentFontSize + 1 : currentFontSize - 1) + "px";
+    article.style.fontSize = newFontSize;
+    localStorage.setItem('fontSize', newFontSize);
 }

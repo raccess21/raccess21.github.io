@@ -7,18 +7,29 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <button id="theme" type="button" onclick="tBClick()">Theme</button>
-    <select id="languageSelector"></select>
+    <div id="options">
+        <button id="theme" type="button" onclick="tBClick()">Theme</button>
+        <select id="languageSelector"></select>
+        <div id="textSizeOptions">
+            <button type="button" onclick="changeSize(true, 'content')">A+</button>
+            <button type="button" onclick="changeSize(false, 'content')">A-</button>
+        </div>
+    </div>
+
     <div id="article">
         <h1 id="heading"></h1>
         <div id="content"></div>
         <div id="articleList"></div>
     </div>
+
     <script src="script.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-        const articleName = urlParams.get('article') ? urlParams.get('article') : "apple";
-        let lang = localStorage.getItem('lang') || "hi"; 
+        const articleName = urlParams.get('article') ? 
+                        urlParams.get('article') : window.location.href = "index.html";
+        let lang = urlParams.get("lang") || localStorage.getItem('lang') || "en"; 
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || 
+        article.style.fontSize || "16px";
         
         const selector = document.getElementById("languageSelector");
         selector.value = lang;
@@ -26,6 +37,8 @@
         let stylesheet = document.querySelector("link[rel='stylesheet']");
         stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";
         
+        
+
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/style.css" : "styles/styleDark.css";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
@@ -35,13 +48,16 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            loadJson(`./articles/${articleName}/${lang}.json`, createPara, "content");
+            loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         });
 
         
 
-        langSelector(selector, localStorage.getItem("articleLangs").split("+"));
-        loadJson(`./articles/${articleName}/${lang}.json`, createPara, "content");
+        loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
+        localStorage.setItem('articleName', articleName);
+        loadJson(`./articles/articles.json`, "languageSelector", langSelector);
+        
+        let langs = localStorage.getItem("articleLangs").split("+") || [];
 
     </script>
 </body>
