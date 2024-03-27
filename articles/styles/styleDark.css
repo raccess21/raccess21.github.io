@@ -4,3 +4,20 @@ body {
     background-color: #1d2329;
     color: #e1e4e8;
 }
+
+/* Not clicked */
+a {
+    color: white; /* Default color for not clicked */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover */
+a:hover {
+    color: #ecec83; /* Color when hovering */
+}
+
+/* Clicked */
+a:active,
+a:focus {
+    color: #C9C9A6; /* Color when clicked or focused */
+}
