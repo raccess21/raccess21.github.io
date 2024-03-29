@@ -8,11 +8,9 @@
 </head>
 <body>
     <button id="theme" type="button" onclick="tBClick()">Theme</button>
-    <select id="languageSelector">
-        <option value="en">en</option>
-        <option value="fr">fr</option>
-        <option value="hi">hi</option>
-    </select>
+    <select id="languageSelector"></select>
+    
+
     <div id="article">
         <h1 id="heading">Articles by @raccess21</h1>
         <div id="articleList"></div>
@@ -22,8 +20,7 @@
 
         const selector = document.getElementById("languageSelector");
         let lang = localStorage.getItem('lang') || "hi";
-        selector.value = lang;
-        selector.selectedOptions[0].textContent = lang;
+        langList("languageSelector", ["hi", "en", "fr"], lang);
         
         const stylesheet = document.querySelector("link[rel='stylesheet']");
         stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";

@@ -27,23 +27,26 @@
         const urlParams = new URLSearchParams(window.location.search);
         const articleName = urlParams.get('article') ? 
                         urlParams.get('article') : window.location.href = "index.html";
-        let lang = urlParams.get("lang") || localStorage.getItem('lang') || "en"; 
-        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || 
-        article.style.fontSize || "16px";
-        
+                        
         const selector = document.getElementById("languageSelector");
-        selector.value = lang;
+        let lang = urlParams.get("lang") || localStorage.getItem("lang") || "en"; 
+        let langs = localStorage.getItem("articleLangs").split("+") || [];
+        
+        if (langs.length > 0) {
+            langList("languageSelector", langs, lang);
+        } else {
+            loadJson(`./articles/articles.json`, "languageSelector", langSelector);
+        }
+
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "16px";
         
         let stylesheet = document.querySelector("link[rel='stylesheet']");
         stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";
         
-        
-
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/style.css" : "styles/styleDark.css";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
         };
-
         
         selector.addEventListener("change", function () {
             lang = selector.value;
@@ -51,14 +54,8 @@
             loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         });
 
-        
-
         loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         localStorage.setItem('articleName', articleName);
-        loadJson(`./articles/articles.json`, "languageSelector", langSelector);
-        
-        let langs = localStorage.getItem("articleLangs").split("+") || [];
-
     </script>
 </body>
 </html>
