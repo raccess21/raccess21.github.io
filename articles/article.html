@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <div id="options">
@@ -40,11 +41,11 @@
 
         document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "16px";
         
-        let stylesheet = document.querySelector("link[rel='stylesheet']");
-        stylesheet.href = localStorage.getItem('themeName') || "styles/style.css";
+        let stylesheet = document.getElementById("theme");
+        stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
         
         const tBClick = function() {
-            stylesheet.href = stylesheet.href.includes("Dark") ? "styles/style.css" : "styles/styleDark.css";
+            stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
         };
         
