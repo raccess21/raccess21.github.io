@@ -25,5 +25,11 @@
       "fr"
     ],
     "tags": {}
+  },
+  "banana": {
+    "langs": [
+      "en"
+    ],
+    "tags": {}
   }
 }
