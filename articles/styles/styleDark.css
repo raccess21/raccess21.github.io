@@ -13,7 +13,8 @@ a {
 
 /* Hover */
 a:hover {
-    color: #ecec83; /* Color when hovering */
+    color: #efc806b3; /* Color when hovering */
+    /* background-color: rgb(152, 93, 16); */
 }
 
 /* Clicked */

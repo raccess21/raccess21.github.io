@@ -1,17 +1,20 @@
 {
   "spring": {
+    "desc" : "Nature's renewal",
     "langs": [
         "en"
     ],
     "tags": {}
   },
   "vr_dystopia": {
+    "desc" : "Virtual reality dystopia",
     "langs": [
       "en"
     ],
     "tags": {}
   },
   "apple": {
+    "desc" : "Apple: a versatile fruit",
     "langs": [
         "hi",
         "en",
@@ -31,6 +34,7 @@
     }
   },
   "article1": {
+    "desc" : "A sample article",
     "langs": [
         "hi",
         "en",
@@ -39,30 +43,35 @@
     "tags": {}
   },
   "ramayana": {
+    "desc" : "Ramayana: epic story",
     "langs": [
       "en"
     ],
     "tags": {}
   },
   "money_and_election": {
+    "desc" : "Money in politics",
     "langs": [
       "en"
     ],
     "tags": {}
   },
   "yamuna": {
+    "desc" : "Yamuna: river in India",
     "langs": [
       "en"
     ],
     "tags": {}
   },
   "sudoku": {
+    "desc" : "Sudoku: puzzle game",
     "langs": [
       "en"
     ],
     "tags": {}
   },
   "democracy": {
+    "desc" : "Democracy: political system",
     "langs": [
       "en"
     ],

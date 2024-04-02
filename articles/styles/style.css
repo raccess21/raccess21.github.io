@@ -8,3 +8,41 @@ body {
 #content {
     text-align: left;
 }
+#articleList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    overflow-wrap: break-word;
+    margin: auto;
+}
+.aLink {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 0.5rem ;
+    width: 100%;
+}
+
+.aLink img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.aLink a {
+    padding: 5px;
+    margin: 5px;
+    overflow-wrap: break-word;
+    white-space: nowrap;
+}
+
+.aLink > div {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
