@@ -1,10 +1,24 @@
 {
+  "digital money": {
+    "langs": [
+      "en"
+    ],
+    "tags": {},
+    "desc": "Description Not Available"
+  },
   "spring": {
     "langs": [
       "en"
     ],
     "tags": {},
     "desc": "Nature's renewal"
+  },
+  "influencers": {
+    "langs": [
+      "en"
+    ],
+    "tags": {},
+    "desc": "Description Not Available"
   },
   "vr_dystopia": {
     "langs": [
@@ -33,6 +47,13 @@
     },
     "desc": "Apple: a versatile fruit"
   },
+  "Hacking : A Form of Art": {
+    "langs": [
+      "en"
+    ],
+    "tags": {},
+    "desc": "Description Not Available"
+  },
   "ramayana": {
     "langs": [
       "en"
@@ -46,6 +67,13 @@
     ],
     "tags": {},
     "desc": "Money in politics"
+  },
+  "advertisement and idiocracy": {
+    "langs": [
+      "en"
+    ],
+    "tags": {},
+    "desc": "Description Not Available"
   },
   "yamuna": {
     "langs": [
@@ -67,5 +95,12 @@
     ],
     "tags": {},
     "desc": "Democracy: political system"
+  },
+  "diamond": {
+    "langs": [
+      "en"
+    ],
+    "tags": {},
+    "desc": "Description Not Available"
   }
 }

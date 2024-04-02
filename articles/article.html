@@ -72,6 +72,7 @@
             loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         });
 
+        document.getElementById("heading").textContent = articleName;
         loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         localStorage.setItem('articleName', articleName);
     </script>
