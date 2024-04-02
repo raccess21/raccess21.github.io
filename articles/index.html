@@ -8,10 +8,9 @@
     <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
-    <button id="theme" type="button" onclick="tBClick()">Theme</button>
-    <select id="languageSelector"></select>
+    <button id="themeButton" class="roundButton" type="button" onclick="tBClick()">☀️/🌕</button>
+    <select id="languageSelector" class="roundButton"></select>
     
-
     <div id="article">
         <h1 id="heading">Articles by @raccess21</h1>
         <div id="articleList"></div>
@@ -28,6 +27,7 @@
 
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕": "☀️";
             localStorage.setItem('themeName', stylesheet.getAttribute('href'));
         };
         

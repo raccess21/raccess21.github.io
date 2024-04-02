@@ -15,9 +15,14 @@ body {
     overflow-wrap: break-word;
     margin: auto;
 }
-.aLink {
+.aLink, #options, #textSizeOptions {
     display: flex;
     flex-direction: row;
+}
+#options, #textSizeOptions {
+    justify-content: center;
+}
+.aLink {
     margin: 5px;
     padding: 5px;
     border-radius: 0.5rem ;
@@ -40,6 +45,14 @@ body {
     white-space: normal;
     word-wrap: break-word;
 }
+
+.roundButton {
+    margin: 5px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 0.5rem;
+}
+
 
 .linkDesc {
     display: block;

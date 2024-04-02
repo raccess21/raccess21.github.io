@@ -11,12 +11,12 @@
 </head>
 <body>
     <div id="options">
-        <button id="theme" type="button" onclick="tBClick()">Theme</button>
-        <select id="languageSelector"></select>
-        <div id="textSizeOptions">
-            <button type="button" onclick="changeSize(true, 'content')">A+</button>
-            <button type="button" onclick="changeSize(false, 'content')">A-</button>
-        </div>
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()">☀️/🌕</button>
+        <select id="languageSelector" class="roundButton"></select>
+    </div>
+    <div id="textSizeOptions">
+        <button type="button" class="roundButton" onclick="changeSize(true, 'content')">A+</button>
+        <button type="button" class="roundButton" onclick="changeSize(false, 'content')">A-</button>
     </div>
 
     <div id="article">
@@ -64,6 +64,7 @@
         
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕": "☀️";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
         };
         
