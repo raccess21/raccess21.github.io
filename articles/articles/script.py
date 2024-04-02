@@ -1,5 +1,6 @@
 from glob import glob
 import json
+from datetime import datetime
 
 
 # takes */*/lang.json and articleName, returns lang
@@ -22,11 +23,16 @@ def updateLangList():
         }
         tags = {}
         desc = "Description Not Available"
+        tm = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
         if articleName in articlesData.keys():                         
             tags = articlesData[articleName]["tags"]
             desc = articlesData[articleName]["desc"]
+            tm = articlesData[articleName]["time"]
+            
         articles[articleName]["tags"] = tags
         articles[articleName]["desc"] = desc
+        articles[articleName]["time"] = tm
+
     
     try:
         with open("articles.json", "w") as fo:
