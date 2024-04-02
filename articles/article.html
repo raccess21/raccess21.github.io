@@ -64,7 +64,7 @@
         
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
-            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕": "☀️";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? " 🌕 ": " ☀️ ";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
         };
         
