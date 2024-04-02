@@ -18,7 +18,7 @@ def updateLangList():
         articleName = article.split("/")[0]         #get articleName
         print(articleName)
         articles[articleName] = {
-            "langs": [[lane(lang, articleName) for lang in glob(f"{article}/*")]],
+            "langs": [lane(lang, articleName) for lang in glob(f"{article}/*")],
         }
         tags = {}
         if articleName in articlesData.keys():                         
