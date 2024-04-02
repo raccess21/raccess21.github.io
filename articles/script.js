@@ -1,6 +1,14 @@
-function createArticleLinks(eId, jsonObj) {
+function sortByArticleName(jsonObj) {
+    return Object.keys(jsonObj).sort();
+}
+function sortByArticleNameRev(jsonObj) {
+    return Object.keys(jsonObj).sort((a, b) => b.localeCompare(a));
+}
+
+function createArticleLinks(eId, jsonObj, sortType = sortByArticleName) {
     let text = "";
-    Object.keys(jsonObj).forEach(article => {
+    console.log(sortType);
+    sortType(jsonObj).forEach(article => {
         desc = jsonObj[article]["desc"] || "Description not available";
         text += '<div class="aLink">' + 
                     `<img alt="article thumbnail" src="assets/images/articleName_thumb.jpg">` +
