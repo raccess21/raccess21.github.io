@@ -31,13 +31,6 @@ function langList(eId, langs, lang=false) {
     }    
 }
 
-function createPara(eId, jsonObj) {
-    let text = "";
-    for (let para of jsonObj) {
-        text += `<p class='para'>${para}</p>`;
-    }
-    document.getElementById(eId).innerHTML = text;
-};
 
 function loadJson(path, eId=false, callback=false) {
     let xobj = new XMLHttpRequest();
@@ -52,6 +45,14 @@ function loadJson(path, eId=false, callback=false) {
     };
     xobj.send(null);
 }
+
+function createPara(eId, jsonObj) {
+    let text = "";
+    for (let para of jsonObj) {
+        text += `<p class='para'>${para}</p>`;
+    }
+    document.getElementById(eId).innerHTML = text;
+};
 
 function changeSize(bulla, eId) {
     const article = document.getElementById(eId);
