@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Chirp', 'Times New Roman', Times, serif;
 }
 
 #content {
@@ -50,6 +50,8 @@ body {
     margin: 5px;
     padding: 12px 20px;
     border: none;
+    outline: none;
+    background-color: inherit;
     border-radius: 0.5rem;
 }
 
