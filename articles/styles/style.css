@@ -28,15 +28,25 @@ body {
     width: 120px;
     height: 80px;
     object-fit: cover;
+    justify-content: center;
+    display: block;
 }
 
 .aLink a {
     padding: 5px;
     margin: 5px;
-    overflow-wrap: break-word;
-    white-space: nowrap;
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
+.linkDesc {
+    display: block;
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+}
 .aLink > div {
     display: flex;
     flex-direction: column;
