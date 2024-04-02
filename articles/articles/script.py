@@ -21,9 +21,12 @@ def updateLangList():
             "langs": [lane(lang, articleName) for lang in glob(f"{article}/*")],
         }
         tags = {}
+        desc = "Description Not Available"
         if articleName in articlesData.keys():                         
             tags = articlesData[articleName]["tags"]
+            desc = articlesData[articleName]["desc"]
         articles[articleName]["tags"] = tags
+        articles[articleName]["desc"] = desc
     
     try:
         with open("articles.json", "w") as fo:

@@ -1,24 +1,23 @@
 {
   "spring": {
-    "desc" : "Nature's renewal",
-    "langs": [
-        "en"
-    ],
-    "tags": {}
-  },
-  "vr_dystopia": {
-    "desc" : "Virtual reality dystopia",
     "langs": [
       "en"
     ],
-    "tags": {}
+    "tags": {},
+    "desc": "Nature's renewal"
+  },
+  "vr_dystopia": {
+    "langs": [
+      "en"
+    ],
+    "tags": {},
+    "desc": "Virtual reality dystopia"
   },
   "apple": {
-    "desc" : "Apple: a versatile fruit",
     "langs": [
-        "hi",
-        "en",
-        "fr"
+      "hi",
+      "en",
+      "fr"
     ],
     "tags": {
       "Agriculture": 0.8,
@@ -31,50 +30,42 @@
       "Food History": 0.5,
       "Cultural Significance": 0.6,
       "Genetic Sequencing": 0.4
-    }
-  },
-  "article1": {
-    "desc" : "A sample article",
-    "langs": [
-        "hi",
-        "en",
-        "fr"
-    ],
-    "tags": {}
+    },
+    "desc": "Apple: a versatile fruit"
   },
   "ramayana": {
-    "desc" : "Ramayana: epic story",
     "langs": [
       "en"
     ],
-    "tags": {}
+    "tags": {},
+    "desc": "Ramayana: epic story"
   },
   "money_and_election": {
-    "desc" : "Money in politics",
     "langs": [
       "en"
     ],
-    "tags": {}
+    "tags": {},
+    "desc": "Money in politics"
   },
   "yamuna": {
-    "desc" : "Yamuna: river in India",
     "langs": [
       "en"
     ],
-    "tags": {}
+    "tags": {},
+    "desc": "Yamuna: river in India"
   },
   "sudoku": {
-    "desc" : "Sudoku: puzzle game",
     "langs": [
       "en"
     ],
-    "tags": {}
+    "tags": {},
+    "desc": "Sudoku: puzzle game"
   },
   "democracy": {
-    "desc" : "Democracy: political system",
     "langs": [
       "en"
     ],
-    "tags": {}
+    "tags": {},
+    "desc": "Democracy: political system"
   }
 }
