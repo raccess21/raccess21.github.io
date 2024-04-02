@@ -1,6 +1,4 @@
 body {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
     background-color: #1d2329;
     color: #e1e4e8;
 }
@@ -21,4 +19,7 @@ a:hover {
 a:active,
 a:focus {
     color: #C9C9A6; /* Color when clicked or focused */
+}
+.aLink {
+    border: 1px solid white;
 }

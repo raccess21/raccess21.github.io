@@ -1,0 +1,25 @@
+body {
+    background-color: #fafafa;
+    color: #202124;
+}
+
+/* Not clicked */
+a {
+    color: #0366d6; /* Default color for not clicked */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover */
+a:hover {
+    color: #3e87f5; /* Color when hovering */
+}
+
+/* Clicked */
+a:active,
+a:focus {
+    color: #1a5a9b; /* Color when clicked or focused */
+}
+.aLink {
+    border: 1px solid #e5e7eb;
+}
+

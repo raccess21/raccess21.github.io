@@ -1,8 +1,6 @@
 body {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: hsl(0, 0%, 95%);
-    color: rgb(152, 93, 16);
 }
 
 #content {
@@ -22,7 +20,6 @@ body {
     flex-direction: row;
     margin: 5px;
     padding: 5px;
-    border: 1px solid white;
     border-radius: 0.5rem ;
     width: 100%;
 }

@@ -33,6 +33,7 @@
         
         function openArticle(articleLink) {
             [articleName, langs] = [...articleLink.split('&')];
+            langs = langs.split("+");
             localStorage.setItem('articleName', articleName);
             localStorage.setItem('articleLangs', langs);
             if (!langs.includes(lang)) {lang=langs[0]};
