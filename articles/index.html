@@ -35,6 +35,7 @@
             [articleName, langs] = [...articleLink.split('&')];
             localStorage.setItem('articleName', articleName);
             localStorage.setItem('articleLangs', langs);
+            if (!langs.includes(lang)) {lang="en"};
             window.location = `article.html?article=${articleName}&lang=${lang}`;
         };
         selector.addEventListener("change", function () {
