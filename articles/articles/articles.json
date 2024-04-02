@@ -1,9 +1,27 @@
 {
+  "spring": {
+    "langs": [
+      [
+        "en"
+      ]
+    ],
+    "tags": {}
+  },
+  "vr_dystopia": {
+    "langs": [
+      [
+        "en"
+      ]
+    ],
+    "tags": {}
+  },
   "apple": {
     "langs": [
-      "hi",
-      "en",
-      "fr"
+      [
+        "hi",
+        "en",
+        "fr"
+      ]
     ],
     "tags": {
       "Agriculture": 0.8,
@@ -20,15 +38,51 @@
   },
   "article1": {
     "langs": [
-      "hi",
-      "en",
-      "fr"
+      [
+        "hi",
+        "en",
+        "fr"
+      ]
     ],
     "tags": {}
   },
-  "banana": {
+  "ramayana": {
     "langs": [
-      "en"
+      [
+        "en"
+      ]
+    ],
+    "tags": {}
+  },
+  "money_and_election": {
+    "langs": [
+      [
+        "en"
+      ]
+    ],
+    "tags": {}
+  },
+  "yamuna": {
+    "langs": [
+      [
+        "en"
+      ]
+    ],
+    "tags": {}
+  },
+  "sudoku": {
+    "langs": [
+      [
+        "en"
+      ]
+    ],
+    "tags": {}
+  },
+  "democracy": {
+    "langs": [
+      [
+        "en"
+      ]
     ],
     "tags": {}
   }
