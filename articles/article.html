@@ -48,7 +48,7 @@
                         
         const selector = document.getElementById("languageSelector");
         let lang = urlParams.get("lang") || localStorage.getItem("lang") || "en"; 
-        let langs = localStorage.getItem("articleLangs").split("+") || [];
+        let langs = localStorage.getItem("articleLangs").split(",") || [];
         
         if (langs.length > 0) {
             langList("languageSelector", langs, lang);

@@ -2,8 +2,12 @@ function createArticleLinks(eId, jsonObj) {
     let text = "";
     Object.keys(jsonObj).forEach(article => {
         desc = jsonObj[article]["desc"] || "Description not available";
-        text += `<div class="aLink"><img alt="article thumbnail" src="assets/images/articleName_thumb.jpg"><div class="link"><a href="javascript:openArticle('` + article + 
-        '&' + jsonObj[article]["langs"].join('+') + `')">${article}</a><span class="linkDesc">${desc}</span></div></div>`;
+        text += '<div class="aLink">' + 
+                    `<img alt="article thumbnail" src="assets/images/articleName_thumb.jpg">` +
+                    `<div class="link">` + 
+                        `<a href="javascript:openArticle('${article}&` + 
+                        jsonObj[article]["langs"].join(',') + `')">${article}</a>`+
+                        `<span class="linkDesc">${desc}</span></div></div>`;
     });
     document.getElementById(eId).innerHTML = text;
 }

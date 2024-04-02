@@ -33,10 +33,9 @@
         
         function openArticle(articleLink) {
             [articleName, langs] = [...articleLink.split('&')];
-            langs = langs.split("+");
             localStorage.setItem('articleName', articleName);
             localStorage.setItem('articleLangs', langs);
-            if (!langs.includes(lang)) {lang=langs[0]};
+            if (!langs.includes(lang)) {lang=langs.split(",")[0]};
             window.location = `article.html?article=${articleName}&lang=${lang}`;
         };
         selector.addEventListener("change", function () {
