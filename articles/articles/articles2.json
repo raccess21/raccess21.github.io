@@ -1,124 +1,30 @@
-{
-  "Digital Money": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Electronic money for digital transactions",
-    "time": "2024-04-02T22:28:11.033435"
-  },
-  "Apple": {
-    "langs": [
-      "hi",
-      "en",
-      "fr"
-    ],
-    "tags": {},
-    "desc": "Keeps Doctor Away!!!",
-    "time": "2024-04-02T22:28:11.033823"
-  },
-  "Democracy": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Direct citizen involvement in politics",
-    "time": "2024-04-02T22:28:11.034080"
-  },
-  "Diamond": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "A make believe Stone?",
-    "time": "2024-04-02T22:28:11.034324"
-  },
-  "Advertisement and Idiocracy": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Faux consumer culture",
-    "time": "2024-04-02T22:28:11.034562"
-  },
-  "Hacking : A Form of Art": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Hacking as art and science",
-    "time": "2024-04-02T22:28:11.034800"
-  },
-  "Eldorado!": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Description Not Available",
-    "time": "2024-04-02T22:28:11.035037"
-  },
-  "Sudoku": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Number puzzle game",
-    "time": "2024-04-02T22:28:11.035296"
-  },
-  "Yamuna Maiyya": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "River goddess of Hindu mythology",
-    "time": "2024-04-02T22:28:11.035539"
-  },
-  "Spring": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Season of renewal and growth",
-    "time": "2024-04-02T22:28:11.035777"
-  },
-  "Influencers": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Social media celebrities",
-    "time": "2024-04-02T22:28:11.036010"
-  },
-  "Money and Election": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Political financing and campaigns",
-    "time": "2024-04-02T22:28:11.036246"
-  },
-  "VR Dystopia": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "A Possible Future",
-    "time": "2024-04-02T22:28:11.036480"
-  },
-  "Religion or Startup": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Description Not Available",
-    "time": "2024-04-02T22:28:11.036762"
-  },
-  "Ramayana": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Hindu epic poem and legend",
-    "time": "2024-04-02T22:28:11.037018"
-  }
-}
+[
+    "Free speech, often hailed as a cornerstone of democracy and individual liberty, is a fundamental human right that enables individuals to express their thoughts, ideas, and opinions without fear of censorship or persecution. In recent years, however, the cost of exercising free speech has shifted dramatically, from the risk of facing life-altering consequences to as little as a few pennies spent on social media platforms. In this essay, we explore the evolving landscape of free speech, the factors contributing to its reduced cost, and the necessity of guarding it culturally in the face of new challenges and threats.",
+    
+    "Traditionally, the cost of exercising free speech was steep, with individuals risking their livelihoods, reputations, and even their lives to speak out against oppression, injustice, and tyranny. From political dissidents facing imprisonment or exile to journalists risking their safety to uncover the truth, the pursuit of free speech often came at great personal sacrifice. However, with the advent of digital technologies and the rise of social media, the cost of free speech has plummeted, allowing anyone with an internet connection to broadcast their opinions to a global audience at minimal cost.",
+    
+    "While the democratization of free speech has empowered individuals to participate in public discourse and challenge authority like never before, it has also given rise to new challenges and threats. The proliferation of misinformation, hate speech, and online harassment has raised concerns about the impact of unbridled free speech on social cohesion, public discourse, and democratic institutions. Moreover, the concentration of power in the hands of tech companies and social media platforms has raised questions about the extent to which free speech can truly be exercised in the digital age.",
+    
+    "In response to these challenges, there is a growing recognition of the need to guard free speech not only legally but also culturally. In a society that values diversity, tolerance, and respect for differing viewpoints, it is incumbent upon individuals and communities to foster a culture of open dialogue, mutual understanding, and civil discourse. This requires not only protecting the rights of individuals to express themselves freely but also promoting media literacy, critical thinking, and empathy as essential tools for navigating the digital landscape.",
+    
+    "Moreover, the responsibility to guard free speech extends beyond legal protections and cultural norms to encompass the role of technology companies and social media platforms in shaping the digital public square. As gatekeepers of online discourse, these platforms have a duty to balance the principles of free expression with the need to combat harmful content, protect user privacy, and uphold democratic values. This requires transparency, accountability, and collaboration between governments, civil society, and the private sector to develop effective policies and mechanisms for safeguarding free speech in the digital age.",
+    
+    "In conclusion, free speech is a precious and fragile right that must be protected and guarded vigilantly in the face of new challenges and threats. While the reduced cost of exercising free speech in the digital age has democratized access to the public sphere, it has also introduced new risks and vulnerabilities that require thoughtful and proactive responses. By fostering a culture of open dialogue, media literacy, and mutual respect, we can ensure that free speech remains a cornerstone of democracy and individual liberty for generations to come."
+] 
+
+[
+    "The myth of plastic recycling, long touted as a solution to the global plastic pollution crisis, is increasingly being challenged as evidence mounts of its inefficacy and environmental harm. While recycling has been promoted as a way to reduce waste and conserve resources, the reality is that the vast majority of plastic waste is not recycled and often ends up polluting the environment or being incinerated. In this essay, we delve into the myth of plastic recycling, examining its origins, challenges, and the need for alternative solutions to address the plastic pollution crisis.",
+    
+    "The notion of plastic recycling as a panacea for environmental problems gained traction in the latter half of the 20th century, as concerns about waste management and resource depletion grew. Recycling was heralded as a way to divert plastic waste from landfills, conserve natural resources, and reduce greenhouse gas emissions. However, the reality of plastic recycling has fallen far short of these lofty promises, as the infrastructure and technology needed to effectively recycle plastic have lagged behind the exponential growth in plastic production and consumption.",
+    
+    "One of the primary challenges of plastic recycling is the complexity and diversity of plastic materials, which makes them difficult to sort, process, and recycle efficiently. Unlike materials such as glass or metal, which can be easily recycled into new products, plastics come in a wide range of compositions and types, each with its own unique properties and recycling requirements. As a result, many types of plastic are not economically viable to recycle and end up being discarded or exported to other countries with lax environmental regulations.",
+    
+    "Moreover, the global plastic recycling market has been plagued by issues such as contamination, low-quality materials, and limited end markets for recycled plastic products. Despite efforts to improve recycling infrastructure and increase consumer participation, the reality is that only a small fraction of plastic waste is actually recycled, with the majority either being landfilled, incinerated, or ending up in the natural environment, where it can persist for hundreds of years, leaching toxins and harming wildlife.",
+    
+    "In light of these challenges, there is a growing recognition of the need to shift away from the myth of plastic recycling towards more sustainable solutions to address the plastic pollution crisis. This includes reducing plastic production and consumption, redesigning products and packaging to be more environmentally friendly, and investing in alternative materials and waste management strategies. Additionally, there is a need for greater government regulation and corporate responsibility to hold polluters accountable and incentivize the transition to a circular economy.",
+    
+    "In conclusion, the myth of plastic recycling has been debunked by mounting evidence of its inefficacy and environmental harm. While recycling may have a role to play in reducing waste and conserving resources, it is not a silver bullet solution to the plastic pollution crisis. Instead, we must adopt a more holistic approach that addresses the root causes of plastic pollution and embraces alternative solutions that prioritize environmental sustainability and human well-being."
+] 
+
+Power rangers mystic force
+Today i am believing in magic
