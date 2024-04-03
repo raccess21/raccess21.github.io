@@ -1,155 +1,78 @@
 {
   "Digital Money": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Electronic money for digital transactions",
-    "time": "2024-04-02T13:28:52.472489"
+    "dname": "Digital Money",
+    "desc": "Electronic money for digital transactions"
   },
   "Apple": {
-    "langs": [
-      "en",
-      "fr"
-    ],
-    "tags": {},
-    "desc": "Keeps Doctor Away!!!",
-    "time": "2024-03-21T13:28:52.472957"
+    "dname": "Apple",
+    "desc": "Keeps Doctor Away!!!"
   },
   "Democracy": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Direct citizen involvement in politics",
-    "time": "2024-04-02T13:28:52.473237"
+    "dname": "Democracy",
+    "desc": "Direct citizen involvement in politics"
   },
   "Diamond": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "A make believe Stone?",
-    "time": "2024-04-02T13:28:52.473474"
+    "dname": "Diamond",
+    "desc": "A make believe Stone?"
   },
   "Plastic Recycling": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Messiah or a Myth",
-    "time": "2024-04-03T14:43:24.041944"
+    "dname": "Plastic Recycling",
+    "desc": "Messiah or a Myth"
   },
   "Advertisement and Idiocracy": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Faux consumer culture",
-    "time": "2024-04-02T13:28:52.473740"
+    "dname": "Advertisement and Idiocracy",
+    "desc": "Faux consumer culture"
   },
   "Hacking : A Form of Art": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Hacking as art and science",
-    "time": "2024-04-02T17:28:52.473990"
+    "dname": "Hacking : A Form of Art",
+    "desc": "Hacking as art and science"
   },
   "Carl Sagan": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Science as a Candle in the Dark",
-    "time": "2024-04-02T22:35:56.581538"
+    "dname": "Carl Sagan",
+    "desc": "Science as a Candle in the Dark"
   },
   "Eldorado!": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Description Not Available",
-    "time": "2024-04-02T17:28:52.474214"
+    "dname": "Eldorado!",
+    "desc": "Description Not Available"
   },
   "Sudoku": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Number puzzle game",
-    "time": "2024-04-02T17:28:52.474411"
+    "dname": "Sudoku",
+    "desc": "Number puzzle game"
   },
   "Yamuna Maiyya": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "River goddess of Hindu mythology",
-    "time": "2024-04-02T17:28:52.474624"
+    "dname": "Yamuna Maiyya",
+    "desc": "River goddess of Hindu mythology"
   },
   "Gomutra": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "A Different Kind of Urine",
-    "time": "2024-04-02T22:35:56.582400"
+    "dname": "Gomutra",
+    "desc": "A Different Kind of Urine"
   },
   "Spring": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Season of renewal and growth",
-    "time": "2024-04-02T10:28:52.474832"
+    "dname": "Spring",
+    "desc": "Season of renewal and growth"
   },
   "Influencers": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Social media celebrities",
-    "time": "2024-04-02T10:28:52.475037"
+    "dname": "Influencers",
+    "desc": "Social media celebrities"
   },
   "Money and Election": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Political campaigns and financing",
-    "time": "2024-04-02T10:28:52.475261"
+    "dname": "Money and Election",
+    "desc": "Political campaigns and financing"
   },
   "Free Speech": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Will always cost!!!",
-    "time": "2024-04-03T14:43:24.044601"
+    "dname": "Free Speech",
+    "desc": "Will always cost!!!"
   },
   "VR Dystopia": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "A Possible Future",
-    "time": "2024-04-02T10:28:52.475478"
+    "dname": "VR Dystopia",
+    "desc": "A Possible Future"
   },
   "Religion or Startup": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Description Not Available",
-    "time": "2024-04-02T10:28:52.475701"
+    "dname": "Religion or Startup",
+    "desc": "Description Not Available"
   },
   "Ramayana": {
-    "langs": [
-      "en"
-    ],
-    "tags": {},
-    "desc": "Hindu epic poem and legend",
-    "time": "2024-04-02T22:28:52.475919"
+    "dname": "Ramayana",
+    "desc": "Hindu epic poem and legend"
   }
 }

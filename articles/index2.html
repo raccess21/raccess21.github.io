@@ -21,7 +21,7 @@
         const selector = document.getElementById("languageSelector");
         let lang = localStorage.getItem('lang') || "en";
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || " ☀️ ";
-        langList("languageSelector", ["en", "hi"], lang);
+        langList("languageSelector", ["en"], lang);
         
         const stylesheet = document.getElementById("theme");
         stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
@@ -43,15 +43,10 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            fetchJson(
-                [`./articles/articles.json`, `./articles/articles${lang}.json`], 
-                'articleList', createArticleLinks, sortByArticleName);
-            
+            loadJson(`./articles/articlesen.json`, 'articleList', createArticleLinks, sortByArticleNameRev);
         });
 
-        fetchJson(
-            [`./articles/articles.json`, `./articles/articles${lang}.json`], 
-            'articleList', createArticleLinks, sortByArticleName);
+        loadJson(`./articles/articlesen.json`, 'articleList', createArticleLinks, sortByArticleNameRev);
 
     </script>
 </body>

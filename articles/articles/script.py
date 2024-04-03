@@ -1,7 +1,7 @@
 from glob import glob
 import json
 from datetime import datetime
-
+import random
 
 # takes */*/lang.json and articleName, returns lang
 def lane(lang, articleName):
@@ -12,7 +12,7 @@ def lane(lang, articleName):
 def updateLangList():
     articles = {}
     lang = "en"
-    with open(f"articles{lang}.json", "r") as fi:
+    with open(f"articles.json", "r") as fi:
         articlesData = json.loads(fi.read())
 
     for article in  glob("*/"):
@@ -35,13 +35,35 @@ def updateLangList():
 
     
     try:
-        with open(f"articles{lang}.json", "w") as fo:
+        with open(f"articles.json", "w") as fo:
+            fo.write(json.dumps(articles, indent=2))
+    except:
+        print("Error writing file!")
+
+def updateLangList2():
+    # characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890-_"
+    articles = {}
+    with open(f"articles.json", "r") as fi:
+        articlesData = json.loads(fi.read())
+    print(len(articlesData) - len(set(articlesData)))
+    for article in  glob("*/"):
+        articleName = article.split("/")[0]         #get articleName
+        print(articleName)
+        articles[articleName] = {
+            # "langs": [lane(lang, articleName) for lang in glob(f"{article}/*")],
+            "dname" : articleName,
+            "desc" : articlesData[articleName]["desc"]
+        }
+
+    
+    try:
+        with open(f"articlesen.json", "w") as fo:
             fo.write(json.dumps(articles, indent=2))
     except:
         print("Error writing file!")
 
 def main():
-    updateLangList()
+    updateLangList2()
 
 if __name__ == "__main__":
     main()

@@ -50,7 +50,7 @@
         const selector = document.getElementById("languageSelector");
         let lang = urlParams.get("lang") || localStorage.getItem("lang") || "en"; 
         let langs = localStorage.getItem("articleLangs").split(",") || [];
-        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || " ☀️ ";
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️☀️";
         
         if (langs.length > 0) {
             langList("languageSelector", langs, lang);
@@ -65,7 +65,7 @@
         
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
-            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? " 🌕 ": " ☀️ ";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕🌕": "☀️☀️☀️";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
             localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
         };
