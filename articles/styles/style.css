@@ -20,6 +20,8 @@ body {
     flex-direction: row;
 }
 #options, #textSizeOptions {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
 .aLink {
@@ -75,4 +77,20 @@ body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: justify;
+}
+
+/* smooth scrolling animation */
+a[href*="#"] {
+    scroll-behavior:smooth;
+}
+
+
+/* smooth dropdown menu animation */
+.dropdown {
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.dropdown:hover {
+    opacity: 1;
+    visibility: visible;
 }

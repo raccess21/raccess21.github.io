@@ -11,8 +11,8 @@ def lane(lang, articleName):
 # updates lang list in articles.json file
 def updateLangList():
     articles = {}
-
-    with open("articles.json", "r") as fi:
+    lang = "en"
+    with open(f"articles{lang}.json", "r") as fi:
         articlesData = json.loads(fi.read())
 
     for article in  glob("*/"):
@@ -35,7 +35,7 @@ def updateLangList():
 
     
     try:
-        with open("articles.json", "w") as fo:
+        with open(f"articles{lang}.json", "w") as fo:
             fo.write(json.dumps(articles, indent=2))
     except:
         print("Error writing file!")

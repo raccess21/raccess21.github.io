@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="options">
-        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()">☀️/🌕</button>
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()"></button>
         <select id="languageSelector" class="roundButton"></select>
     </div>
     <div id="textSizeOptions">
@@ -50,6 +50,7 @@
         const selector = document.getElementById("languageSelector");
         let lang = urlParams.get("lang") || localStorage.getItem("lang") || "en"; 
         let langs = localStorage.getItem("articleLangs").split(",") || [];
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || " ☀️ ";
         
         if (langs.length > 0) {
             langList("languageSelector", langs, lang);
@@ -66,6 +67,7 @@
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
             document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? " 🌕 ": " ☀️ ";
             localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
         };
         
         selector.addEventListener("change", function () {

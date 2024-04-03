@@ -20,7 +20,8 @@
 
         const selector = document.getElementById("languageSelector");
         let lang = localStorage.getItem('lang') || "hi";
-        langList("languageSelector", ["hi", "en", "fr"], lang);
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || " ☀️ ";
+        langList("languageSelector", ["hi", "en"], lang);
         
         const stylesheet = document.getElementById("theme");
         stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
@@ -29,6 +30,7 @@
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
             document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? " 🌕 ": " ☀️ ";
             localStorage.setItem('themeName', stylesheet.getAttribute('href'));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
         };
         
         function openArticle(articleLink) {
@@ -41,9 +43,10 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
+            loadJson(`./articles/articles${lang}.json`, 'articleList', createArticleLinks, sortByArticleNameRev);
         });
 
-        loadJson('./articles/articles.json', 'articleList', createArticleLinks, sortByArticleNameRev);
+        loadJson(`./articles/articles${lang}.json`, 'articleList', createArticleLinks, sortByArticleNameRev);
 
     </script>
 </body>
