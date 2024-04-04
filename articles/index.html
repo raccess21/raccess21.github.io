@@ -20,7 +20,7 @@
 
         const selector = document.getElementById("languageSelector");
         let lang = localStorage.getItem('lang') || "en";
-        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️/🌕";
         langList("languageSelector", ["en", "hi"], lang);
         
         const stylesheet = document.getElementById("theme");
