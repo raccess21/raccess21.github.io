@@ -6,6 +6,7 @@ body {
 #content {
     text-align: left;
 }
+
 #articleList {
     display: flex;
     flex-direction: column;
@@ -15,15 +16,14 @@ body {
     overflow-wrap: break-word;
     margin: auto;
 }
+
 .aLink, #options, #textSizeOptions {
     display: flex;
-    flex-direction: row;
-}
-#options, #textSizeOptions {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
+    flex-direction: row;
 }
+
+
 .aLink {
     margin: 5px;
     padding: 5px;
@@ -31,22 +31,14 @@ body {
     width: 100%;
 }
 
-.aLink img {
+.aLink > img {
     width: 120px;
     height: 80px;
     object-fit: cover;
-    justify-content: center;
     display: block;
+    margin: auto;
 }
 
-.aLink a {
-    padding: 5px;
-    margin: 5px;
-    display: block;
-    overflow: visible;
-    white-space: normal;
-    word-wrap: break-word;
-}
 
 .roundButton {
     margin: 5px;
@@ -57,19 +49,6 @@ body {
     border-radius: 0.5rem;
 }
 
-
-.linkDesc {
-    display: block;
-    overflow: visible;
-    white-space: normal;
-    word-wrap: break-word;
-}
-.aLink > div {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px;
-}
 #content .para {
     line-height: 1.6;
     margin-bottom: 1.5rem;
@@ -93,4 +72,19 @@ a[href*="#"] {
 .dropdown:hover {
     opacity: 1;
     visibility: visible;
+}
+
+.aLinks {
+    margin: 5px;
+    padding: 5px;
+    width: inherit;
+    /* border-radius: 0.5rem; */
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
 }

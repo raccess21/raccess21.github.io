@@ -7,16 +7,16 @@ function sortByArticleNameRev(jsonObj) {
 
 
 function createArticleLinks(eId, jsonObj, sortType = sortByArticleName) {
-    let text = '';
+    let text = "";
     sortType(jsonObj).forEach(article => {
         desc = jsonObj[article]["desc"] || "Description not available";
         dname = jsonObj[article]["dname"] || "Description not available";
-        text += `<a class="aLink" href="javascript:openArticle('${article}&` + 
-                jsonObj[article]["langs"].join(',') + `')">` +
+        text += '<div class="aLink">' + 
                     `<img alt="article thumbnail" src="assets/images/articleName_thumb.jpg">` +
-                    `<div class="desc">` + 
-                        `<h4>${dname}</h4>`+
-                        `<span>${desc}</span></div></a>`;
+                    `<div class="link">` + 
+                        `<a href="javascript:openArticle('${article}&` + 
+                        jsonObj[article]["langs"].join(',') + `')">${dname}</a>`+
+                        `<span class="linkDesc">${desc}</span></div></div>`;
     });
     document.getElementById(eId).innerHTML = text;
 }
@@ -26,26 +26,34 @@ function langSelector(eId, jsonObj) {
     langList(eId, langs);
 }
 
-async function fetchJson(paths, eId=false, callback=false, sortType = sortByArticleName) {
-    responses = {0: 0, 1:1};
-    for (let i=0; i<paths.length; i++) {
-        try {
-            response = await fetch(paths[i]);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            responses[i] =  await response.json();
-        } catch (error) {
-            console.error(`Error fetching Json: ${error}`);
-            return null;
+async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        const json = await response.json();
+        return json;
+    } catch (error) {
+      console.error('Error fetching JSON:', error);
+      return null;
     }
-    Object.keys(responses[0]).forEach((article) => {
-        responses[0][article] = {...responses[0][article], ...responses[1][article]};
-    })
-    callback(eId, responses[0], sortType);
+}
+
+function fetchJson(url) {
+    fetchJSON(url)
+    .then(json => {
+        if (json) {
+        // console.log('JSON Object:', json);
+        return json;
+        // Do something with the JSON object
+        } else {
+        console.log('Failed to fetch JSON');
+        }
+    });
 
 }
+
 function langList(eId, langs, lang=false) {
     lang = lang || localStorage.getItem("lang");
     for (let i=0; i<langs.length; i++) {

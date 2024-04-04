@@ -15,20 +15,20 @@
         <h1 id="heading">Articles by @raccess21</h1>
         <div id="articleList"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
     <script>
 
         const selector = document.getElementById("languageSelector");
         let lang = localStorage.getItem('lang') || "en";
-        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || " ☀️ ";
-        langList("languageSelector", ["en"], lang);
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️/🌕";
+        langList("languageSelector", ["en", "hi"], lang);
         
         const stylesheet = document.getElementById("theme");
         stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
 
         const tBClick = function() {
             stylesheet.href = stylesheet.href.includes("Dark") ? "styles/styleLight.css" : "styles/styleDark.css";
-            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? " 🌕 ": " ☀️ ";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕": "☀️☀️";
             localStorage.setItem('themeName', stylesheet.getAttribute('href'));
             localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
         };
@@ -43,11 +43,17 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            loadJson(`./articles/articlesen.json`, 'articleList', createArticleLinks, sortByArticleNameRev);
+            articlesLang = fetchJson(`./articles/articles${lang}.json`);
         });
 
-        loadJson(`./articles/articlesen.json`, 'articleList', createArticleLinks, sortByArticleNameRev);
-
+        articles = fetchJson(`./articles/articles.json`);
+        articlesLang = fetchJson(`./articles/articles${lang}.json`);
+        console.log(articles);
+        console.log(articlesLang);
+        // articles = Object.keys(articles).forEach(article => {
+        //     articles[article] = {...articles[article], ...articlesLang[article]}
+        // });
+        // createArticleLinks('articleList', articles, sortByArticleName);
     </script>
 </body>
 </html>
