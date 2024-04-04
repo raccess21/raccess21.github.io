@@ -87,9 +87,13 @@ function createPara(eId, jsonObj) {
 };
 
 function changeSize(bulla, eId) {
-    const article = document.getElementById(eId);
-    const currentFontSize = parseInt(article.style.fontSize) || 16;
-    const newFontSize = (bulla ? currentFontSize + 1 : currentFontSize - 1) + "px";
+bulla = parseInt(bulla);   
+const article = document.getElementById(eId);
+    const currentFontSize = parseInt(article.style.fontSize) || 18;
+    let newFontSize;
+if (bulla == -1) {newFontSize = currentFontSize - 1 + "px";}
+else if (bulla == 0) {newFontSize = "18px";}
+else {newFontSize = currentFontSize + 1 + "px";}
     article.style.fontSize = newFontSize;
     localStorage.setItem('fontSize', newFontSize);
 }
