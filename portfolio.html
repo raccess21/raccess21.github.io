@@ -17,11 +17,10 @@
                 </div>
                 <div class="hidden md:block">
                     <ul class="flex space-x-4">
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Home</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Services</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Portfolio</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-900">About</a></li>
-                        <li><a href="#contactSection" class="text-gray-600 hover:text-gray-900">Contact</a></li>
+                        <li><a href="#heroSection" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-gray-900">Services</a></li>
+                        <li><a href="#portfolio" class="text-gray-600 hover:text-gray-900">Portfolio</a></li>
+                        <li><a href="#about" class="text-gray-600 hover:text-gray-900">About</a></li>
                     </ul>
                 </div>
             </div>
@@ -31,8 +30,8 @@
     <!-- Hero Section -->
     <section id="heroSection" class="py-20">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-4">We Build Strong Connections</h2>
-            <p class="text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis hendrerit arcu non malesuada ultricies.</p>
+            <h2 class="text-4xl font-bold mb-4">We Elevate Your Presence</h2>
+            <p class="text-lg mb-8">Let the valuable content you create, create value for you.</p>
             <a href="#contactSection">
                 <button id="contactBtn" class="bg-white text-blue-500 font-semibold py-2 px-6 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">Contact Us</button>
             </a>
@@ -46,36 +45,62 @@
             i = (i + 1) % images.length;
         }, 3000)
     </script>
+
     <!-- Services Section -->
-    <section class="py-20">
+    <section class="py-20" id="services">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-4">Content Strategy</h3>
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200">
+                    <h3 class="text-xl font-semibold mb-4">Content Modulation Strategy</h3>
                     <p class="text-gray-700">
-                        We help brands create compelling content that resonates with their audience.
-                        We work with you to understand your brand, industry, and target audience,
-                        and then develop a content strategy that aligns with your goals.
+                        Crafting stories that captivate and convert. Your brand's narrative, expertly tailored for impact.
                     </p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="bg-gray-200 rounded-lg shadow-md p-6 hover:bg-gray-300">
                     <h3 class="text-xl font-semibold mb-4">Social Media Management</h3>
-                    <p class="text-gray-700">
-                        We help brands manage their social media presence and increase engagement.
-                        We create and schedule content, respond to comments and messages,
-                        and track engagement metrics to help you measure the impact of your social media strategy.
+                    <p class="text-gray-700">Igniting conversations and fueling growth. Your brand, thriving in the digital spotlight.
                     </p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-xl font-semibold mb-4">Media Relations</h3>
+                <div class="bg-gray-300 rounded-lg shadow-md p-6 hover:bg-gray-400">
+                    <h3 class="text-xl font-semibold mb-4">Campaign Management</h3>
                     <p class="text-gray-700">
-                        We help brands secure media coverage through thoughtful and strategic outreach.
-                        We work with journalists to understand their beat and target audience,
-                        and then develop a pitch and story idea that aligns with their goals.
+                        From concept to conquest. Strategic campaigns that captivate, resonate, and drive results.
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section class="py-20" id="portfolio">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Success Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                
+                <a href="https://twitter.com/CivilLearning1">
+                    <div class="bg-blue-500 hover:bg-blue-400 rounded-lg shadow-md p-6 mx-auto text-white">
+                        <h3 class="text-xl font-semibold mb-4">Twitter</h3>
+                        <p class="text-white">
+                        Twitter ke metric bhej</p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="bg-pink-500 hover:bg-pink-400 rounded-lg shadow-md p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-4">Youtube</h3>
+                        <p class="text-white">
+                        Youtube ke metric aur link bhej</p>
+                    </div>
+                </a>
+                <a href ="">
+                    <div class="bg-green-500 hover:bg-green-400 rounded-lg shadow-md p-6 text-white">
+                        <h3 class="text-xl font-semibold mb-4">Medium</h3>
+                        <p class="text-white">
+                            medium ke metric aur link bhej
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -95,7 +120,7 @@
                         <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M41,4h-32c-2.76,0 -5,2.24 -5,5v32c0,2.76 2.24,5 5,5h32c2.76,0 5,-2.24 5,-5v-32c0,-2.76 -2.24,-5 -5,-5zM17,20v19h-6v-19zM11,14.47c0,-1.4 1.2,-2.47 3,-2.47c1.8,0 2.93,1.07 3,2.47c0,1.4 -1.12,2.53 -3,2.53c-1.8,0 -3,-1.13 -3,-2.53zM39,39h-6c0,0 0,-9.26 0,-10c0,-2 -1,-4 -3.5,-4.04h-0.08c-2.42,0 -3.42,2.06 -3.42,4.04c0,0.91 0,10 0,10h-6v-19h6v2.56c0,0 1.93,-2.56 5.81,-2.56c3.97,0 7.19,2.73 7.19,8.26z"></path></g></g>
                     </svg>
                 </a>
-                <a href="tel:+1234567890" class="text-blue-400 hover:text-blue-300">
+                <a href="tel:+918826779790" class="text-blue-400 hover:text-blue-300">
                     <svg  version="1.1" viewBox="0 0 25 21" width="30" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/>
                         <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#ffffff" id="Icons-Communication" transform="translate(-124.000000, -125.000000)"><g id="ring-volume" transform="translate(124.000000, 125.500000)"><path d="M23.7,14.7 C20.7,11.8 16.5,10 12,10 C7.5,10 3.3,11.8 0.3,14.7 C0.1,14.9 0,15.1 0,15.4 C0,15.7 0.1,15.9 0.3,16.1 L2.8,18.6 C3,18.8 3.2,18.9 3.5,18.9 C3.8,18.9 4,18.8 4.2,18.6 C5,17.9 5.9,17.2 6.9,16.7 C7.2,16.5 7.5,16.2 7.5,15.8 L7.5,12.7 C8.9,12.2 10.5,12 12.1,12 C13.7,12 15.2,12.3 16.7,12.7 L16.7,15.8 C16.7,16.2 16.9,16.5 17.3,16.7 C18.3,17.2 19.2,17.8 20,18.6 C20.2,18.8 20.4,18.9 20.7,18.9 C21,18.9 21.2,18.8 21.4,18.6 L23.9,16.1 C24.1,15.9 24.2,15.7 24.2,15.4 C24,15.1 23.9,14.9 23.7,14.7 L23.7,14.7 Z M21.2,4.3 L19.8,2.9 L16.2,6.5 L17.6,7.9 C17.6,7.8 21,4.3 21.2,4.3 L21.2,4.3 Z M13,0 L11,0 L11,5 L13,5 L13,0 L13,0 Z M6.4,7.8 L7.8,6.4 L4.3,2.8 L2.8,4.3 C3,4.3 6.4,7.8 6.4,7.8 L6.4,7.8 Z" id="Shape"/></g></g></g>
                     </svg>

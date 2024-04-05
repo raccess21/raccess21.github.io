@@ -3,18 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobbies</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        #container {
+            height: 70vh;
+            width: 70vw;
+            display: flex;
+            justify-content: center;
+            background-image: url("public.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: fadein 2s;
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #content {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<body class="bg-gray-200">
-    <div class="container mx-auto py-8">
-        <div class="hobbies flex justify-center">
-            <div class="image-container flex space-x-4 overflow-hidden">
-            </div>
-            <div class="description bg-gray-800 text-white py-2 px-4 rounded-md absolute bottom-4 left-1/2 transform -translate-x-1/2"></div>
+<body>  
+    <div id="container">
+        <div id="content">
+            <h1 id="heading">Images</h1>
+            <p>Bahut Images</p>
         </div>
     </div>
-
-    <script src="image_scroll.js"></script>
 </body>
 </html>
+
