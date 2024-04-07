@@ -21,7 +21,7 @@
     </div>
 
     <div id="article">
-        <h1 id="heading"></h1>
+        <h1 id="articleHeading"></h1>
         <div id="content"></div>
         <div id="articleList"></div>
         <a href="index.html" class="para">Article List</a>
@@ -77,7 +77,7 @@
             loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         });
 
-        document.getElementById("heading").textContent = articleName;
+        document.getElementById("articleHeading").textContent = articleName;
         loadJson(`./articles/${articleName}/${lang}.json`, "content", createPara);
         localStorage.setItem('articleName', articleName);
     </script>

@@ -3,8 +3,14 @@ body {
     font-family: 'Chirp', 'Times New Roman', Times, serif;
 }
 
+#articleHeading {
+    margin: 1.5em 0.5em 0.3em;
+}
+
 #content {
     text-align: left;
+    margin: 0.8em 1em 1em;
+    padding-bottom: 1em;
 }
 
 #articleList {
