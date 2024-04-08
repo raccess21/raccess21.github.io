@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <meta name="description" content="This is a structure page for articles that are loaded using JavaScript. The articles are on various topics such as politics, science, religion, psychology, and philosophy. They are carefully vetted and edited to ensure accuracy and fairness.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
      crossorigin="anonymous"></script>
-    <title>Article</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
@@ -47,7 +48,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const articleName = urlParams.get('article') ? 
                         urlParams.get('article') : window.location.href = "index.html";
-                        
+        document.title = articleName;               
         const selector = document.getElementById("languageSelector");
         let lang = urlParams.get("lang") || localStorage.getItem("lang") || "en"; 
         let langs = localStorage.getItem("articleLangs").split(",") || [];

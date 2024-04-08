@@ -72,8 +72,10 @@ function loadJson(path, eId=false, callback=false) {
     xobj.open('GET', path, true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
+            jsonObj = JSON.parse(xobj.responseText);
+
             if (callback) {
-                callback(eId, JSON.parse(xobj.responseText));
+                callback(eId, jsonObj);
             }
         }
     };
@@ -81,6 +83,7 @@ function loadJson(path, eId=false, callback=false) {
 }
 
 function createPara(eId, jsonObj) {
+    document.querySelector('meta[name="description"]').setAttribute("content", jsonObj[0]);
     let text = "";
     for (let para of jsonObj) {
         text += `<p class='para'>${para}</p>`;
