@@ -37,7 +37,7 @@ def updateLangList():
         articleName = article.split("/")[0]         #get articleName
         print(articleName)
 
-        if articleName not in articlesData.keys():
+        if articleName not in articlesData:
             articlesData[articleName] = {
                 "tags" : {},
                 "langs": [],
@@ -48,7 +48,7 @@ def updateLangList():
         articlesData[articleName]["langs"] = [lane(lang, articleName) for lang in glob(f"{article}/*")]
         
         for lang in langs:
-            if articleName not in articlesLangData[lang].keys():
+            if articleName not in articlesLangData[lang]:
                 articlesLangData[lang][articleName] = {
                     "dname": articleName,
                     "desc" : defaultDesc[lang]
