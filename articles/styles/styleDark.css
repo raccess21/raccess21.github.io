@@ -8,9 +8,7 @@ a {
     color: rgb(246, 188, 188); /* Default color for not clicked */
     text-decoration: none; /* Remove underline */
 }
- .aInArticle {
-    font-weight: bold;
- }
+
 /* Hover */
 a:hover {
     color: #efc806b3; /* Color when hovering */
