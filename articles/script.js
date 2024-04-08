@@ -48,10 +48,12 @@ async function fetchJson(paths, eId=false, callback=false, sortType = sortByArti
 }
 function langList(eId, langs, lang=false) {
     lang = lang || localStorage.getItem("lang");
-    for (let i=0; i<langs.length; i++) {
-        if (langs[i] == lang) {
-            [langs[0], langs[i]] = [langs[i], langs[0]]
-            break;
+    if (langs[0] != lang)  {
+        for (let i=1; i<langs.length; i++) {
+            if (langs[i] == lang) {
+                [langs[0], langs[i]] = [langs[i], langs[0]]
+                break;
+            }
         }
     }
     
