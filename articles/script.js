@@ -13,7 +13,7 @@ function createArticleLinks(eId, jsonObj, sortType = sortByArticleName) {
         dname = jsonObj[article]["dname"] || "Description not available";
         text += `<a class="aLink" href="javascript:openArticle('${article}&` + 
                 jsonObj[article]["langs"].join(',') + `')">` +
-                    `<img alt="article thumbnail" src="assets/images/articleName_thumb.jpg">` +
+                    `<img alt="article thumbnail" src="assets/images/${jsonObj[article]["thumb"]}">` +
                     `<div class="desc">` + 
                         `<h4>${dname}</h4>`+
                         `<span>${desc}</span></div></a>`;
