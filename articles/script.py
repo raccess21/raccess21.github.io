@@ -7,7 +7,10 @@ import xml.sax.saxutils as ST
 
 # takes */*/lang.json and articleName, returns lang
 def lane(lang, articleName):
-    return lang.split(articleName)[1].split('.')[0][1:]
+    print(lang)
+    # return articleName
+    # print(lang.split(articleName)[1].split('.')[0][1:])
+    # return lang.split(articleName)[1].split('.')[0][1:]
 
 # reads all articles folder, scans for all lang.json files
 # updates lang list in articles.json file
@@ -18,7 +21,7 @@ def updateLangList():
     ####EXISTING DATA LOADER
     langs = ["en", "hi"]
     
-    with open(f"articles.json", "r") as fi:
+    with open(f"articles/articles.json", "r") as fi:
         articlesData = json.loads(fi.read())
 
     with open(f"sitemap.xml", "r") as fi:
@@ -26,7 +29,7 @@ def updateLangList():
     
     articlesLangData = {}
     for lang in langs:
-        with open(f"articles{lang}.json", "r") as fi:
+        with open(f"articles/articles{lang}.json", "r") as fi:
             articlesLangData[lang] = json.loads(fi.read())
     
     #######################################
@@ -38,8 +41,8 @@ def updateLangList():
     }
 
     
-    for num, article in  enumerate(glob("*/")):
-        articleName = article.split("/")[0]         #get articleName
+    for num, article in  enumerate(glob("articles/*/")):
+        articleName = article.split("/")[1]         #get articleName
         print(str(num + 1) + '. ' + articleName)
 
         if articleName not in articlesData:
@@ -50,8 +53,12 @@ def updateLangList():
             }
         #scan for all files in article name folder, langs list is name of all the foders, 
         # lane(lang.json) retrieves lang from file path name
-        articlesData[articleName]["langs"] = [lane(lang, articleName) for lang in glob(f"{article}/*")]
-        
+        articlesData[articleName]["langs"] = [
+                                        lang.split(article)[1].split('.')[0]
+                                        for lang in glob(f"{article}/*")
+                                        ]
+        # for lang in glob(f"{article}/*"):
+        #     print(lang.split(article)[1].split('.')[0])
         for lang in articlesData[articleName]["langs"]:
             aName  = articleName.replace(" ", "%20")
             if  f'https://raccess21.github.io/articles/article.html?article={aName}&amp;lang={lang}' not in xml:
@@ -68,20 +75,20 @@ def updateLangList():
     xml = xmlParser.parseString(xml).toprettyxml()
 
     try:
-        with open(f"articles2.json", "w") as fo:
+        with open(f"articles/articles.json", "w") as fo:
             fo.write(json.dumps(articlesData, indent=2))
     except:
         print("Error writing file!")
 
     try:
-        with open(f"sitemap2.xml", "w") as fo:
+        with open(f"sitemap.xml", "w") as fo:
             fo.write(xml)
     except:
         print("Error writing file!")
 
     for lang in langs:
         try:
-            with open(f"articles{lang}2.json", "w", encoding="utf-8") as fo:
+            with open(f"articles/articles{lang}.json", "w", encoding="utf-8") as fo:
                 fo.write(json.dumps(articlesLangData[lang], indent=2, ensure_ascii=False))
         except:
             print("Error writing file!")
@@ -105,6 +112,6 @@ def xmlupdate():
 
 def main():
     updateLangList()
-
+    
 if __name__ == "__main__":
     main()
