@@ -60,7 +60,7 @@
             loadJson(`./articles/articles.json`, "languageSelector", langSelector);
         }
 
-        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "16px";
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "18px";
         
         let stylesheet = document.getElementById("theme");
         stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
