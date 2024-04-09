@@ -45,6 +45,7 @@ def updateLangList():
         if articleName not in articlesData:
             articlesData[articleName] = {
                 "tags" : {},
+                "thumb": "articleName_thumb.jpg",
                 "langs": [],
                 "time" : datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f") 
             }
