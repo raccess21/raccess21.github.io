@@ -1,4 +1,3 @@
-User-Agent: *
 Allow: /ads/preferences/
 Allow: /dtt/k
 Allow: /pagead/show_ads.js
