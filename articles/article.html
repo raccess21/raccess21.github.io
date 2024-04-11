@@ -51,7 +51,7 @@
         document.title = articleName;               
         const selector = document.getElementById("languageSelector");
         let lang = urlParams.get("lang") || localStorage.getItem("lang") || "en"; 
-        let langs = localStorage.getItem("articleLangs").split(",") || [];
+        let langs = localStorage.getItem("articleLangs") ? localStorage.getItem("articleLangs").split(",") : [];
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {
