@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl Sagan</title>
+    <meta name="description" content="Carl Sagan, an American astronomer, cosmologist, and science communicator, was a towering figure in the field of popular science and a passionate advocate for scientific skepticism, rational inquiry, and the exploration of the cosmos. Through his numerous books, television series, and public appearances, Sagan inspired millions of people around the world to marvel at the wonders of the universe and to embrace the spirit of scientific curiosity and discovery. In this essay, we explore the life and legacy of Carl Sagan, his contributions to science and education, and the enduring impact of his work on society and culture.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+</head>
+<body>
+    <div id="options">
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()"></button>
+        <select id="languageSelector" class="roundButton"></select>
+    </div>
+    <div id="textSizeOptions">
+        <button type="button" class="roundButton" onclick="changeSize(1, 'content')">A+</button>
+        <button type="button" class="roundButton" onclick="changeSize(0, 'content')">A</button>
+        <button type="button" class="roundButton" onclick="changeSize(-1, 'content')">A-</button>
+    </div>
+
+    <div id="article">
+        <h1 id="articleHeading">Carl Sagan</h1>
+        <div id="content"><p class="para">Carl Sagan, an American astronomer, cosmologist, and science communicator, was a towering figure in the field of popular science and a passionate advocate for scientific skepticism, rational inquiry, and the exploration of the cosmos. Through his numerous books, television series, and public appearances, Sagan inspired millions of people around the world to marvel at the wonders of the universe and to embrace the spirit of scientific curiosity and discovery. In this essay, we explore the life and legacy of Carl Sagan, his contributions to science and education, and the enduring impact of his work on society and culture.</p><p class="para">Born on November 9, 1934, in Brooklyn, New York, Carl Sagan demonstrated an early interest in science and astronomy, fueled by visits to the library and the Hayden Planetarium. He pursued his passion for astronomy at the University of Chicago, where he earned a Ph.D. in astronomy and astrophysics in 1960. Throughout his career, Sagan made significant contributions to the study of planetary science, including research on the atmospheres of Venus and Mars and the possibility of extraterrestrial life.</p><p class="para">However, it was Sagan's gift for communication and his ability to convey complex scientific concepts in accessible and engaging ways that truly set him apart. His best-selling book, 'Cosmos: A Personal Voyage,' and the accompanying television series introduced millions of viewers to the wonders of the universe, from the origins of life on Earth to the mysteries of the cosmos. Sagan's eloquent prose, coupled with his enthusiasm and passion for science, inspired a generation of scientists, educators, and science enthusiasts.</p><p class="para">Moreover, Sagan was a tireless advocate for scientific literacy and critical thinking, emphasizing the importance of evidence-based reasoning and skepticism in the face of pseudoscience, superstition, and misinformation. He famously coined the phrase 'extraordinary claims require extraordinary evidence' as a guiding principle for evaluating extraordinary claims and assertions. Sagan's commitment to scientific skepticism and rational inquiry continues to resonate today, as society grapples with issues ranging from climate change denial to the spread of conspiracy theories.</p><p class="para">In addition to his scientific contributions, Sagan was also a passionate advocate for space exploration and the search for extraterrestrial intelligence (SETI). He played a key role in the development of NASA's Voyager missions, which sent spacecraft on interstellar journeys to explore the outer planets and beyond. Sagan's message of hope and wonder, encapsulated in his famous 'Pale Blue Dot' speech, continues to inspire awe and humility in our place in the vastness of the cosmos.</p><p class="para">In conclusion, Carl Sagan's legacy looms large in the annals of science and popular culture, as a champion of reason, wonder, and exploration. His passion for science, his commitment to education, and his gift for communication have left an indelible mark on society, inspiring countless individuals to look up at the stars and to ponder the mysteries of the universe. As we continue to explore the cosmos and unravel its secrets, we do so in the spirit of curiosity and inquiry that Carl Sagan so eloquently embodied.</p></div>
+        <div id="articleList"></div>
+        <a href="../index2.html" class="para">Article List</a>
+    </div>
+
+    <div id="ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+        crossorigin="anonymous"></script>
+        <!-- Square Responsive -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9559699967591875"
+            data-ad-slot="9692793583"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <script src="../script2.js"></script>
+    <script>
+        // let langs = [];
+        let [articleName, lang] = window.location.href.split('/').pop().split('.')[0].split('__'); 
+        articleName = articleName.split("_").join(" ");
+        localStorage.setItem('articleName', articleName);
+        
+        let langs = localStorage.getItem(`${articleName}_langs`) ? localStorage.getItem(`${articleName}_langs`).split(",") : [];
+        localStorage.setItem('lang', lang);
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
+        
+        if (langs.length > 0) {
+            langList("languageSelector", langs, lang);
+        } else {
+            loadJson(`../articles/articles.json`, "languageSelector", langSelector);
+        }
+
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "18px";
+        
+        let stylesheet = document.getElementById("theme");
+        stylesheet.href = localStorage.getItem('themeName') || "../styles/styleLight.css";
+        
+        const tBClick = function() {
+            stylesheet.href = stylesheet.href.includes("Dark") ? "../styles/styleLight.css" : "../styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕": "☀️☀️";
+            localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
+        };
+        
+        const selector = document.getElementById('languageSelector');
+        selector.addEventListener("change", function () {
+            lang = selector.value;
+            localStorage.setItem('lang', lang);
+            window.location.href = `${window.location.href.split('__')[0]}__${lang}.html`;
+        });
+
+    </script>
+</body>
+</html>

@@ -22,7 +22,9 @@ function createArticleLinks(eId, jsonObj, sortType = sortByArticleName) {
 }
 
 function langSelector(eId, jsonObj) {
+    console.log("langSelector");
     const langs = jsonObj[localStorage.getItem("articleName")]["langs"];
+    localStorage.setItem(`${localStorage.getItem("articleName")}_langs`, langs);
     langList(eId, langs);
 }
 
@@ -47,6 +49,7 @@ async function fetchJson(paths, eId=false, callback=false, sortType = sortByArti
 
 }
 function langList(eId, langs, lang=false) {
+    console.log('langList');
     lang = lang || localStorage.getItem("lang");
     if (langs[0] != lang)  {
         for (let i=1; i<langs.length; i++) {
@@ -68,6 +71,7 @@ function langList(eId, langs, lang=false) {
 
 
 function loadJson(path, eId=false, callback=false) {
+    console.log('loadJson');
     let xobj = new XMLHttpRequest();
     xobj.open('GET', path, true);
     xobj.onreadystatechange = function () {

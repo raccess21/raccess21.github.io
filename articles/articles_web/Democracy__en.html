@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Democracy</title>
+    <meta name="description" content="Democracy: The Pillar of Modern Governance">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+</head>
+<body>
+    <div id="options">
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()"></button>
+        <select id="languageSelector" class="roundButton"></select>
+    </div>
+    <div id="textSizeOptions">
+        <button type="button" class="roundButton" onclick="changeSize(1, 'content')">A+</button>
+        <button type="button" class="roundButton" onclick="changeSize(0, 'content')">A</button>
+        <button type="button" class="roundButton" onclick="changeSize(-1, 'content')">A-</button>
+    </div>
+
+    <div id="article">
+        <h1 id="articleHeading">Democracy</h1>
+        <div id="content"><p class="para">Democracy: The Pillar of Modern Governance</p><p class="para">Democracy stands as one of the most revered pillars of modern governance, embodying the principles of freedom, equality, and collective decision-making. Rooted in the ancient civilizations of Greece, democracy has evolved over centuries, shaping the course of history and defining the aspirations of nations worldwide. In this essay, we delve into the essence of democracy, its historical underpinnings, contemporary challenges, and enduring significance in today's world.</p><p class="para">At its core, democracy embodies the idea that power should reside with the people, who exercise it through elected representatives or directly. The concept traces its origins to the Athenian democracy of ancient Greece, where citizens actively participated in the governance of their city-state. However, the modern iteration of democracy took shape in the Enlightenment era, with philosophers like John Locke and Jean-Jacques Rousseau advocating for the sovereignty of the people and the social contract between rulers and the ruled.</p><p class="para">The establishment of democratic institutions, such as parliaments, constitutions, and free elections, became foundational elements of modern democracies. These institutions serve to safeguard individual rights, ensure the rule of law, and foster political participation among citizens. Moreover, democracy promotes pluralism and tolerance, allowing diverse voices to be heard and societal grievances to be addressed through peaceful means.</p><p class="para">Yet, democracy is not without its challenges. In the contemporary landscape, democratic systems face threats ranging from authoritarianism to populism and political polarization. The rise of populist leaders exploiting economic anxieties and identity politics has tested the resilience of democratic norms and institutions. Moreover, the influence of money in politics, the spread of disinformation through social media, and the erosion of trust in traditional media pose formidable obstacles to the functioning of democratic societies.</p><p class="para">Nevertheless, democracy remains indispensable for fostering social progress, human rights, and sustainable development. The democratic principles of accountability and transparency ensure that governments are held accountable to their citizens, thereby curbing corruption and promoting good governance. Furthermore, democracy provides a framework for peaceful conflict resolution, allowing for the peaceful transfer of power and the resolution of disputes through dialogue and negotiation.</p><p class="para">In the realm of international relations, democracy has emerged as a beacon of hope for oppressed peoples seeking self-determination and human rights. The spread of democracy through waves of democratization in the 20th and 21st centuries underscores its universal appeal and transformative potential. From the fall of the Berlin Wall to the Arab Spring, democratic movements have reshaped the geopolitical landscape, challenging autocratic regimes and advancing the cause of freedom and democracy worldwide.</p><p class="para">Moreover, democracy serves as a bulwark against authoritarian tendencies and extremist ideologies. By promoting political pluralism and the peaceful resolution of conflicts, democracy offers a viable alternative to authoritarianism and radicalism. Through democratic participation and civic engagement, individuals can contribute to shaping their societies and building a more inclusive and equitable world.</p><p class="para">In conclusion, democracy stands as a cornerstone of modern governance, embodying the aspirations of individuals for freedom, equality, and justice. While facing numerous challenges in the contemporary era, democracy remains resilient and adaptable, capable of addressing the complex issues of our time. By upholding democratic values and institutions, we can safeguard the principles of liberty, dignity, and human rights for generations to come. As Winston Churchill famously remarked, 'Democracy is the worst form of government, except for all those other forms that have been tried from time to time.' Indeed, democracy may be imperfect, but it remains humanity's best hope for a better future.</p></div>
+        <div id="articleList"></div>
+        <a href="../index2.html" class="para">Article List</a>
+    </div>
+
+    <div id="ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+        crossorigin="anonymous"></script>
+        <!-- Square Responsive -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9559699967591875"
+            data-ad-slot="9692793583"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <script src="../script2.js"></script>
+    <script>
+        // let langs = [];
+        let [articleName, lang] = window.location.href.split('/').pop().split('.')[0].split('__'); 
+        articleName = articleName.split("_").join(" ");
+        localStorage.setItem('articleName', articleName);
+        
+        let langs = localStorage.getItem(`${articleName}_langs`) ? localStorage.getItem(`${articleName}_langs`).split(",") : [];
+        localStorage.setItem('lang', lang);
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
+        
+        if (langs.length > 0) {
+            langList("languageSelector", langs, lang);
+        } else {
+            loadJson(`../articles/articles.json`, "languageSelector", langSelector);
+        }
+
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "18px";
+        
+        let stylesheet = document.getElementById("theme");
+        stylesheet.href = localStorage.getItem('themeName') || "../styles/styleLight.css";
+        
+        const tBClick = function() {
+            stylesheet.href = stylesheet.href.includes("Dark") ? "../styles/styleLight.css" : "../styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕": "☀️☀️";
+            localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
+        };
+        
+        const selector = document.getElementById('languageSelector');
+        selector.addEventListener("change", function () {
+            lang = selector.value;
+            localStorage.setItem('lang', lang);
+            window.location.href = `${window.location.href.split('__')[0]}__${lang}.html`;
+        });
+
+    </script>
+</body>
+</html>

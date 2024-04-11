@@ -110,8 +110,32 @@ def xmlupdate():
         fo.write(xml)
         # xml = xmlParser.parseString(xml).toprettyxml()
 
+def createHtml():
+    'http://127.0.0.1:5500/articles_web/Advertisement_and_Idiocracy__en.html'
+    with open('assets/layouts/article.html', 'r') as fi:
+        html = fi.read()
+
+    with open('articles/articles.json', 'r') as fi:
+        articlesData = json.loads(fi.read())
+
+    for article in articlesData.keys():
+        for lang in articlesData[article]["langs"]:
+            nHtml = html
+            nHtml = nHtml.replace('$title', article)
+            with open(f'articles/{article}/{lang}.json') as fi:
+                paras = json.loads(fi.read())
+            nHtml = nHtml.replace('$description', paras[0])
+            content = '<p class="para">' + '</p><p class="para">'.join(paras) + '</p>'
+            nHtml = nHtml.replace('$content', content)
+            nHtml = nHtml.replace('$articleList', '')
+        
+            # writing html
+            with open(f'articles_web/{article.replace(" ", "_")}__{lang}.html', 'w') as fo:
+                fo.write(nHtml)
+
 def main():
-    updateLangList()
+    # updateLangList()
+    createHtml()
     
 if __name__ == "__main__":
     main()
