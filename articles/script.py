@@ -138,10 +138,16 @@ def createHtml():
 def checkGit():
     ...
 
-
+def getLinks():
+    with open('sitemap.xml', 'r') as fi:
+        links = [link.split('</loc>')[0] for link in fi.read().split('<loc>')[1:]]
+    with open('links.txt', 'w') as fo:
+        fo.write('\n'.join(links))
+    
 def main():
     # updateLangList()
-    createHtml()
+    # createHtml()
+    getLinks()
     
 if __name__ == "__main__":
     main()
