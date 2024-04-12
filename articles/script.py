@@ -4,6 +4,7 @@ from datetime import datetime
 # import random
 import xml.dom.minidom as xmlParser
 import xml.sax.saxutils as ST
+import os
 # import git
 
 # takes */*/lang.json and articleName, returns lang
@@ -63,8 +64,8 @@ def updateLangList():
         #     print(lang.split(article)[1].split('.')[0])
         for lang in articlesData[articleName]["langs"]:
             aName  = articleName.replace(" ", "_")
-            if  f'articles_web/{aName}__{lang}' not in xml:
-                xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{aName}__{lang}.html</loc><lastmod>{articlesData[articleName]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
+            if  f'articles_web/{aName}?{lang}' not in xml:
+                xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{aName}?{lang}.html</loc><lastmod>{articlesData[articleName]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
 
         for lang in langs:
             if articleName not in articlesLangData[lang]:
@@ -113,7 +114,7 @@ def xmlupdate():
         # xml = xmlParser.parseString(xml).toprettyxml()
 
 def createHtml():
-    'http://127.0.0.1:5500/articles_web/Advertisement_and_Idiocracy__en.html'
+    'http://127.0.0.1:5500/articles_web/Advertisement_and_Idiocracy?en.html'
     with open('assets/layouts/article.html', 'r') as fi:
         html = fi.read()
 
@@ -132,7 +133,7 @@ def createHtml():
             nHtml = nHtml.replace('$articleList', '')
         
             # writing html
-            with open(f'articles_web/{article.replace(" ", "_")}__{lang}.html', 'w') as fo:
+            with open(f'articles_web/{article.replace(" ", "_")}?{lang}.html', 'w') as fo:
                 fo.write(nHtml)
 
 def checkGit():
@@ -144,10 +145,17 @@ def getLinks():
     with open('links.txt', 'w') as fo:
         fo.write('\n'.join(links))
     
+def renaam():
+    for html in glob('articles_web/*'):
+        if '__' in html:
+            print(html)
+            os.rename(html, html.replace('__', '?'))
+
 def main():
-    updateLangList()
-    createHtml()
-    getLinks()
+    # updateLangList()
+    # createHtml()
+    # getLinks()
+    renaam()
     
 if __name__ == "__main__":
     main()

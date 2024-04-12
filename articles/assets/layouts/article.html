@@ -48,7 +48,7 @@
     <script src="../script.js"></script>
     <script>
         // let langs = [];
-        let [articleName, lang] = window.location.href.split('/').pop().split('.')[0].split('__'); 
+        let [articleName, lang] = window.location.href.split('/').pop().split('.')[0].split('?'); 
         articleName = articleName.split("_").join(" ");
         localStorage.setItem('articleName', articleName);
         
@@ -79,7 +79,7 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            window.location.href = `${window.location.href.split('__')[0]}__${lang}.html`;
+            window.location.href = `${window.location.href.split('?')[0]}?${lang}.html`;
         });
 
     </script>
