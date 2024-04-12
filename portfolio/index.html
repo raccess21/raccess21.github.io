@@ -35,7 +35,7 @@
             <div style="display: flex; flex-direction: row;">
 
                 <!-- Text Content -->
-                <div id="text" style="display: flex; flex-direction: column; width: 50%;">
+                <div id="text" style="display: flex; flex-direction: column; width: 60%;">
                     <h2 class="text-4xl font-bold mb-4">Sara ka sara Social Impact in one place.</h2>
                     <p class="text-lg mb-8">Let the valuable content you create, create value for you.</p>
                 
@@ -55,15 +55,28 @@
     <script>
         images = ['creator.png']
         // , 'platforms.jpeg', 'organic.png'];
+
+        const textBox = document.getElementById('text');
+        const imgBox  = document.getElementById('images');
         let i = 0;
         setInterval(function() {
             document.getElementById('heroSection').style =`background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.7)), url(${images[i]}) center/cover no-repeat;" class="py-20"`;
-            document.getElementById('images').innerHTML = `<img id="image" src="${images[i]}" style=" min-height:100%"></img>`
-            let height = document.getElementById('text').offsetHeight; document.getElementById('image').style.height = height + "px";
+            
+            if (window.innerWidth > 1.1 * window.innerHeight) {
+                textBox.style.width  = '60%';
+                imgBox.classList.remove('hidden');
+                imgBox.innerHTML = `<img id="image" src="${images[i]}" style=" min-height:100%"></img>`
+                let height = textBox.offsetHeight; 
+                document.getElementById('image').style.height = height + "px";
+            }
+            else {
+                textBox.style.width = '100%';
+                imgBox.classList.add('hidden');
+            }
             i = (i + 1) % images.length;
         }, 3000)
     </script>
-    
+
     <!-- About Section -->    
     <section class="py-20" id="about">
         <div class="max-w-7xl mx-auto px-4">
