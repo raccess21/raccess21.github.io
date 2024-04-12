@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaraImpact</title>
     <!-- Tailwind CSS CDN -->
-    <link rel="stylesheet" href="portflio.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="portflio.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
     #image {
@@ -16,223 +19,236 @@
     }
     </style>
 </head>
-<body class="bg-gray-100">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold text-gray-800">SaraImpact</h1>
-                </div>
-                <div class="hidden md:block">
-                    <ul class="flex space-x-4">
-                        <li><a href="#heroSection" class="text-gray-600 hover:text-gray-900">Home</a></li>
-                        <li><a href="#services" class="text-gray-600 hover:text-gray-900">Services</a></li>
-                        <li><a href="#portfolio" class="text-gray-600 hover:text-gray-900">Portfolio</a></li>
-                        <li><a href="#about" class="text-gray-600 hover:text-gray-900">About</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body class="font-sans bg-gray-100">
+        <div class="min-h-screen flex justify-center items-center">
+        <!-- <div class="min-h-screen  bg-gray-200  flex flex-wrap items-center  justify-center  "> -->
 
-  <!-- Hero Section -->
-<section id="heroSection" class="py-20">
-    <div class="max-w-7xl mx-auto pd-1em">
-        <div style="display: flex; flex-direction: row;">
-
-            <!-- Text Content -->
-            <div id="text" style="display: flex; flex-direction: column; width: 50%;">
-                <h2 class="text-4xl font-bold mb-4">Sara ka sara Social Impact in one place.</h2>
-                <p class="text-lg mb-8">Let the valuable content you create, create value for you.</p>
-            
-                <!-- Contact Button -->
-                <a href="#contactSection">
-                    <button id="contactBtn" class="bg-white text-blue-500 font-semibold py-2 px-6 rounded-full hover:bg-blue-600 hover:text-white transition duration-300">Contact Us</button>
-                </a>
-            </div>
-
-            <!-- Image -->
-            <div style="width: 40%; min-height:100%">
-            <img id="image" src="https://cdn.esahubble.org/archives/images/screen/heic2017a.jpg" style=" min-height:100%"></img></div>
-        </div>
-    </div>
-</section>
-<script>
-    images = ['https://cdn.esahubble.org/archives/images/screen/heic2017a.jpg'];
-    let i = 0;
-    setInterval(function() {
-        var imageUrl = `url(${images[i]})`;
-        document.getElementById('heroSection').style =`background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.7)), url(${images[i]}) center/cover no-repeat;" class="py-20"`;
-            
-     let height = document.getElementById('text').offsetHeight; document.getElementById('image').style.height = height + "px";
-        i = (i + 1) % images.length;
-    }, 3000)
-</script>
-
-    <!-- About Section -->    
-    <section class="py-20" id="about">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8">About Us</h2>
-            <p>We elevate your Presence. We aid you in being better and looking best in an overly saturated Digital World.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200">
-                    <h3 class="text-xl font-semibold mb-4">Content Modulation Strategy</h3>
-                    <p class="text-gray-700">
-                        Insights that help you craft stories that captivates your narrative and resonates with your possible audience, expertly tailored for impact.
+            <div class="">
+                <div class="text-center font-semibold">
+                    <h1 class="text-5xl">
+                        <span class="text-blue-700 tracking-wide">Flexible </span>
+                        <span>Plans</span>
+                    </h1>
+                    <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
+                        Choose a plan that works best for you and<br/> your team.
                     </p>
                 </div>
-                <div class="bg-gray-200 rounded-lg shadow-md p-6 hover:bg-gray-300">
-                    <h3 class="text-xl font-semibold mb-4">Social Media Management</h3>
-                    <p class="text-gray-700">
-                        Igniting conversations and fueling growth. Your digital presence managed and mitigated on platforms that matter to your needs.
-                    </p>
-                </div>
-                <div class="bg-gray-300 rounded-lg shadow-md p-6 hover:bg-gray-400">
-                    <h3 class="text-xl font-semibold mb-4">Insights and Trends</h3>
-                    <p class="text-gray-700">
-                        From concept to conquest. gain insights from your numbers, upcoming and ongoing trends and evolve as the landscape changes.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="py-20" id="services">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-
-                <div class="bg-gray-100 rounded-lg shadow-md p-6 hover:bg-gray-200">
-                    <h3 class="text-xl font-semibold mb-4">For Individuals</h3>
-                    <p class="text-gray-700">
-                        Looking to boost your social profiles for a more reputable foothold in a increasingly digital world. 
-                        <br>
-                         💰 : Starts @ ₹ 1999/month
-                         <br> 
-                         LinkedIn and Twitter basic Package.
-                    </p>
-                </div>
-                <div class="bg-gray-200 rounded-lg shadow-md p-6 hover:bg-gray-300">
-                    <h3 class="text-xl font-semibold mb-4">For Creators</h3>
-                    <p class="text-gray-700">
-                        Looking to increase your reach and engagement to better connect with your audience. 
-                        <br>
-                         💰 : Starts @ ₹ 4999/month
-                         <br> 
-                          Youtube, Twitter blue, Facebook Page and Whatsapp Package.
-                    </p>
-                </div>
-                <div class="bg-gray-300 rounded-lg shadow-md p-6 hover:bg-gray-400">
-                    <h3 class="text-xl font-semibold mb-4">For Business</h3>
-                    <p class="text-gray-700">
-                        Bake the perfect cake and let us handle post all smiles without a break. 
-                        <br>
-                         💰 : Starts @ ₹ 9999/month
-                         <br> 
-                          Twitter Blue with ad management. Add-ons - youtube 
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="py-20" id="portfolio">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8">Success Stories</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" style="justify-content: center;">
-
-                <a target="_blank" href="https://twitter.com/CivilLearning1">
-                    <div class="bg-blue-500 hover:bg-blue-400 rounded-lg p-6 mx-auto text-white transform duration-150 ease-in-out hover:scale-105 shadow-md content-center" style="box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.2);">
-                        <h3 class="text-xl font-semibold mb-4">Twitter</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="margin: auto;">
-                        <g fill="#fffdfd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M34.21875,5.46875c-5.98047,0 -10.84375,4.86328 -10.84375,10.84375c0,0.35938 0.08984,0.71094 0.125,1.0625c-7.39453,-0.70703 -13.93359,-4.26953 -18.375,-9.71875c-0.20703,-0.26172 -0.52734,-0.40234 -0.86328,-0.37891c-0.33203,0.02344 -0.62891,0.21484 -0.79297,0.50391c-0.93359,1.60547 -1.46875,3.45313 -1.46875,5.4375c0,2.40234 0.85938,4.60156 2.1875,6.40625c-0.25781,-0.11328 -0.53906,-0.17578 -0.78125,-0.3125c-0.30859,-0.16406 -0.67969,-0.15625 -0.98047,0.02344c-0.30078,0.17969 -0.48438,0.50391 -0.48828,0.85156v0.125c0,3.68359 1.90625,6.88281 4.71875,8.84375c-0.03125,-0.00391 -0.0625,0.00781 -0.09375,0c-0.34375,-0.05859 -0.69141,0.0625 -0.92187,0.32422c-0.23047,0.26172 -0.30469,0.625 -0.20312,0.95703c1.11719,3.47266 3.96875,6.125 7.5,7.09375c-2.8125,1.67188 -6.07422,2.65625 -9.59375,2.65625c-0.76172,0 -1.49219,-0.03906 -2.21875,-0.125c-0.46875,-0.0625 -0.91797,0.21094 -1.07422,0.65625c-0.16016,0.44531 0.01563,0.94141 0.41797,1.1875c4.51172,2.89453 9.86719,4.59375 15.625,4.59375c9.33203,0 16.65234,-3.89844 21.5625,-9.46875c4.91016,-5.57031 7.46875,-12.80469 7.46875,-19.5625c0,-0.28516 -0.02344,-0.5625 -0.03125,-0.84375c1.83203,-1.40234 3.46875,-3.04687 4.75,-4.96875c0.25391,-0.37109 0.22656,-0.86719 -0.06641,-1.21094c-0.28906,-0.34375 -0.77734,-0.44922 -1.18359,-0.25781c-0.51562,0.23047 -1.11719,0.25391 -1.65625,0.4375c0.71094,-0.94922 1.32031,-1.97266 1.6875,-3.125c0.125,-0.39453 -0.01172,-0.82812 -0.33594,-1.08594c-0.32422,-0.25391 -0.77734,-0.28516 -1.13281,-0.07031c-1.70703,1.01172 -3.59766,1.72266 -5.59375,2.15625c-1.9375,-1.8125 -4.48828,-3.03125 -7.34375,-3.03125zM34.21875,7.46875c2.55078,0 4.85547,1.08984 6.46875,2.8125c0.24219,0.25 0.59766,0.35547 0.9375,0.28125c1.30469,-0.25781 2.54297,-0.63672 3.75,-1.125c-0.69531,0.9375 -1.55469,1.73828 -2.5625,2.34375c-0.45703,0.22266 -0.67187,0.75 -0.50391,1.23047c0.16406,0.47656 0.66406,0.75391 1.16016,0.64453c1,-0.12109 1.89063,-0.52734 2.84375,-0.78125c-0.85547,0.92578 -1.79297,1.76172 -2.8125,2.5c-0.27734,0.20313 -0.42969,0.53125 -0.40625,0.875c0.01563,0.40625 0.03125,0.80859 0.03125,1.21875c0,6.25 -2.39844,13.03516 -6.96875,18.21875c-4.57031,5.18359 -11.28125,8.8125 -20.0625,8.8125c-3.98828,0 -7.75391,-0.88281 -11.15625,-2.4375c4.21875,-0.32422 8.10938,-1.81641 11.25,-4.28125c0.32813,-0.26172 0.45703,-0.69922 0.32422,-1.09766c-0.13281,-0.39844 -0.5,-0.67187 -0.91797,-0.68359c-3.29687,-0.05859 -6.05859,-1.97656 -7.53125,-4.6875c0.05469,0 0.10156,0 0.15625,0c0.98828,0 1.96484,-0.125 2.875,-0.375c0.4375,-0.12891 0.73828,-0.53516 0.72266,-0.99219c-0.01562,-0.45703 -0.33984,-0.84766 -0.78516,-0.94531c-3.55859,-0.71875 -6.22656,-3.61719 -6.84375,-7.21875c1.00781,0.34766 2.03906,0.62109 3.15625,0.65625c0.45703,0.02734 0.87109,-0.25781 1.01172,-0.69141c0.14063,-0.43359 -0.03125,-0.91016 -0.41797,-1.15234c-2.375,-1.58984 -3.9375,-4.29687 -3.9375,-7.375c0,-1.14062 0.29688,-2.1875 0.6875,-3.1875c5,5.48828 12,9.13281 19.90625,9.53125c0.3125,0.01563 0.61719,-0.11328 0.82031,-0.35156c0.20313,-0.24219 0.28125,-0.5625 0.21094,-0.86719c-0.15234,-0.64844 -0.25,-1.33594 -0.25,-2.03125c0,-4.89844 3.94531,-8.84375 8.84375,-8.84375z"></path></g></g>
-                        </svg>
-                        <p class="text-white font-medium text-lg">                        
-                            👁 - 15.6 M
-                            </p>
-                            <p class="text-white font-medium text-lg">         
-                            👻 - 15.1 K</span>
+                <div class="pt-24" >
+                    <!-- Basic Card -->
+                    <div class="w-96 p-8 bg-white text-center rounded-3xl pr-16 shadow-xl">
+                        <h1 class="text-black font-semibold text-2xl">Basic</h1>
+                        <p class="pt-2 tracking-wide">
+                            <span class="text-gray-400 align-top">$ </span>
+                            <span class="text-3xl font-semibold">10</span>
+                            <span class="text-gray-400 font-medium">/ user</span>
                         </p>
+                        <hr class="mt-4 border-1">
+                        <div class="pt-8">
+                            <p class="font-semibold text-gray-400 text-left">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    Get started with <span class="text-black">messaging</span>
+                                </span>
+                            </p>
+                            <p class="font-semibold text-gray-400 text-left pt-5">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    Flexible <span class="text-black">team meetings</span>
+                                </span>
+                            </p>
+                            <p class="font-semibold text-gray-400 text-left pt-5">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    <span class="text-black">5 TB</span> cloud storage
+                                </span>
+                            </p>
+    
+                            <a href="#" class="">
+                                <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                                    <span class="font-medium">
+                                        Choose Plan
+                                    </span>
+                                    <span class="pl-2 material-icons align-middle text-sm">
+                                        east
+                                    </span>
+                                </p>
+                            </a>
+                        </div>
                     </div>
-                </a>
-                <a target="_blank" href="https://www.youtube.com/@IGNOU_BABA">
-                    <div class="bg-pink-500 hover:bg-pink-400 rounded-lg p-6 mx-auto text-white transform duration-200 ease-in-out hover:scale-105 shadow-md" style="box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.2);">
-                        <h3 class="text-xl font-semibold mb-4">Youtube</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="margin: auto;">
-                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M24.40234,9c-6.60156,0 -12.80078,0.5 -16.10156,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.39844,2.39844 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.50391,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.59766,-0.5 16.09766,-1.19922c2.20313,-0.5 4.10156,-2 4.5,-4.30078c0.40234,-2.5 0.90234,-6.09766 1,-10.59766c0,-4.5 -0.5,-8.10156 -1,-10.60156c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.5,-0.5 -9.59766,-1 -16.19531,-1zM24.40234,11c7.19922,0 12.99609,0.59766 15.79688,1.09766c1.5,0.40234 2.69922,1.40234 2.89844,2.70313c0.60156,3.19922 1,6.60156 1,10.10156c-0.09766,4.29688 -0.59766,7.79688 -1,10.29688c-0.29687,1.89844 -2.29687,2.5 -2.89844,2.70313c-3.60156,0.69922 -9.60156,1.19531 -15.60156,1.19531c-6,0 -12.09766,-0.39844 -15.59766,-1.19531c-1.5,-0.40234 -2.69922,-1.40234 -2.89844,-2.70312c-0.80078,-2.80078 -1.10156,-6.5 -1.10156,-10.19922c0,-4.60156 0.40234,-8 0.80078,-10.09766c0.30078,-1.90234 2.39844,-2.50391 2.89844,-2.70312c3.30078,-0.69922 9.40234,-1.19922 15.70313,-1.19922zM19,17v16l14,-8zM21,20.40234l8,4.59766l-8,4.59766z"></path></g></g>
-                        </svg>
-                        <p class="text-white font-medium text-lg">                        
-                            👁 - 12.9 M
-                            </p>
-                            <p class="text-white font-medium text-lg">         
-                            👻 - 15.5 K</span>
+                    <!-- StartUp Card -->
+                    <div class="w-80 p-8 bg-gray-900 text-center rounded-3xl text-white border-4 shadow-xl border-white transform scale-125">
+                        <h1 class="text-white font-semibold text-2xl">Startup</h1>
+                        <p class="pt-2 tracking-wide">
+                            <span class="text-gray-400 align-top">$ </span>
+                            <span class="text-3xl font-semibold">24</span>
+                            <span class="text-gray-400 font-medium">/ user</span>
                         </p>
+                        <hr class="mt-4 border-1 border-gray-600">
+                        <div class="pt-8">
+                            <p class="font-semibold text-gray-400 text-left">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    All features in <span class="text-white">Basic</span>
+                                </span>
+                            </p>
+                            <p class="font-semibold text-gray-400 text-left pt-5">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    Flexible <span class="text-white">call scheduling</span>
+                                </span>
+                            </p>
+                            <p class="font-semibold text-gray-400 text-left pt-5">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    <span class="text-white">15 TB</span> cloud storage
+                                </span>
+                            </p>
+    
+                            <a href="#" class="">
+                                <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                                    <span class="font-medium">
+                                        Choose Plan
+                                    </span>
+                                    <span class="pl-2 material-icons align-middle text-sm">
+                                        east
+                                    </span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <p class="bg-blue-700 font-semibold px-4 py-1 rounded-full uppercase text-xs">Popular</p>
+                        </div>
+                    </div>
+                    <!-- Enterprise Card -->
+                    <div class="w-96 p-8 bg-white text-center rounded-3xl pl-16 shadow-xl">
+                        <h1 class="text-black font-semibold text-2xl">Enterprise</h1>
+                        <p class="pt-2 tracking-wide">
+                            <span class="text-gray-400 align-top">$ </span>
+                            <span class="text-3xl font-semibold">35</span>
+                            <span class="text-gray-400 font-medium">/ user</span>
+                        </p>
+                        <hr class="mt-4 border-1">
+                        <div class="pt-8">
+                            <p class="font-semibold text-gray-400 text-left">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    All features in <span class="text-black">Startup</span>
+                                </span>
+                            </p>
+                            <p class="font-semibold text-gray-400 text-left pt-5">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    Growth <span class="text-black">oriented</span>
+                                </span>
+                            </p>
+                            <p class="font-semibold text-gray-400 text-left pt-5">
+                                <span class="material-icons align-middle">
+                                    done
+                                </span>
+                                <span class="pl-2">
+                                    <span class="text-black">Unlimited</span> cloud storage
+                                </span>
+                            </p>
+    
+                            <a href="#" class="">
+                                <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white">
+                                    <span class="font-medium">
+                                        Choose Plan
+                                    </span>
+                                    <span class="pl-2 material-icons align-middle text-sm">
+                                        east
+                                    </span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="min-h-screen  bg-gray-200  flex flex-wrap items-center  justify-center  ">
+            <div class="text-center font-semibold">
+                <h1 class="text-3xl">
+                    <span class="text-blue-700 tracking-wide">Flexible </span>
+                    <span>Plans</span>
+                </h1>
+                <p class="pt-6 text-xl text-gray-400 font-normal w-full px-8 md:w-full">
+                    Choose a plan that fits best for you and<br/> your needs.
+                </p>
+            </div>
+
+            <div class="flex flex-col sm:flex-col lg:flex-row xl:flex-row md:flex-row justify-center items center  container" style="margin: 2em; padding: 2em;">
+            <div class="py-12 sm:py-12 md:py-6 rounded-2xl lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-white z-30" >
+                <h1 class="text-gray-500 font-semibold text-xl ">Individual</h1>
+                    <div class="text-center py-4 px-7">
+                        <h1 class="text-gray-700 text-4xl font-black">₹1999</h1>
+                        <p class="text-gray-500  mt-2">Monthly</p>
                         
                     </div>
-                </a>
-                <a target="_blank" href="https://linkedin.com/in/sonu-yadav-real/">
-                    <div class="bg-green-500 hover:bg-green-400 rounded-lg p-6 mx-auto text-white transform duration-200 ease-in-out hover:scale-105 shadow-md" style="box-shadow: 0px 0px 20px rgba(59, 130, 246, 0.2);">
-                        <h3 class="text-xl font-semibold mb-4">Linkedin</h3>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="margin: auto;">
-                        <g fill="#fffdfd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M8,3.01172c-1.68739,0 -3.16452,0.47991 -4.24609,1.35352c-1.08157,0.8736 -1.74219,2.16798 -1.74219,3.58203c0,2.74357 2.45699,4.8672 5.70508,4.99414c0.09162,0.02933 0.18702,0.04512 0.2832,0.04688c1.75357,0 3.24619,-0.51401 4.3125,-1.42383c1.06631,-0.90981 1.67578,-2.22152 1.67578,-3.61719c-0.00015,-0.01824 -0.0008,-0.03648 -0.00195,-0.05469c-0.15402,-2.76089 -2.61155,-4.88086 -5.98633,-4.88086zM8,4.98828c2.60907,0 3.89588,1.28106 4.00586,2.98438c-0.0071,0.83228 -0.3293,1.53924 -0.97461,2.08984c-0.65244,0.55669 -1.65982,0.94922 -3.03125,0.94922c-2.60195,0 -4.01172,-1.41255 -4.01172,-3.06445c0,-0.82595 0.33939,-1.50502 1.00781,-2.04492c0.66843,-0.5399 1.6913,-0.91406 3.00391,-0.91406zM3,15c-0.55226,0.00006 -0.99994,0.44774 -1,1v29c0.00006,0.55226 0.44774,0.99994 1,1h10c0.55226,-0.00006 0.99994,-0.44774 1,-1v-9.33594v-19.66406c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM18,15c-0.55226,0.00006 -0.99994,0.44774 -1,1v29c0.00006,0.55226 0.44774,0.99994 1,1h10c0.55226,-0.00006 0.99994,-0.44774 1,-1v-16v-0.25v-0.25c0,-1.94442 1.55558,-3.5 3.5,-3.5c1.94442,0 3.5,1.55558 3.5,3.5v16.5c0.00006,0.55226 0.44774,0.99994 1,1h10c0.55226,-0.00006 0.99994,-0.44774 1,-1v-17c0,-4.12652 -1.21211,-7.39555 -3.25586,-9.625c-2.04375,-2.22945 -4.89493,-3.375 -7.95703,-3.375c-3.90424,0 -6.26548,1.42608 -7.78711,2.60156v-1.60156c-0.00006,-0.55226 -0.44774,-0.99994 -1,-1zM4,17h8v18.66406v8.33594h-8zM19,17h8v2.63867c0.00013,0.41422 0.2556,0.78549 0.64242,0.93364c0.38682,0.14814 0.82494,0.0425 1.10172,-0.26567c0,0 2.9657,-3.30664 8.04297,-3.30664c2.5729,0 4.82842,0.92227 6.48242,2.72656c1.654,1.8043 2.73047,4.53496 2.73047,8.27344v16h-8v-15.5c0.00126,-0.14111 -0.02737,-0.28089 -0.08398,-0.41016c-0.22196,-2.82573 -2.53569,-5.08984 -5.41602,-5.08984c-3.02558,0 -5.5,2.47442 -5.5,5.5v0.25v0.25v15h-8z"></path></g></g>
-                        </svg>
-                        <p class="text-white font-medium text-lg">                        
-                            👁 - 15.6 M
-                            </p>
-                            <p class="text-white font-medium text-lg">         
-                            👻 - 15.1 K</span>
+                    <div class="h-px bg-gray-200"></div>
+                    <div class="text-center mt-3">
+                        <p class="text-sm text-gray-400">
+                            Looking to boost your social profiles for a more reputable foothold in a increasingly digital world. 
+                            LinkedIn and Twitter basic Package.
                         </p>
+                    </div>
+                    <!-- <p class="w-full py-4 bg-blue-600 mt-8 rounded-xl text-white"> -->
+
+                    <button class="w-full mt-6 mb-3 py-2 rounded-xl text-white font-semibold bg-blue-700 hover:shadow-xl duration-200 hover:bg-gray-800">
+                        Buy Now
+                    </button>
+                </div>
+                <div class="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 rounded-3xl w-full md:max-w-min sm:w-full bg-black transform scale-1 sm:scale-1 md:scale-105 lg:scale-105 xl:scale-105 z-40  shadow-none sm:shadow-none md:shadow-xl lg:shadow-xl xl:shadow-xl">
+                    <h1 class="text-purple-200 font-semibold text-xl ">Creator</h1>
+                    <div class="text-center py-4 px-7">
+                        <h1 class="text-white text-4xl font-black">₹4999</h1>
+                        <p class="text-white text-opacity-50 mt-2">Monthly</p>
                         
                     </div>
-                </a>
+                    <div class="h-px bg-purple-400"></div>
+                    <div class="text-center mt-3">
+                        <p class="text-sm text-white text-opacity-80">
+                            Looking to increase your reach and engagement to better connect with your audience. 
+                            Youtube, Twitter blue, Facebook Page and Whatsapp Package.
+                        </p>
+                    </div>
+                    <button class="w-full mt-6 mb-3 py-2 rounded-xl text-white font-semibold bg-blue-600 hover:shadow-xl duration-200 hover:bg-grey-800">Buy Now</button>
+                </div>
+                <div class="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full rounded-2xl md:max-w-min sm:w-full bg-white z-30">
+                <h1 class="text-gray-500 font-semibold text-xl ">Enterprise</h1>
+                    <div class="text-center py-4 px-7">
+                        <h1 class="text-gray-700 text-4xl font-black">₹9999</h1>
+                        <p class="text-gray-500  mt-2">Monthly</p>
+                        
+                    </div>
+                    <div class="h-px bg-gray-200"></div>
+                    <div class="text-center mt-3">
+                        <p class="text-sm text-gray-400">
+                            Bake the perfect cake and let us handle post all smiles without a break. 
+                            Twitter Blue with ad management. Add-ons - youtube 
+                        </p>
+                    </div>
+                    <button class="w-full mt-6 mb-3 py-2 rounded-xl text-white font-semibold bg-blue-600 hover:shadow-xl duration-200 hover:bg-gray-800">Buy Now</button>
+                </div>
             </div>
+             
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contactSection" class="bg-gray-800 text-white py-20"><!-- hidden"-->
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-            <div class="flex left space-x-4" >
-                <a target="_blank" href="mailto:saraimpact1@gmail.com?subject=Service%20Quotation" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer" >
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="margin-top: 4px; margin-right: 4px;">
-<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M12,23.403v-0.013v-13.001l-0.12,-0.089h-0.01l-2.73,-2.02c-1.67,-1.24 -4.05,-1.18 -5.53,0.28c-0.99,0.98 -1.61,2.34 -1.61,3.85v3.602zM38,23.39v0.013l10,-7.391v-3.602c0,-1.49 -0.6,-2.85 -1.58,-3.83c-1.46,-1.457 -3.765,-1.628 -5.424,-0.403l-2.876,2.123l-0.12,0.089zM14,24.868l10.406,7.692c0.353,0.261 0.836,0.261 1.189,0l10.405,-7.692v-13.001l-11,8.133l-11,-8.133zM38,25.889v15.111c0,0.552 0.448,1 1,1h6.5c1.381,0 2.5,-1.119 2.5,-2.5v-21.003zM12,25.889l-10,-7.392v21.003c0,1.381 1.119,2.5 2.5,2.5h6.5c0.552,0 1,-0.448 1,-1z"></path></g></g>
-</svg>
-                </a>
-                <a target="_blank" href="https://wa.me/message/BWANJDQTLL32I1" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" style="margin-top: 4px;">
-                        <g fill="#fffdfd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M12,2c-5.5,0 -10,4.5 -10,10c0,1.8 0.50078,3.5 1.30078,5l-1.30078,5l5.19922,-1.19922c1.5,0.8 3.10078,1.19922 4.80078,1.19922c5.5,0 10,-4.5 10,-10c0,-2.7 -1.00039,-5.19961 -2.90039,-7.09961c-1.9,-1.9 -4.39961,-2.90039 -7.09961,-2.90039zM12,4c2.1,0 4.09922,0.80078 5.69922,2.30078c1.5,1.6 2.30078,3.59922 2.30078,5.69922c0,4.4 -3.6,8 -8,8c-1.3,0 -2.70078,-0.3 -3.80078,-1l-0.69922,-0.40039l-0.69922,0.20117l-2,0.5l0.5,-1.80078l0.19922,-0.80078l-0.40039,-0.69922c-0.7,-1.2 -1.09961,-2.6 -1.09961,-4c0,-4.4 3.6,-8 8,-8zM8.5,7.40039c-0.2,0 -0.49922,-0.00117 -0.69922,0.29883c-0.3,0.3 -0.90039,0.90156 -0.90039,2.10156c0,1.2 0.9,2.39961 1,2.59961c0.2,0.2 1.79883,2.79883 4.29883,3.79883c2.1,0.8 2.5,0.60156 3,0.60156c0.5,-0.1 1.50117,-0.60117 1.70117,-1.20117c0.2,-0.6 0.19883,-1.10039 0.29883,-1.40039c-0.1,-0.1 -0.2,-0.19883 -0.5,-0.29883c-0.2,-0.1 -1.39922,-0.70078 -1.69922,-0.80078c-0.3,-0.1 -0.39961,-0.20039 -0.59961,0.09961c-0.2,0.3 -0.70078,0.8 -0.80078,1c-0.1,0.2 -0.2,0.20156 -0.5,0.10156c-0.2,-0.1 -1,-0.30117 -2,-1.20117c-0.8,-0.6 -1.30039,-1.39922 -1.40039,-1.69922c-0.2,-0.2 0.00156,-0.4 0.10156,-0.5l0.39844,-0.40039c0.1,-0.1 0.10117,-0.30039 0.20117,-0.40039c0.1,-0.1 0.1,-0.20039 0,-0.40039c-0.1,-0.2 -0.60078,-1.39844 -0.80078,-1.89844c-0.2,-0.4 -0.39961,-0.40039 -0.59961,-0.40039z"></path></g></g>
-                    </svg>
-                </a>
-                <a target="_blank" href="https://t.me/sonu_yadav_real" class="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="38" height="38" viewBox="0,0,256,256">
-<g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(4,4)"><path d="M32,10c-12.15,0 -22,9.85 -22,22c0,12.15 9.85,22 22,22c12.15,0 22,-9.85 22,-22c0,-12.15 -9.85,-22 -22,-22zM32,14c9.941,0 18,8.059 18,18c0,9.941 -8.059,18 -18,18c-9.941,0 -18,-8.059 -18,-18c0,-9.941 8.059,-18 18,-18zM41.04102,23.33789c-0.50794,-0.05859 -1.14612,0.08064 -1.85937,0.33789c-1.303,0.47 -17.95792,7.54217 -18.91992,7.95117c-0.911,0.388 -1.77439,0.81088 -1.77539,1.42188c0,0.43 0.25498,0.67283 0.95898,0.92383c0.732,0.262 2.57797,0.82009 3.66797,1.12109c1.05,0.289 2.24406,0.03709 2.91406,-0.37891c0.709,-0.441 8.90128,-5.92234 9.48828,-6.40234c0.587,-0.48 1.05617,0.13619 0.57617,0.61719c-0.48,0.481 -6.1037,5.93541 -6.8457,6.69141c-0.9,0.918 -0.26025,1.869 0.34375,2.25c0.689,0.435 5.64948,3.76092 6.39648,4.29492c0.747,0.534 1.50327,0.77539 2.19727,0.77539c0.694,0 1.0593,-0.91461 1.4043,-1.97461c0.405,-1.241 2.30216,-13.61473 2.53516,-16.05273c0.071,-0.739 -0.16214,-1.23022 -0.61914,-1.44922c-0.13825,-0.06625 -0.29358,-0.10742 -0.46289,-0.12695z"></path></g></g>
-</svg>
-                </a>
-                <a target="_blank" href="tel:+918826779790" class="text-blue-400 hover:text-blue-300">
-                    <svg  version="1.1" viewBox="0 0 25 21" width="30" height="30" style="margin-top: 2px;"><title/><desc/><defs/>
-                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1"><g fill="#ffffff" id="Icons-Communication" transform="translate(-124.000000, -125.000000)"><g id="ring-volume" transform="translate(124.000000, 125.500000)"><path d="M23.7,14.7 C20.7,11.8 16.5,10 12,10 C7.5,10 3.3,11.8 0.3,14.7 C0.1,14.9 0,15.1 0,15.4 C0,15.7 0.1,15.9 0.3,16.1 L2.8,18.6 C3,18.8 3.2,18.9 3.5,18.9 C3.8,18.9 4,18.8 4.2,18.6 C5,17.9 5.9,17.2 6.9,16.7 C7.2,16.5 7.5,16.2 7.5,15.8 L7.5,12.7 C8.9,12.2 10.5,12 12.1,12 C13.7,12 15.2,12.3 16.7,12.7 L16.7,15.8 C16.7,16.2 16.9,16.5 17.3,16.7 C18.3,17.2 19.2,17.8 20,18.6 C20.2,18.8 20.4,18.9 20.7,18.9 C21,18.9 21.2,18.8 21.4,18.6 L23.9,16.1 C24.1,15.9 24.2,15.7 24.2,15.4 C24,15.1 23.9,14.9 23.7,14.7 L23.7,14.7 Z M21.2,4.3 L19.8,2.9 L16.2,6.5 L17.6,7.9 C17.6,7.8 21,4.3 21.2,4.3 L21.2,4.3 Z M13,0 L11,0 L11,5 L13,5 L13,0 L13,0 Z M6.4,7.8 L7.8,6.4 L4.3,2.8 L2.8,4.3 C3,4.3 6.4,7.8 6.4,7.8 L6.4,7.8 Z" id="Shape"/></g></g></g>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p>&copy; 2024 SaraImpact. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        document.getElementById('contactBtn').addEventListener('click', function() {
-            document.getElementById('contactSection').classList.toggle('hidden');
-        });
-    </script>
-
 </body>
 </html>
 
