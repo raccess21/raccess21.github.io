@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles by @raccess21</title>
     <meta name="description" content="List of articles by @raccess21. Articles cover topics such as politics, science, religion, psychology, and philosophy. They are carefully vetted and edited to ensure accuracy and fairness.">
-    <link rel="stylesheet" id="structure" href="styles/style.css">
-    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
+    <link rel="stylesheet" id="structure">  <!--href="styles/style.css"-->
+    <link rel="stylesheet" id="theme">      <!--href="styles/styleLight.css"-->
 </head>
 <body>
     <button id="themeButton" class="roundButton" type="button" onclick="tBClick()">☀️/🌕</button>
@@ -23,7 +23,9 @@
         let langs = ["en", "hi"];
         let lang = localStorage.getItem('lang') || "en";
         lang = langs.includes(lang) ? lang : langs[0];
-        
+
+        document.getElementById('structure').href = 'styles/style.css';
+        document.getElementById('theme').href = 'styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️/🌕";
         langList("languageSelector", langs, lang);
         
