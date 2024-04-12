@@ -51,7 +51,8 @@
         let nameLang = window.location.href.split('/').pop().split('.')[0]
         let lang = nameLang.split('_').pop();
         let articleName = nameLang.split(`_${lang}`)[0];
-        localStorage.setItem('articleName', articleName);
+        
+        localStorage.setItem('articleName', articleName.replace('_', ' '));
         
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
@@ -80,7 +81,7 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            window.location.href = `${window.location.href.split('?')[0]}_${lang}.html`;
+            window.location.href = `${window.location.href.split(lang)[0]}${lang}.html`;
         });
 
     </script>
