@@ -22,7 +22,7 @@ function createArticleLinks(eId, jsonObj, sortType = sortByArticleName) {
 }
 
 function langSelector(eId, jsonObj) {
-    console.log("langSelector");
+    // console.log("langSelector");
     const langs = jsonObj[localStorage.getItem("articleName")]["langs"];
     localStorage.setItem(`langs`, langs);
     langList(eId, langs);
@@ -49,7 +49,7 @@ async function fetchJson(paths, eId=false, callback=false, sortType = sortByArti
 
 }
 function langList(eId, langs, lang=false) {
-    console.log('langList');
+    // console.log('langList');
     lang = lang || localStorage.getItem("lang");
     if (langs[0] != lang)  {
         for (let i=1; i<langs.length; i++) {

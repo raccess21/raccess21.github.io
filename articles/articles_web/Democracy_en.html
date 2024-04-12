@@ -56,8 +56,9 @@
     <script src="../script.js"></script>
     <script>
         // let langs = [];
-        let [articleName, lang] = window.location.href.split('/').pop().split('.')[0].split('__'); 
-        articleName = articleName.split("_").join(" ");
+        let nameLang = window.location.href.split('/').pop().split('.')[0]
+        let lang = nameLang.split('_').pop();
+        let articleName = nameLang.split(`_${lang}`)[0];
         localStorage.setItem('articleName', articleName);
         
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
@@ -87,7 +88,7 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            window.location.href = `${window.location.href.split('__')[0]}__${lang}.html`;
+            window.location.href = `${window.location.href.split('?')[0]}_${lang}.html`;
         });
 
     </script>

@@ -65,7 +65,7 @@ def updateLangList():
         for lang in articlesData[articleName]["langs"]:
             aName  = articleName.replace(" ", "_")
             if  f'articles_web/{aName}?{lang}' not in xml:
-                xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{aName}?{lang}.html</loc><lastmod>{articlesData[articleName]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
+                xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{aName}_{lang}.html</loc><lastmod>{articlesData[articleName]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
 
         for lang in langs:
             if articleName not in articlesLangData[lang]:
@@ -133,7 +133,7 @@ def createHtml():
             nHtml = nHtml.replace('$articleList', '')
         
             # writing html
-            with open(f'articles_web/{article.replace(" ", "_")}?{lang}.html', 'w') as fo:
+            with open(f'articles_web/{article.replace(" ", "_")}_{lang}.html', 'w') as fo:
                 fo.write(nHtml)
 
 def checkGit():
@@ -147,15 +147,15 @@ def getLinks():
     
 def renaam():
     for html in glob('articles_web/*'):
-        if '__' in html:
+        if '?' in html:
             print(html)
-            os.rename(html, html.replace('__', '?'))
+            os.rename(html, html.replace('?', '_'))
 
 def main():
     # updateLangList()
-    # createHtml()
+    createHtml()
     # getLinks()
-    renaam()
+    # renaam()
     
 if __name__ == "__main__":
     main()

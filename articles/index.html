@@ -41,7 +41,7 @@
             [articleName, langs] = [...articleLink.split('&')];
             localStorage.setItem(`langs`, langs);
             if (!langs.includes(lang)) {lang=langs.split(",")[0]};
-            window.location = `articles_web/${articleName.split(" ").join("_")}?${lang}.html`;
+            window.location = `articles_web/${articleName.split(" ").join("_")}_${lang}.html`;
         };
         selector.addEventListener("change", function () {
             lang = selector.value;
