@@ -125,7 +125,7 @@ def createHtml():
             with open(f'articles/{article}/{lang}.json') as fi:
                 paras = json.loads(fi.read())
             nHtml = nHtml.replace('$description', paras[0])
-            content = '<p class="para">' + '</p><p class="para">'.join(paras) + '</p>'
+            content = '<p class="para">' + '</p>\n\t\t\t<p class="para">'.join(paras) + '</p>'
             nHtml = nHtml.replace('$content', content)
             nHtml = nHtml.replace('$articleList', '')
         
