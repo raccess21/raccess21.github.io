@@ -56,6 +56,9 @@
         
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
+        
+        document.getElementById('structure').href = '../styles/style.css';
+        document.getElementById('theme').href = '../styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {

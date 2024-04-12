@@ -138,7 +138,7 @@ def createHtml():
 def checkGit():
     ...
 def main():
-    updateLangList()
+    # updateLangList()
     createHtml()
     
 if __name__ == "__main__":
