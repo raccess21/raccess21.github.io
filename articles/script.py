@@ -145,8 +145,8 @@ def getLinks():
         fo.write('\n'.join(links))
     
 def main():
-    # updateLangList()
-    # createHtml()
+    updateLangList()
+    createHtml()
     getLinks()
     
 if __name__ == "__main__":

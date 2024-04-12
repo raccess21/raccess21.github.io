@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slayer Doga : A Gameplay Definition</title>
+    <meta name="description" content="In the fast-paced world of mobile gaming, Slayer Doga stands out as a formidable force on the battlefield of PUBG Mobile. With an overly aggressive solo vs squad gameplay style, Slayer Doga has earned a reputation for dominating squads and emerging victorious in the most challenging of scenarios. This essay aims to define the gameplay of Slayer Doga, exploring his unique approach to combat and the strategies that set him apart from his peers.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
+</head>
+<body>
+    <div id="options">
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()"></button>
+        <select id="languageSelector" class="roundButton"></select>
+    </div>
+    <div id="textSizeOptions">
+        <button type="button" class="roundButton" onclick="changeSize(1, 'content')">A+</button>
+        <button type="button" class="roundButton" onclick="changeSize(0, 'content')">A</button>
+        <button type="button" class="roundButton" onclick="changeSize(-1, 'content')">A-</button>
+    </div>
+
+    <div id="article">
+        <h1 id="articleHeading">Slayer Doga : A Gameplay Definition</h1>
+        <div id="content">
+            <p class="para">In the fast-paced world of mobile gaming, Slayer Doga stands out as a formidable force on the battlefield of PUBG Mobile. With an overly aggressive solo vs squad gameplay style, Slayer Doga has earned a reputation for dominating squads and emerging victorious in the most challenging of scenarios. This essay aims to define the gameplay of Slayer Doga, exploring his unique approach to combat and the strategies that set him apart from his peers.</p>
+			<p class="para">At the heart of Slayer Doga's gameplay is his relentless aggression and unwavering confidence in his abilities. Unlike other players who may prefer a more cautious and strategic approach, Slayer Doga thrives on the adrenaline rush of engaging multiple opponents single-handedly. With lightning-fast reflexes and pinpoint accuracy, he strikes fear into the hearts of his adversaries, leaving a trail of defeated squads in his wake.</p>
+			<p class="para">One of the key characteristics of Slayer Doga's gameplay is his preference for solo engagements over team-based tactics. While many players rely on the support of their teammates to watch their backs and provide cover fire, Slayer Doga excels when he is alone, free to roam the battlefield without the constraints of teamwork. This solo approach allows him to play to his strengths, leveraging his exceptional gunplay and situational awareness to outmaneuver and outgun his opponents.</p>
+			<p class="para">Moreover, Slayer Doga is not just a master of firearms, but also a master grenadier. His expertise in handling grenades adds another dimension to his gameplay, allowing him to flush out enemies from cover, disrupt enemy formations, and create opportunities for aggressive pushes. Whether he's raining down explosives on entrenched enemies or using grenades to clear out buildings, Slayer Doga's mastery of this explosive tool sets him apart as a force to be reckoned with on the battlefield.</p>
+			<p class="para">However, despite his formidable skills, Slayer Doga is not immune to failure. His overconfidence and tendency to underestimate his opponents have led to his downfall on more than one occasion. When he takes his opponents too lightly and becomes reckless in his actions, Slayer Doga's once unstoppable gameplay can quickly turn against him, resulting in defeat and frustration. This flaw serves as a humbling reminder that even the most skilled players are not invincible and must remain vigilant and focused at all times.</p>
+			<p class="para">In conclusion, Slayer Doga's gameplay can be defined as an overly aggressive solo vs squad style that prioritizes individual skill and instinctive decision-making. With his relentless aggression, unwavering confidence, and mastery of both firearms and grenades, Slayer Doga has carved out a niche for himself as one of the most feared players in the world of PUBG Mobile. However, his tendency to fail due to overconfidence serves as a cautionary tale, reminding players of the importance of humility and self-awareness in the pursuit of victory on the digital battlefield.</p>
+        </div>
+        <div id="articleList"></div>
+        <a href="../index.html" class="para">Article List</a>
+    </div>
+
+    <div id="ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+        crossorigin="anonymous"></script>
+        <!-- Square Responsive -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9559699967591875"
+            data-ad-slot="9692793583"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+        // let langs = [];
+        let [articleName, lang] = window.location.href.split('/').pop().split('.')[0].split('__'); 
+        articleName = articleName.split("_").join(" ");
+        localStorage.setItem('articleName', articleName);
+        
+        let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
+        localStorage.setItem('lang', lang);
+        
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
+        
+        if (langs.length > 0) {
+            langList("languageSelector", langs, lang);
+        } else {
+            loadJson(`../articles/articles.json`, "languageSelector", langSelector);
+        }
+
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "18px";
+        
+        let stylesheet = document.getElementById("theme");
+        stylesheet.href = localStorage.getItem('themeName') || "../styles/styleLight.css";
+        
+        const tBClick = function() {
+            stylesheet.href = stylesheet.href.includes("Dark") ? "../styles/styleLight.css" : "../styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕": "☀️☀️";
+            localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
+        };
+        
+        const selector = document.getElementById('languageSelector');
+        selector.addEventListener("change", function () {
+            lang = selector.value;
+            localStorage.setItem('lang', lang);
+            window.location.href = `${window.location.href.split('__')[0]}__${lang}.html`;
+        });
+
+    </script>
+</body>
+</html>
