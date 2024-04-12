@@ -52,7 +52,7 @@
         let lang = nameLang.split('_').pop();
         let articleName = nameLang.split(`_${lang}`)[0];
         
-        localStorage.setItem('articleName', articleName.replace('_', ' '));
+        localStorage.setItem('articleName', articleName.split('_').join(' '));
         
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);

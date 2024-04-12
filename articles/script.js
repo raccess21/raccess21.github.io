@@ -22,8 +22,8 @@ function createArticleLinks(eId, jsonObj, sortType = sortByArticleName) {
 }
 
 function langSelector(eId, jsonObj) {
-    // console.log("langSelector");
-    const langs = jsonObj[localStorage.getItem("articleName")]["langs"];
+    let articleName = localStorage.getItem("articleName").split('_').join(' ');
+    const langs = jsonObj[articleName]["langs"];
     localStorage.setItem(`langs`, langs);
     langList(eId, langs);
 }
