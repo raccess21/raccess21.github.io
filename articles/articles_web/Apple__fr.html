@@ -7,8 +7,8 @@
     <meta name="description" content="Une pomme est un fruit rond et comestible produit par un pommier (Malus spp., parmi lesquels le pommier domestique ou de verger ; Malus domestica). Les pommiers sont cultivés dans le monde entier et sont les espèces les plus largement cultivées du genre Malus. L'arbre est originaire d'Asie centrale, où son ancêtre sauvage, Malus sieversii, est encore présent. Les pommes sont cultivées depuis des milliers d'années en Asie et en Europe et ont été introduites en Amérique du Nord par les colons européens. Les pommes ont une signification religieuse et mythologique dans de nombreuses cultures, notamment dans la tradition norroise, grecque et chrétienne européenne.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <div id="options">
@@ -57,8 +57,6 @@
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
         
-        document.getElementById('structure').href = '../styles/style.css';
-        document.getElementById('theme').href = '../styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {

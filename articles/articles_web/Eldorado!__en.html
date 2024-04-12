@@ -7,8 +7,8 @@
     <meta name="description" content="El Dorado, the legendary city of gold, has captured the imaginations of explorers, adventurers, and treasure hunters for centuries. According to myth and folklore, El Dorado was a fabled city located somewhere in the uncharted jungles of South America, overflowing with untold riches and unimaginable wealth. In this essay, we delve into the mystery of El Dorado, its origins and significance, and the enduring allure it holds for seekers of fortune and glory.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <div id="options">
@@ -60,8 +60,6 @@
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
         
-        document.getElementById('structure').href = '../styles/style.css';
-        document.getElementById('theme').href = '../styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {

@@ -7,8 +7,8 @@
     <meta name="description" content="The Ramayana, one of the most revered and ancient epics of Hindu mythology, holds a central place in the cultural and spiritual fabric of India. Composed by the sage Valmiki, the Ramayana narrates the tale of Lord Rama, his consort Sita, and their journey through life's trials and tribulations. Filled with moral lessons, divine teachings, and timeless wisdom, the Ramayana continues to inspire generations with its profound insights into human nature and the eternal struggle between good and evil.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <div id="options">
@@ -60,8 +60,6 @@
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
         
-        document.getElementById('structure').href = '../styles/style.css';
-        document.getElementById('theme').href = '../styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {

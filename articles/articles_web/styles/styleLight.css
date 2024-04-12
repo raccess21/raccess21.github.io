@@ -1,0 +1,29 @@
+body {
+    background-color: #fafafa;
+    color: #202124;
+}
+
+/* Not clicked */
+a {
+    color: #0366d6; /* Default color for not clicked */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover */
+a:hover {
+    color: #3e87f5; /* Color when hovering */
+}
+
+/* Clicked */
+a:active,
+a:focus {
+    color: #1a5a9b; /* Color when clicked or focused */
+}
+.aLink {
+    border: 1px solid #e5e7eb;
+}
+.roundButton {
+    background-color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    color: black;   
+}

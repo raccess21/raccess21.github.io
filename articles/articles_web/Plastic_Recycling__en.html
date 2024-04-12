@@ -7,8 +7,8 @@
     <meta name="description" content="The myth of plastic recycling, long touted as a solution to the global plastic pollution crisis, is increasingly being challenged as evidence mounts of its inefficacy and environmental harm. While recycling has been promoted as a way to reduce waste and conserve resources, the reality is that the vast majority of plastic waste is not recycled and often ends up polluting the environment or being incinerated. In this essay, we delve into the myth of plastic recycling, examining its origins, challenges, and the need for alternative solutions to address the plastic pollution crisis.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <div id="options">
@@ -60,8 +60,6 @@
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
         
-        document.getElementById('structure').href = '../styles/style.css';
-        document.getElementById('theme').href = '../styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {

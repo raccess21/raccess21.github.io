@@ -7,8 +7,8 @@
     <meta name="description" content="Carl Sagan, an American astronomer, cosmologist, and science communicator, was a towering figure in the field of popular science and a passionate advocate for scientific skepticism, rational inquiry, and the exploration of the cosmos. Through his numerous books, television series, and public appearances, Sagan inspired millions of people around the world to marvel at the wonders of the universe and to embrace the spirit of scientific curiosity and discovery. In this essay, we explore the life and legacy of Carl Sagan, his contributions to science and education, and the enduring impact of his work on society and culture.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" id="theme" href="../styles/styleLight.css">
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <div id="options">
@@ -60,8 +60,6 @@
         let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
         
-        document.getElementById('structure').href = '../styles/style.css';
-        document.getElementById('theme').href = '../styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
         if (langs.length > 0) {
