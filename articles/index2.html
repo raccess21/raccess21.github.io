@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles by @raccess21</title>
     <meta name="description" content="List of articles by @raccess21. Articles cover topics such as politics, science, religion, psychology, and philosophy. They are carefully vetted and edited to ensure accuracy and fairness.">
-    <link rel="stylesheet" id="structure">  <!--href="styles/style.css"-->
-    <link rel="stylesheet" id="theme">      <!--href="styles/styleLight.css"-->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
 </head>
 <body>
     <button id="themeButton" class="roundButton" type="button" onclick="tBClick()">☀️/🌕</button>
@@ -16,18 +16,13 @@
         <h1 id="heading">Articles by @raccess21</h1>
         <div id="articleList"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
     <script>
 
         const selector = document.getElementById("languageSelector");
-        let langs = ["en", "hi"];
         let lang = localStorage.getItem('lang') || "en";
-        lang = langs.includes(lang) ? lang : langs[0];
-
-        document.getElementById('structure').href = 'styles/style.css';
-        document.getElementById('theme').href = 'styles/styleLight.css';
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️/🌕";
-        langList("languageSelector", langs, lang);
+        langList("languageSelector", ["en", "hi"], lang);
         
         const stylesheet = document.getElementById("theme");
         stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
@@ -41,9 +36,10 @@
         
         function openArticle(articleLink) {
             [articleName, langs] = [...articleLink.split('&')];
-            localStorage.setItem(`langs`, langs);
+            localStorage.setItem('articleName', articleName);
+            localStorage.setItem('articleLangs', langs);
             if (!langs.includes(lang)) {lang=langs.split(",")[0]};
-            window.location = `articles_web/${articleName.split(" ").join("_")}__${lang}.html`;
+            window.location = `article.html?article=${articleName}&lang=${lang}`;
         };
         selector.addEventListener("change", function () {
             lang = selector.value;
