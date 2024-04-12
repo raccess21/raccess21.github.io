@@ -1,0 +1,18 @@
+#image {
+    min-height: 100%;
+    object-fit: contain;
+    border-radius:5px;
+    mask-image: linear-gradient(to left, transparent 0%, rgba(255,255,255,1) 2%, rgba(255,255,255,1) 98%, transparent 100%);
+    }
+
+section {
+    margin: 3% 5%;
+    border-radius: 1em;
+    background-color: white;
+    box-shadow: 1%;
+}
+
+#text {
+    background-color: rgba(119, 0, 0, 0.171);
+    padding: 3%;
+}
