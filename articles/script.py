@@ -1,9 +1,10 @@
 from glob import glob
 import json
 from datetime import datetime
-import random
+# import random
 import xml.dom.minidom as xmlParser
 import xml.sax.saxutils as ST
+# import git
 
 # takes */*/lang.json and articleName, returns lang
 def lane(lang, articleName):
@@ -49,7 +50,8 @@ def updateLangList():
             articlesData[articleName] = {
                 "tags" : {},
                 "langs": [],
-                "time" : datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f") 
+                "cTime" : datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f"), 
+                "mTime" : datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f") 
             }
         #scan for all files in article name folder, langs list is name of all the foders, 
         # lane(lang.json) retrieves lang from file path name
@@ -60,9 +62,9 @@ def updateLangList():
         # for lang in glob(f"{article}/*"):
         #     print(lang.split(article)[1].split('.')[0])
         for lang in articlesData[articleName]["langs"]:
-            aName  = articleName.replace(" ", "%20")
-            if  f'https://raccess21.github.io/articles/article.html?article={aName}&amp;lang={lang}' not in xml:
-                xml += f'<url><loc>https://raccess21.github.io/articles/article.html?article={aName}&amp;lang={lang}</loc><lastmod>{articlesData[articleName]["time"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
+            aName  = articleName.replace(" ", "_")
+            # if  f'https://raccess21.github.io/articles/{aName}__{lang}' not in xml:
+            xml += f'<url><loc>https://raccess21.github.io/articles/{aName}__{lang}</loc><lastmod>{articlesData[articleName]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
 
         for lang in langs:
             if articleName not in articlesLangData[lang]:
@@ -81,7 +83,7 @@ def updateLangList():
         print("Error writing file!")
 
     try:
-        with open(f"sitemap.xml", "w") as fo:
+        with open(f"sitemap2.xml", "w") as fo:
             fo.write(xml)
     except:
         print("Error writing file!")
@@ -102,7 +104,7 @@ def xmlupdate():
     for key in articesData.keys():
         for lang in articesData[key]["langs"]:
             articleName  = key.replace(" ", "%20")
-            xml += f'<url><loc>https://raccess21.github.io/articles/article.html?article={articleName}&lang={lang}</loc><lastmod>{articesData[key]["time"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
+            xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/article.html?article={articleName}&lang={lang}</loc><lastmod>{articesData[key]["time"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
     xml += '</urlset>'
     xml = xmlParser.parseString(xml.replace('&', '&amp;')).toprettyxml()
 
@@ -133,9 +135,11 @@ def createHtml():
             with open(f'articles_web/{article.replace(" ", "_")}__{lang}.html', 'w') as fo:
                 fo.write(nHtml)
 
+def checkGit():
+    ...
 def main():
-    # updateLangList()
-    createHtml()
+    updateLangList()
+    # createHtml()
     
 if __name__ == "__main__":
     main()

@@ -16,13 +16,16 @@
         <h1 id="heading">Articles by @raccess21</h1>
         <div id="articleList"></div>
     </div>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
     <script>
 
         const selector = document.getElementById("languageSelector");
+        let langs = ["en", "hi"];
         let lang = localStorage.getItem('lang') || "en";
+        lang = langs.includes(lang) ? lang : langs[0];
+
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️/🌕";
-        langList("languageSelector", ["en", "hi"], lang);
+        langList("languageSelector", langs, lang);
         
         const stylesheet = document.getElementById("theme");
         stylesheet.href = localStorage.getItem('themeName') || "styles/styleLight.css";
@@ -36,10 +39,9 @@
         
         function openArticle(articleLink) {
             [articleName, langs] = [...articleLink.split('&')];
-            localStorage.setItem('articleName', articleName);
-            localStorage.setItem('articleLangs', langs);
+            localStorage.setItem(`langs`, langs);
             if (!langs.includes(lang)) {lang=langs.split(",")[0]};
-            window.location = `article.html?article=${articleName}&lang=${lang}`;
+            window.location = `articles_web/${articleName.split(" ").join("_")}__${lang}.html`;
         };
         selector.addEventListener("change", function () {
             lang = selector.value;

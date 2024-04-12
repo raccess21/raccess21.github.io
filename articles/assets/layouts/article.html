@@ -52,7 +52,7 @@
         articleName = articleName.split("_").join(" ");
         localStorage.setItem('articleName', articleName);
         
-        let langs = localStorage.getItem(`${articleName}_langs`) ? localStorage.getItem(`${articleName}_langs`).split(",") : [];
+        let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
         localStorage.setItem('lang', lang);
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
         
