@@ -139,7 +139,7 @@ def checkGit():
     ...
 def main():
     updateLangList()
-    # createHtml()
+    createHtml()
     
 if __name__ == "__main__":
     main()
