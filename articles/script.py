@@ -153,7 +153,7 @@ def renaam():
             os.rename(html, html.replace('?', '_'))
 
 def main():
-    # updateLangList()
+    updateLangList()
     createHtml()
     # getLinks()
     # renaam()

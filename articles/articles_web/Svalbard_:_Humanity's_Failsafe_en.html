@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svalbard : Humanity's Failsafe</title>
+    <meta name="description" content="Nestled amidst the frigid waters of the Arctic Ocean lies Svalbard, a remote archipelago that serves as humanity's failsafe in the face of global catastrophe. With its rugged terrain, stark beauty, and unique position within the Arctic Circle, Svalbard holds a special significance as a repository of biodiversity, cultural heritage, and scientific research. This essay explores the importance of Svalbard as humanity's failsafe and the measures in place to safeguard its future.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
+</head>
+<body>
+    <div id="options">
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()"></button>
+        <select id="languageSelector" class="roundButton"></select>
+    </div>
+    <div id="textSizeOptions">
+        <button type="button" class="roundButton" onclick="changeSize(1, 'content')">A+</button>
+        <button type="button" class="roundButton" onclick="changeSize(0, 'content')">A</button>
+        <button type="button" class="roundButton" onclick="changeSize(-1, 'content')">A-</button>
+    </div>
+
+    <div id="article">
+        <h1 id="articleHeading">Svalbard : Humanity's Failsafe</h1>
+        <div id="content">
+            <p class="para">Nestled amidst the frigid waters of the Arctic Ocean lies Svalbard, a remote archipelago that serves as humanity's failsafe in the face of global catastrophe. With its rugged terrain, stark beauty, and unique position within the Arctic Circle, Svalbard holds a special significance as a repository of biodiversity, cultural heritage, and scientific research. This essay explores the importance of Svalbard as humanity's failsafe and the measures in place to safeguard its future.</p>
+			<p class="para">At the heart of Svalbard's significance is the Svalbard Global Seed Vault, often referred to as the 'Doomsday Vault.' Buried deep within the permafrost of a remote mountainside on the island of Spitsbergen, the Seed Vault serves as a backup storage facility for the world's agricultural biodiversity. With its capacity to store millions of seeds from diverse plant species, the Seed Vault represents a crucial safeguard against the loss of genetic resources due to natural disasters, climate change, or human conflict.</p>
+			<p class="para">In addition to its role as a seed bank, Svalbard is also home to the Arctic World Archive, a secure facility located deep within a decommissioned coal mine. The Archive serves as a digital repository for the world's most valuable data and information, preserving cultural heritage, scientific knowledge, and historical records for future generations. By storing data in a geographically stable and secure location, the Arctic World Archive ensures that vital information remains accessible even in the event of global upheaval or technological collapse.</p>
+			<p class="para">Moreover, Svalbard serves as a hub for scientific research and collaboration, attracting researchers from around the world to study its unique ecosystems, geology, and climate. With its proximity to the North Pole and its relatively untouched natural environment, Svalbard provides invaluable insights into the impacts of climate change and human activity on the Arctic region. By facilitating scientific inquiry and knowledge sharing, Svalbard plays a vital role in advancing our understanding of the planet and informing global efforts to address environmental challenges.</p>
+			<p class="para">However, despite its importance as humanity's failsafe, Svalbard is not immune to threats. Climate change, industrial activity, and geopolitical tensions pose significant risks to the delicate balance of life on the archipelago. Rising temperatures and melting ice threaten to disrupt ecosystems and alter the landscape of Svalbard, while increasing human activity raises concerns about pollution and habitat destruction. Additionally, geopolitical tensions in the Arctic region could potentially jeopardize the international cooperation and collaboration that are essential for preserving Svalbard's unique status as a global commons.</p>
+			<p class="para">In conclusion, Svalbard stands as humanity's failsafe, a remote outpost of hope and resilience in an uncertain world. From the Svalbard Global Seed Vault to the Arctic World Archive, Svalbard serves as a beacon of hope, preserving the planet's biodiversity, cultural heritage, and scientific knowledge for future generations. As we confront the challenges of the 21st century, it is imperative that we continue to cherish and protect Svalbard as a symbol of our collective commitment to safeguarding the future of humanity and the planet.</p>
+        </div>
+        <div id="articleList"></div>
+        <a href="../index.html" class="para">Article List</a>
+    </div>
+
+    <div id="ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+        crossorigin="anonymous"></script>
+        <!-- Square Responsive -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9559699967591875"
+            data-ad-slot="9692793583"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+        // let langs = [];
+        let nameLang = window.location.href.split('/').pop().split('.')[0]
+        let lang = nameLang.split('_').pop();
+        let articleName = nameLang.split(`_${lang}`)[0];
+        
+        localStorage.setItem('articleName', articleName.split('_').join(' '));
+        
+        let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
+        localStorage.setItem('lang', lang);
+        
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
+        
+        if (langs.length > 0) {
+            langList("languageSelector", langs, lang);
+        } else {
+            loadJson(`../articles/articles.json`, "languageSelector", langSelector);
+        }
+
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "18px";
+        
+        let stylesheet = document.getElementById("theme");
+        stylesheet.href = localStorage.getItem('themeName') || "../styles/styleLight.css";
+        
+        const tBClick = function() {
+            stylesheet.href = stylesheet.href.includes("Dark") ? "../styles/styleLight.css" : "../styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕": "☀️☀️";
+            localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
+        };
+        
+        const selector = document.getElementById('languageSelector');
+        selector.addEventListener("change", function () {
+            lang = selector.value;
+            localStorage.setItem('lang', lang);
+            window.location.href = `${window.location.href.split(lang)[0]}${lang}.html`;
+        });
+
+    </script>
+</body>
+</html>
