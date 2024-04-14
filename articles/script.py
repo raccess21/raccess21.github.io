@@ -85,7 +85,7 @@ def updateLangList():
         print("Error writing file!")
 
     try:
-        with open(f"sitemap.xml", "w") as fo:
+        with open(f"sitemap2.xml", "w") as fo:
             fo.write(xml)
     except:
         print("Error writing file!")

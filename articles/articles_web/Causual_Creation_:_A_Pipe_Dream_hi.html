@@ -88,7 +88,7 @@
         selector.addEventListener("change", function () {
             lang = selector.value;
             localStorage.setItem('lang', lang);
-            window.location.href = `${window.location.href.split(lang)[0]}${lang}.html`;
+            window.location.href = `${articleName}_${lang}.html`;
         });
 
     </script>
