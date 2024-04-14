@@ -1,18 +1,6 @@
-#image {
-    height: 100%;
-    border-radius: 5px;
-    object-fit: cover;
-}
-
 section {
     margin: 2em 1em;
     border-radius: 1em;
     background-color: white;
     box-shadow: 1%;
-}
-
-#text, #images {
-    background-color: rgba(119, 0, 0, 0.171);
-    border-radius: 5px;
-    margin: 5px 10px;
 }

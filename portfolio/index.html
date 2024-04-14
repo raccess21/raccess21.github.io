@@ -6,7 +6,7 @@
     <title>SaraImpact</title> 
     <meta name="description" content="Sara Impact is a growth company that manages social media handles for indivuduals, creators and companies. Provides field specific insights to drive the narrative and win social influence game. Offers content strategy, brand narrative and market positioning.">
     <!-- Tailwind CSS CDN -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
 </head>
@@ -31,11 +31,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="heroSection" class="py-20">
+    <section class="py-10" id="heroSection">
         <div class="max-w-7xl mx-auto pd-1em">
             <div style="display: flex; flex-direction: row;">
                 <!-- Message Information -->
-                <div id="text" class="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 rounded-3xl w-full sm:w-full md:w-30 bg-black bg-opacity-80 shadow-none sm:shadow-none md:shadow-xl lg:shadow-xl xl:shadow-xl mx-2" style="width: 50%; height: auto;">
+                <div id="text" class="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 rounded-3xl w-full sm:w-full md:w-30 bg-black bg-opacity-100 shadow-none sm:shadow-none md:shadow-xl lg:shadow-xl xl:shadow-xl mx-2" style="width: 50%; height: auto;">
                     <h1 class="text-purple-200 font-semibold text-xl ">SaraImpact</h1>
                     <div class="text-center py-4 px-7">
                         <h1 class="text-white text-4xl font-black">Sara ka sara Social Impact</h1>
@@ -64,14 +64,14 @@
     </section>
 
     <script>
-        images = ['creator.png']
+        images = ['organic.png']
         // , 'platforms.jpeg', 'organic.png'];
 
         const textBox = document.getElementById('text');
         const imgBox  = document.getElementById('images');
         let i = 0;
         setInterval(function() {
-            document.getElementById('heroSection').style =`background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.7)), url(${images[i]}) center/cover no-repeat;" class="py-20"`;
+            // document.getElementById('heroSection').style =`background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.7)), url(${images[i]}) center/cover no-repeat;" class="py-20"`;
             
             if (window.innerWidth > 1.1 * window.innerHeight) {
                 textBox.style.width  = '60%';
@@ -89,7 +89,7 @@
     </script>
 
     <!-- About Section -->    
-    <section class="py-20" id="about">
+    <section class="pt-10" id="about">
         <div class="flex flex-wrap items-center  justify-center  ">
             <div class="text-center font-semibold mb-2"> <!-- Adjusted mb value to reduce margin bottom -->
                 <h1 class="text-3xl">
@@ -165,7 +165,7 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="py-20 bg-gray-200" id="portfolio">
+    <section class="pt-10 bg-gray-200" id="portfolio">
         <div class="flex flex-wrap items-center  justify-center  ">
             <div class="text-center font-semibold mb-2"> <!-- Adjusted mb value to reduce margin bottom -->
                 <h1 class="text-3xl">
@@ -267,7 +267,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-20 bg-gray-200" id="services">
+    <section class="pt-10 bg-gray-200" id="services">
         <div class="flex flex-wrap items-center  justify-center  ">
             <div class="text-center font-semibold mb-2"> <!-- Adjusted mb value to reduce margin bottom -->
                 <h1 class="text-3xl">
