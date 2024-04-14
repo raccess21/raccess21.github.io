@@ -65,7 +65,7 @@ def updateLangList():
         #     print(lang.split(article)[1].split('.')[0])
         for lang in articlesData[articleName]["langs"]:
             aName  = articleName.replace(" ", "_")
-            if  f'articles_web/{aName}?{lang}' not in xml:
+            if  f'articles_web/{aName}_{lang}' not in xml:
                 xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{aName}_{lang}.html</loc><lastmod>{articlesData[articleName]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
 
         for lang in langs:
