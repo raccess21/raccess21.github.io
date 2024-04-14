@@ -100,19 +100,20 @@ def updateLangList():
 def xmlupdate():
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 
-    with open('articles.json', 'r') as fi:
+    with open('articles/articles.json', 'r') as fi:
         articesData = json.loads(fi.read())
     
+    files = 0
     for key in articesData.keys():
         for lang in articesData[key]["langs"]:
-            articleName  = key.replace(" ", "%20")
-            xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/article.html?article={articleName}&lang={lang}</loc><lastmod>{articesData[key]["time"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
+            files += 1
+            articleName  = key.replace(" ", "_")
+            xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{articleName}_{lang}.html</loc><lastmod>{articesData[key]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
     xml += '</urlset>'
-    xml = xmlParser.parseString(xml.replace('&', '&amp;')).toprettyxml()
-
-    with open('sitemap.xml', 'w') as fo:
+    print(f"Total files: {files+1}")
+    with open('sitemap2.xml', 'w') as fo:
+        xml = xmlParser.parseString(xml).toprettyxml()
         fo.write(xml)
-        # xml = xmlParser.parseString(xml).toprettyxml()
 
 def createHtml():
     'http://127.0.0.1:5500/articles_web/Advertisement_and_Idiocracy?en.html'
@@ -153,10 +154,11 @@ def renaam():
             os.rename(html, html.replace('?', '_'))
 
 def main():
-    updateLangList()
-    createHtml()
+    # updateLangList()
+    # createHtml()
     # getLinks()
     # renaam()
-    
+    xmlupdate()
+
 if __name__ == "__main__":
     main()

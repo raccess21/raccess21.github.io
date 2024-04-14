@@ -7,12 +7,6 @@
 		<priority>1</priority>
 	</url>
 	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Digital%20Money&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://raccess21.github.io/articles/article.html?article=Apple&amp;lang=en</loc>
 		<lastmod>2024-03-21</lastmod>
 		<changefreq>never</changefreq>
@@ -37,30 +31,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Plastic%20Recycling&amp;lang=en</loc>
-		<lastmod>2024-04-03</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Advertisement%20and%20Idiocracy&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Hacking%20:%20A%20Form%20of%20Art&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Carl%20Sagan&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://raccess21.github.io/articles/article.html?article=Eldorado!&amp;lang=en</loc>
 		<lastmod>2024-04-02</lastmod>
 		<changefreq>never</changefreq>
@@ -68,12 +38,6 @@
 	</url>
 	<url>
 		<loc>https://raccess21.github.io/articles/article.html?article=Sudoku&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Yamuna%20Maiyya&amp;lang=en</loc>
 		<lastmod>2024-04-02</lastmod>
 		<changefreq>never</changefreq>
 		<priority>0.5</priority>
@@ -97,30 +61,6 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Money%20and%20Election&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Free%20Speech&amp;lang=en</loc>
-		<lastmod>2024-04-03</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=VR%20Dystopia&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Religion%20or%20Startup&amp;lang=en</loc>
-		<lastmod>2024-04-02</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
 		<loc>https://raccess21.github.io/articles/article.html?article=Ramayana&amp;lang=en</loc>
 		<lastmod>2024-04-02</lastmod>
 		<changefreq>never</changefreq>
@@ -132,22 +72,5 @@
 		<changefreq>never</changefreq>
 		<priority>0.5</priority>
 	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Fast%20Fashion&amp;lang=en</loc>
-		<lastmod>2024-04-07</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.5</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Causual%20Creation%20:%20A%20Pipe%20Dream&amp;lang=hi</loc>
-		<lastmod>2024-04-07</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.9</priority>
-	</url>
-	<url>
-		<loc>https://raccess21.github.io/articles/article.html?article=Causual%20Creation%20:%20A%20Pipe%20Dream&amp;lang=en</loc>
-		<lastmod>2024-04-07</lastmod>
-		<changefreq>never</changefreq>
-		<priority>0.7</priority>
-	</url>
+	
 </urlset>
