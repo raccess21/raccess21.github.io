@@ -85,7 +85,7 @@ def updateLangList():
         print("Error writing file!")
 
     try:
-        with open(f"sitemap2.xml", "w") as fo:
+        with open(f"sitemap.xml", "w") as fo:
             fo.write(xml)
     except:
         print("Error writing file!")
@@ -111,7 +111,7 @@ def xmlupdate():
             xml += f'<url><loc>https://raccess21.github.io/articles/articles_web/{articleName}_{lang}.html</loc><lastmod>{articesData[key]["mTime"].split("T")[0]}</lastmod><changefreq>never</changefreq><priority>0.8</priority></url>'
     xml += '</urlset>'
     print(f"Total files: {files+1}")
-    with open('sitemap2.xml', 'w') as fo:
+    with open('sitemap.xml', 'w') as fo:
         xml = xmlParser.parseString(xml).toprettyxml()
         fo.write(xml)
 
