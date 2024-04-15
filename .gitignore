@@ -2,6 +2,7 @@ node_modules
 package*
 test*
 test.html
+index2.html
 articles2.json
 *Legacy*
 **/*2*/
