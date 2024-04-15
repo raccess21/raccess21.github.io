@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="google-site-verification" content="oFJELImiGpkr73hb8JnNGU0rCQIxRDQvHiH3SRJgevY" />
+  <meta name="google-adsense-account" content="ca-pub-9559699967591875">
+  <title>
+   Your Portfolio
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body class="theme-light bg-gray-100 text-gray-900">
+  <div class="container mx-auto px-4 py-8">
+   <div class="flex flex-col items-center">
+    <img alt="Your Name" class="rounded-full h-24 w-24 mb-4 cursor-pointer" onclick="openModal()" src="public.jpg"/>
+    <h1 class="text-2xl font-bold mb-2">
+     Rahul Anand
+    </h1>
+    <p class="text-lg text-center">
+     A paragraph about yourself goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget fermentum arcu. Nullam tempus metus auctor, tincidunt eros in, vehicula leo.
+    </p>
+    <div class="mt-4">
+     <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center focus:outline-none" onclick="toggleTheme()">
+      <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+      <span>
+       Toggle Theme
+      </span>
+     </button>
+    </div>
+   </div>
+  </div>
+  <!-- image click -->
+  <div class="hidden fixed z-10 inset-0 overflow-y-auto" id="modal">
+   <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+    <div aria-hidden="true" class="fixed inset-0 transition-opacity">
+     <div class="absolute inset-0 bg-gray-500 opacity-75">
+     </div>
+    </div>
+    <span aria-hidden="true" class="hidden sm:inline-block sm:align-middle sm:h-screen">
+    </span>
+    <div aria-labelledby="modal-headline" aria-modal="true" class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" role="dialog">
+     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+      <div class="sm:flex sm:items-start">
+       <div class="mx-auto flex-shrink-0 flex items-center justify-center h-48 w-48 bg-gray-200 rounded-full">
+        <img alt="Full Image" class="max-h-full" id="modalImage" src=""/>
+       </div>
+      </div>
+     </div>
+     <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+      <button class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm" onclick="closeModal()" type="button">
+       Close
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="flex flex-col md:flex-row items-center justify-center px-4 py-8 md:px-10 lg:px-16">
+   <div class="flex flex-col items-center justify-center px-4 py-8 md:px-10 lg:px-16">
+    <div class="max-w-lg bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden mx-auto">
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+       Education
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+       Your education information goes here.
+      </p>
+     </div>
+    </div>
+   </div>
+   <div class="flex flex-col items-center justify-center px-4 py-8 md:px-10 lg:px-16">
+    <div class="max-w-lg bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden mx-auto">
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+       Hobbies
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+       Your hobbies information goes here.
+      </p>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+        <a href="articles/">Writing</a>
+    </p>
+     </div>
+    </div>
+   </div>
+   <div class="flex flex-col items-center justify-center px-4 py-8 md:px-10 lg:px-16">
+    <div class="max-w-lg bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden mx-auto">
+     <div class="p-6">
+      <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+       Projects
+      </h2>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+       Your projects information goes here.
+      </p>
+      <a href="snake.html">
+       Snake
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
