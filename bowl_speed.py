@@ -1,13 +1,14 @@
 import time
 
-x, dx = [float(val.strip())/1000 for val in  "20.17 +- 0.5".split("+-")]
+x, dx = [float(val.strip())/1000 for val in "20.17 +- 0.5".split("+-")]
 
 input("Start Clock... :")
 t1 = time.time()
+
 input("Stop  Clock... :")
 timer = time.time() - t1
 
-t, dt = [float(val.strip())/3600 for val in  f"{timer} +- 0.5".split("+-")]
+t, dt = [float(val.strip())/3600 for val in f"{timer} +- 0.5".split("+-")]
 v = x / t
 dv = dx / x + dt / t
 
