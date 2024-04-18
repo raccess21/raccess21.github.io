@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl Sagan</title>
+    <meta name="description" content="Carl Sagan, an American astronomer, cosmologist, and science communicator, was a towering figure in the field of popular science and a passionate advocate for scientific skepticism, rational inquiry, and the exploration of the cosmos. Through his numerous books, television series, and public appearances, Sagan inspired millions of people around the world to marvel at the wonders of the universe and to embrace the spirit of scientific curiosity and discovery. In this essay, we explore the life and legacy of Carl Sagan, his contributions to science and education, and the enduring impact of his work on society and culture.">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" id="structure" href="styles/style.css">
+    <link rel="stylesheet" id="theme" href="styles/styleLight.css">
+</head>
+<body>
+    <div id="options">
+        <button id="themeButton" type="button" class="roundButton" onclick="tBClick()"></button>
+        <select id="languageSelector" class="roundButton"></select>
+    </div>
+    <div id="textSizeOptions">
+        <button type="button" class="roundButton" onclick="changeSize(1, 'content')">A+</button>
+        <button type="button" class="roundButton" onclick="changeSize(0, 'content')">A</button>
+        <button type="button" class="roundButton" onclick="changeSize(-1, 'content')">A-</button>
+    </div>
+
+    <div id="article">
+        <h1 id="articleHeading">Carl Sagan</h1>
+        <div id="content">
+            <p class="para">In recent years, the development of driverless cars has captured the imagination of the public, promising a future where transportation is safer, more efficient, and less reliant on human intervention. However, the road to widespread adoption of autonomous vehicles is fraught with challenges and obstacles. This essay explores the technological, regulatory, and societal challenges facing the execution of driverless cars and the implications for the future of transportation.</p>
+            <p class="para">At the forefront of the challenges in executing driverless cars is the complex nature of artificial intelligence and machine learning algorithms required to navigate real-world environments. While significant strides have been made in developing autonomous driving systems, they still struggle to accurately interpret dynamic and unpredictable situations on the road, such as inclement weather, construction zones, or unexpected obstacles. Achieving the level of reliability and safety necessary for widespread deployment remains a daunting task for engineers and developers.</p>
+            <p class="para">Moreover, the regulatory landscape surrounding autonomous vehicles is still in its infancy, with policymakers and government agencies grappling with how to ensure the safety and accountability of driverless technology. Questions around liability in the event of accidents, data privacy concerns, and ethical considerations in programming decision-making algorithms add layers of complexity to the regulatory framework. Without clear guidelines and standards, the deployment of driverless cars may be hindered by legal and bureaucratic hurdles.</p>
+            <p class="para">In addition to technological and regulatory challenges, the societal acceptance of driverless cars presents a significant barrier to execution. Many individuals express skepticism or fear regarding the reliability and safety of autonomous vehicles, citing concerns about potential accidents, loss of jobs in the transportation sector, or the erosion of personal freedom and control. Overcoming these perceptions and building trust in the capabilities of driverless technology will require extensive public education and outreach efforts.</p>
+            <p class="para">Furthermore, the integration of driverless cars into existing transportation infrastructure presents logistical challenges, such as updating roadways, signage, and traffic management systems to accommodate autonomous vehicles. Coordination among various stakeholders, including government agencies, city planners, and technology companies, will be essential to ensure a smooth transition to a driverless future.</p>
+            <p class="para">Additionally, one of the challenges facing driverless cars is predicting human behavior on the road. Humans are unpredictable and often exhibit inconsistent driving behaviors, such as sudden lane changes or failure to follow seemingly simple traffic rules like lane driving. This variability makes it difficult for autonomous vehicles to anticipate and respond to the actions of human drivers, increasing the risk of accidents and traffic congestion.</p>
+            <p class="para">An example of chaotic human behavior can be observed in everyday scenarios, such as boarding a train. Despite ample time for everyone to board comfortably, people often become disorganized, failing to form orderly queues and creating chaos instead. This chaotic behavior stems from instinctive impulses developed during humanity's primal past, where navigating through chaos gave humans a survival advantage. However, in a rule-based order, such behavior can create problems for the smooth flow of activities, including the operation of driverless cars on the road. Since driverless cars do not have an evolutionary past and instinctive understanding of human chaos, coding and training a machine to understand those seemingly unpredictable behaviors is a tough task and may even be considered a holy grail for programmers currently and in the future.</p>
+            <p class="para">Despite these challenges, the potential benefits of driverless cars are undeniable. From reducing traffic congestion and carbon emissions to improving road safety and accessibility for individuals with disabilities, autonomous vehicles have the potential to revolutionize the way we move and interact with our environment. However, realizing this vision will require collaboration, innovation, and perseverance in overcoming the myriad challenges standing in the way of execution.</p>
+            <p class="para">In conclusion, while the promise of driverless cars holds great potential for transforming the future of transportation, the journey towards their widespread adoption is fraught with challenges. From technological limitations and regulatory hurdles to societal skepticism and logistical complexities, executing driverless cars will require a concerted effort from all stakeholders involved. Only by addressing these challenges head-on can we unlock the full benefits of autonomous vehicles and create a safer, more efficient, and sustainable transportation system for generations to come.</p>
+        
+        </div>
+        <div id="articleList"></div>
+        <a href="../index.html" class="para">Article List</a>
+    </div>
+
+    <div id="ad">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9559699967591875"
+        crossorigin="anonymous"></script>
+        <!-- Square Responsive -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-9559699967591875"
+            data-ad-slot="9692793583"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <script src="../script.js"></script>
+    <script>
+        // let langs = [];
+        let nameLang = window.location.href.split('/').pop().split('.')[0]
+        let lang = nameLang.split('_').pop();
+        let articleName = nameLang.split(`_${lang}`)[0];
+        
+        localStorage.setItem('articleName', articleName.split('_').join(' '));
+        
+        let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
+        localStorage.setItem('lang', lang);
+        
+        document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
+        
+        if (langs.length > 0) {
+            langList("languageSelector", langs, lang);
+        } else {
+            loadJson(`../articles/articles.json`, "languageSelector", langSelector);
+        }
+
+        document.getElementById("content").style.fontSize = localStorage.getItem('fontSize') || "18px";
+        
+        let stylesheet = document.getElementById("theme");
+        stylesheet.href = localStorage.getItem('themeName') || "../styles/styleLight.css";
+        
+        const tBClick = function() {
+            stylesheet.href = stylesheet.href.includes("Dark") ? "../styles/styleLight.css" : "../styles/styleDark.css";
+            document.getElementById("themeButton").textContent = stylesheet.href.includes("Dark") ? "🌕🌕": "☀️☀️";
+            localStorage.setItem("themeName", stylesheet.getAttribute("href"));
+            localStorage.setItem('themeText', document.getElementById("themeButton").textContent);
+        };
+        
+        const selector = document.getElementById('languageSelector');
+        selector.addEventListener("change", function () {
+            lang = selector.value;
+            localStorage.setItem('lang', lang);
+            window.location.href = `${articleName}_${lang}.html`;
+        });
+
+    </script>
+</body>
+</html>

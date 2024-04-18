@@ -168,4 +168,10 @@
 		<changefreq>never</changefreq>
 		<priority>0.8</priority>
 	</url>
+	<url>
+		<loc>https://raccess21.github.io/articles/articles_web/Driverless_Cars_en.html</loc>
+		<lastmod>2024-04-15</lastmod>
+		<changefreq>never</changefreq>
+		<priority>0.8</priority>
+	</url>
 </urlset>
