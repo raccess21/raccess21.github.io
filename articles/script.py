@@ -122,11 +122,16 @@ def createHtml():
 
     with open('articles/articles.json', 'r') as fi:
         articlesData = json.loads(fi.read())
+    langs = ["en", "hi", "fr"]
+    articleLangData = {}
+    for lang in langs:
+        with open(f'articles/articles{lang}.json', "r") as fi:
+            articleLangData[lang] = json.loads(fi.read())
 
     for article in articlesData.keys():
         for lang in articlesData[article]["langs"]:
             nHtml = html
-            nHtml = nHtml.replace('$title', article)
+            nHtml = nHtml.replace('$title', articleLangData[lang][article]["dname"])
             with open(f'articles/{article}/{lang}.json') as fi:
                 paras = json.loads(fi.read())
             nHtml = nHtml.replace('$description', paras[0])
@@ -155,10 +160,10 @@ def renaam():
 
 def main():
     # updateLangList()
-    # createHtml()
+    createHtml()
     # getLinks()
     # renaam()
-    xmlupdate()
+    # xmlupdate()
 
 if __name__ == "__main__":
     main()
