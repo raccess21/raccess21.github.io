@@ -60,8 +60,8 @@ body {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    /* padding-left: 1.5rem;
+    padding-right: 1.5rem; */
     text-align: justify;
 }
 
