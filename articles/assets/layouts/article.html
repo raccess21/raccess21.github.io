@@ -54,7 +54,7 @@
         
         localStorage.setItem('articleName', articleName.split('_').join(' '));
         
-        let langs = localStorage.getItem(`langs`) ? localStorage.getItem(`langs`).split(",") : [];
+        let langs = localStorage.getItem(articleName[`langs`]) ? localStorage.getItem(articleName[`langs`]).split(",") : [];
         localStorage.setItem('lang', lang);
         
         document.getElementById("themeButton").textContent = localStorage.getItem('themeText') || "☀️☀️";
