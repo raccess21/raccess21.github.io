@@ -49,7 +49,7 @@ async function fetchJson(paths, eId=false, callback=false, sortType = sortByArti
 
 }
 function langList(eId, langs, lang=false) {
-    // console.log('langList');
+    console.log('langList');
     lang = lang || localStorage.getItem("lang");
     if (langs[0] != lang)  {
         for (let i=1; i<langs.length; i++) {
@@ -71,13 +71,13 @@ function langList(eId, langs, lang=false) {
 
 
 function loadJson(path, eId=false, callback=false) {
-    console.log('loadJson');
+    // console.log('loadJson');
     let xobj = new XMLHttpRequest();
     xobj.open('GET', path, true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             jsonObj = JSON.parse(xobj.responseText);
-            console.log(jsonObj);
+            // console.log(jsonObj);
             if (callback) {
                 callback(eId, jsonObj);
             }
