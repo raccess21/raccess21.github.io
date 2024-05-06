@@ -8,6 +8,22 @@ Divine in Kaam 25 raps,
 Police wala bhi bola,
 Mera star bahut halka hai"
 
+Paradox in Babam Bam raps,
+"Swang rache jo kabhi machalta mann
+Nadaan samajh mane maaf kar diye
+Dhyan bate jo kabhi wifalta par
+Vardaan mein paath mera saaf kar diye"
+
+While highlighting the significance of social commentary Siddhu Moosewala in 295 raps,
+"Tu dabb geya duniya ne veham paa leya
+Uth putt jhoteya oye Moose 'aaleya
+Jeh aevein reha geet'an vich sach bolda
+Aun wali peerhi educate milugi"
+
+Display of dissent towards other rappers is also what makes this artform unique. Official Bhagat in Arbi Ghode raps,
+"Jo tu likhe wo ni tu kare
+mujhe pta saale side ho"
+
 essay = [
     "Music has always been an integral part of human culture, serving as a means of expression, communication, and connection. Among the diverse genres of music, rap stands out for its unique approach to rhythm and lyricism. Unlike other forms of music that rely on instrumental or vocal melody, rap places a primary emphasis on rhythm, leveraging the power of language and cadence to deliver strong messages in short, quick bursts. This essay explores the evolution and significance of rap as a genre, highlighting its ability to transcend traditional musical boundaries and resonate with audiences around the world.",
 
@@ -15,7 +31,7 @@ essay = [
 
     "Rap's influence is not limited to Western cultures alone; it has made significant inroads into India's vibrant music scene as well. In recent years, Indian rap artists have emerged as powerful voices for social change, using their music to address pressing issues such as inequality, corruption, and identity politics. Artists like Divine, Naezy, and Raftaar have gained widespread acclaim for their bold and unapologetic lyrics, which reflect the realities of life in urban India.",
 
-    "One of the defining features of rap is its ability to convey complex ideas and experiences through the manipulation of rhythm and language. By removing the requirement of instrumental or vocal melody, rap allows artists to focus solely on the rhythmic elements of music, creating dynamic and engaging compositions that captivate listeners. Whether it's addressing social issues, recounting personal narratives, or celebrating cultural identity, rap offers a platform for artists to express themselves authentically and unapologetically.",
+    "One of the most important roles of rap music is its ability to critique systems of power and question authority. Through their lyrics, rap artists often point out flaws in the system and hold governments and law enforcement accountable for their actions. Whether addressing police brutality, government corruption, or socioeconomic inequality, rap serves as a platform for marginalized communities to voice their grievances and demand justice. In this way, rap music plays a vital role in promoting transparency, accountability, and social change.",
 
     "Moreover, rap is accessible to anyone with a voice and a story to tell, making it a democratizing force in the music industry. Unlike traditional forms of music that often require expensive equipment and formal training, rap can be created and shared with minimal resources. This accessibility has empowered a diverse range of artists to enter the music scene, challenging mainstream narratives and amplifying marginalized voices.",
 
