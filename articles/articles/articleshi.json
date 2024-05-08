@@ -99,8 +99,12 @@
     "dname": "Driverless Cars",
     "desc": "विवरण उपलब्ध नहीं है"
   },
-  "Svalbard : Humanity's Failsafe": {
+  "Svalbard : Humanitys Failsafe": {
     "dname": "Svalbard : Humanity's Failsafe",
+    "desc": "विवरण उपलब्ध नहीं है"
+  },
+  "Rap": {
+    "dname": "Rap",
     "desc": "विवरण उपलब्ध नहीं है"
   }
 }

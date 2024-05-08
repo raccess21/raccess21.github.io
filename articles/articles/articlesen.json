@@ -30,7 +30,7 @@
   },
   "Carl Sagan": {
     "dname": "Carl Sagan",
-    "dname2" : "There is a God in My Garage",
+    "dname2": "There is a God in My Garage",
     "desc": "Science as a Candle in the Dark"
   },
   "Eldorado!": {
@@ -104,5 +104,9 @@
   "Driverless Cars": {
     "dname": "Driverless Cars",
     "desc": "Pure Mathematical Execution: No Room for Trust"
+  },
+  "Rap": {
+    "dname": "Rap",
+    "desc": "Description Not Available"
   }
 }
