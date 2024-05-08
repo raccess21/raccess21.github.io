@@ -3,16 +3,16 @@ kaam 25 divine
 पोलीस वाला भी बोला
 मेरा स्टार बहुत हल्का है
 
-Divine in Kaam 25 raps, 
-"Yahan pe naam kaam karta hai.
-Police wala bhi bola,
-Mera star bahut halka hai"
-
 Paradox in Babam Bam raps,
 "Swang rache jo kabhi machalta mann
 Nadaan samajh mane maaf kar diye
 Dhyan bate jo kabhi wifalta par
 Vardaan mein paath mera saaf kar diye"
+
+Divine in Kaam 25 raps, 
+"Yahan pe naam kaam karta hai.
+Police wala bhi bola,
+Mera star bahut halka hai"
 
 While highlighting the significance of social commentary Siddhu Moosewala in 295 raps,
 "Tu dabb geya duniya ne veham paa leya
@@ -20,9 +20,16 @@ Uth putt jhoteya oye Moose 'aaleya
 Jeh aevein reha geet'an vich sach bolda
 Aun wali peerhi educate milugi"
 
-Display of dissent towards other rappers is also what makes this artform unique. Official Bhagat in Arbi Ghode raps,
+Strong display of dissent towards other rappers is also what makes this artform unique. Official Bhagat in Arbi Ghode raps,
 "Jo tu likhe wo ni tu kare
 mujhe pta saale side ho"
+
+Official Bhagat captures freedom beautifully in 'Azadi Do',
+"Wo nahi to Shuru Hai Meri Barbaadi
+Haan Udti Wo Pankho se Dedi Aazadi
+Ab Saath Me Peete hai Hum Joint and Sex
+And Fuck Drugs Hum Janmo Ke Saathi
+Haan! Yhi Hai Aazadi"
 
 essay = [
     "Music has always been an integral part of human culture, serving as a means of expression, communication, and connection. Among the diverse genres of music, rap stands out for its unique approach to rhythm and lyricism. Unlike other forms of music that rely on instrumental or vocal melody, rap places a primary emphasis on rhythm, leveraging the power of language and cadence to deliver strong messages in short, quick bursts. This essay explores the evolution and significance of rap as a genre, highlighting its ability to transcend traditional musical boundaries and resonate with audiences around the world.",
