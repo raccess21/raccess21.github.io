@@ -21,6 +21,7 @@
   },
   "Advertisement and Idiocracy": {
     "dname": "Advertisement and Idiocracy",
+    "dname2": "Sugar-Caffeine and Extra Energy",
     "desc": "Faux consumer culture"
   },
   "Hacking : A Form of Art": {
@@ -28,7 +29,8 @@
     "desc": "Hacking as art and science"
   },
   "Carl Sagan": {
-    "dname": "Carl Sagan : There is a God in My Garage",
+    "dname": "Carl Sagan",
+    "dname2" : "There is a God in My Garage",
     "desc": "Science as a Candle in the Dark"
   },
   "Eldorado!": {

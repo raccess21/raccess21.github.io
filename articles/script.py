@@ -132,6 +132,10 @@ def createHtml():
         for lang in articlesData[article]["langs"]:
             nHtml = html
             title = articleLangData[lang][article]["dname"]
+            try:
+                title = title + " : " + articleLangData[lang][article]["dname2"]
+            except KeyError:
+                ...
             nHtml = nHtml.replace('$title', title)
             nHtml = nHtml.replace('$subject', title.replace(' ', '%20'))
             with open(f'articles/{article}/{lang}.json') as fi:
