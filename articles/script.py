@@ -165,11 +165,11 @@ def renaam():
             os.rename(html, html.replace('?', '_'))
 
 def main():
-    # updateLangList()
+    updateLangList()
     createHtml()
     # getLinks()
     # renaam()
-    # xmlupdate()
+    xmlupdate()
 
 if __name__ == "__main__":
     main()
