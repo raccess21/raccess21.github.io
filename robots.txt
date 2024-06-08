@@ -1,12 +1,3 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Allow: /ads/preferences/
-Allow: /dtt/k
-Allow: /pagead/show_ads.js
-Allow: /pagead/js/adsbygoogle.js
-Allow: /pagead/*/show_ads_impl.js
-Allow: /static/glade.js
-Allow: /static/glade/
-Allow: /tag/js/
-Allow: /script.js
-Crawl-delay: 5
-Sitemap: https:/raccess21.github.io/articles/sitemap.xml
+Disallow:
