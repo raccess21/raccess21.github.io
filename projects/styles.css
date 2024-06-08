@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Dark theme */
+.theme-dark {
+    background-color: #1a202c;
+    color: #e2e8f0;
+}
+
+.personal {
+    @apply flex flex-col items-center justify-center px-4 py-8 md:px-10 lg:px-16;
+}

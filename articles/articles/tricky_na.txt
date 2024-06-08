@@ -1,0 +1,28 @@
+kaam 25 divine
+यहाँ पे नाम काम करता है
+पोलीस वाला भी बोला
+मेरा स्टार बहुत हल्का है
+
+Paradox in Babam Bam raps,
+"Swang rache jo kabhi machalta mann
+Nadaan samajh mane maaf kar diye
+Dhyan bate jo kabhi wifalta par
+Vardaan mein paath mera saaf kar diye"
+
+
+
+
+Strong display of dissent towards other rappers is also what makes this artform unique. Official Bhagat in Arbi Ghode raps,
+"Jo tu likhe wo ni tu kare
+mujhe pta saale side ho"
+
+
+essay = [
+    "intro"
+    "ui/ux"
+    "pace"
+    "differentiator - puzzle"
+    "music"
+    "critique"
+    "sum up"
+]
