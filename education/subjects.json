@@ -1,0 +1,35 @@
+{
+    "theory": {
+        "imgUrl": "theory.jpg",
+        "desc": "Learning theoretical concepts is an essential part of understanding the world around us. It involves exploring the fundamental principles that govern the natural world, from the behavior of atoms and molecules to the workings of the universe. By studying theory, we can develop a deeper understanding of ourselves and the world we live in, and gain the skills to think critically and solve complex problems.",
+        "subs": [
+            {
+                "title": "Physics",
+                "desc": "",
+                "imgUrl": "astronaut-wallpaper-hd.png"
+            },
+            {
+                "title": "Mathematics",
+                "desc": "",
+                "imgUrl": "astronaut-wallpaper-hd.png"
+            },
+            {
+                "title": "Computer Sciences",
+                "desc": "",
+                "imgUrl": "astronaut-wallpaper-hd.png"
+            }
+        ]   
+    },
+
+    "skill": {
+        "desc": "Learning skills involves acquiring practical knowledge and abilities that are useful in real life. It includes learning how to use various tools and software, how to solve problems, how to work efficiently, and how to communicate effectively. By learning skills, we can improve our productivity, enhance our creativity, and increase our confidence in our abilities. It also helps us to develop a growth mindset, and to adapt to new situations and technologies.",
+        "imgUrl": "skill.jpg",
+        "subs": []
+    },
+    
+    "fun": {
+        "desc": "Learning for the sake of enjoyment is a unique and rewarding way to approach learning. It encourages us to embrace the process of learning, to take pleasure in the journey, and to find joy in the discovery and exploration of new topics. By learning for fun, we can discover new interests, develop a love for learning, and cultivate a sense of curiosity and wonder. It also helps us to develop a growth mindset, as we learn to see challenges as opportunities for growth and improvement.",
+        "imgUrl": "fun.jpg",
+        "subs": []
+    }
+}
