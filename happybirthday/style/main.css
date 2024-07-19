@@ -36,6 +36,11 @@ body {
 
 .one > img {
   border-radius: 10%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: auto;
+  padding: auto;
 }
 
 .two {

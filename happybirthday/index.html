@@ -25,20 +25,20 @@
 
     <div class="container">
         <div class="one" style="top: 0vh;">
-            <h1 class="one">
+            <h1 class="one oneh1">
                 Hi Doga
             </h1>
-            <img src="./img/doga1.webp" alt="profile" class="rimg" >
-            <p class="two" id="greetingText">I really like your name btw!</p>
+            <img src="./img/doga1.webp" alt="profile" class="rimg oneimg" >
+            <p class="two onep" id="greetingText">I really like your name btw!</p>
         </div>
 
         <div class="three">
-            <p>It's your birthday!! :D</p>
+            <p class="threep">It's your birthday!! :D</p>
         </div>
 
         <div class="four">
             <div class="text-box">
-                <p class="hbd-chatbox">
+                <p class="hbd-chatbox fourp">
                     Happy Birthday to the best brother ever! 🎉🎂 You've always been there for me with a smile and support. Today is your day to celebrate all the amazing things that make you special. Here's to another fantastic year filled with laughter, love, and all your heart desires. Enjoy every moment, bro! 🎈😊 . . . -ChatGPT
                 </p>
                 <p class="fake-btn">Send</p>
@@ -65,11 +65,11 @@
         </div>
 
         <div class="six">
-            <img src="./img/20210824_114724.jpg" alt="profile" class="profile-picture" id="imagePath"/>
+            <img src="./img/20210824_114724.jpg" alt="profile" class="profile-picture siximg" id="imagePath"/>
             <img src="img/hat.svg" alt="hat" class="hat" />
             <div class="wish">
                 <h3 class="wish-hbd">Happy Birthday!</h3>
-                <h5 id="wishText">Abhi kr to diya wish ye bhi padhega kya! Abhi khatam content poora ;)</h5>
+                <h5 id="wishText" class="sixh5">Abhi kar to diya wish ye bhi padhega kya! Abhi khatam content poora ;)</h5>
             </div>
         </div>
 
@@ -142,17 +142,42 @@
         </div>
 
         <div class="nine">
-            <p>Ab dogaji wapis aao aur btao achcha bna hai ya nahi.</p>
-            <p id="replay">Ya dobara dekhne ke liye yaha <strong>; click</strong>, kro.</p>
+            <p class="ninep1">Okay, now come back and tell me if you liked it.</p>
+            <p  class="ninep2" id="replay">Or <strong>&nbsp; click</strong>, if you want to watch it again.</p>
             <p class="last-smile">:)</p>
         </div>
     </div>
 
 </body>
+    <!-- many bdays script -->
+    <script>
+        const populate = async (name) => {
+            try{
+                const response = await fetch(`./data/${name}.json`);
+                const messages = await response.json();
+
+                for (let mes in messages["text"]){
+                    document.querySelector(`.${mes}`).innerHTML = `${messages["text"][mes]}`
+                    console.log(mes);
+                }
+                for (let mes in messages["img"]){
+                    document.querySelector(`.${mes}`).src = `./img/${messages["img"][mes]}`
+
+                }
+            }
+            catch(error) {
+                console.error(error);
+            }
+
+        }
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        populate(name);
+
+    </script>
     <!-- Greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="application/javascript" src="./script/main.js"></script>
-
 </html>
