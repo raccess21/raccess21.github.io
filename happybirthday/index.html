@@ -143,7 +143,7 @@
 
         <div class="nine">
             <p class="ninep1">Okay, now come back and tell me if you liked it.</p>
-            <p  class="ninep2" id="replay">Or <strong>&nbsp; click</strong>, if you want to watch it again.</p>
+            <p  class="ninep2" id="replay">Or <strong>&nbsp;click</strong>, if you want to watch it again.</p>
             <p class="last-smile">:)</p>
         </div>
     </div>
@@ -157,12 +157,10 @@
                 const messages = await response.json();
 
                 for (let mes in messages["text"]){
-                    document.querySelector(`.${mes}`).innerHTML = `${messages["text"][mes]}`
-                    console.log(mes);
+                    document.querySelector(`.${mes}`).innerHTML = `${messages["text"][mes]}`;
                 }
                 for (let mes in messages["img"]){
-                    document.querySelector(`.${mes}`).src = `./img/${messages["img"][mes]}`
-
+                    document.querySelector(`.${mes}`).src = `./img/${messages["img"][mes]}`;
                 }
             }
             catch(error) {
