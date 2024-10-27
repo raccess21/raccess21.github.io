@@ -51,7 +51,7 @@
                 <strong>special</strong>
                 .
             </p>
-            <p class="idea-4">Because,</p>
+            <p class="idea-4">Becows,</p>
             <p class="idea-5">
                 You are Special
                 <span>:)</span>
@@ -141,8 +141,15 @@
 
         <div class="nine">
             <p class="ninep1">Okay, now come back and tell me if you liked it.</p>
-            <p  class="ninep2" id="replay">Or <strong>&nbsp;click</strong>, if you want to watch it again.</p>
-            <p class="last-smile">:)</p>
+            <p class="ninep2">Or 
+                <strong id="replay">&nbsp;click</strong>
+                , if you want to watch it again or listen to
+                <a id="musicLink" target="_blank">&nbsp;<strong>music.</strong></a>
+            </p>
+            <p class="last-smile">:)
+                <br>
+            </p>
+            
         </div>
     </div>
 
@@ -160,7 +167,10 @@
                 for (let mes in messages["img"]){
                     document.querySelector(`.${mes}`).src = `./img/${messages["img"][mes][0]}`;
                 }
+
+            document.querySelector("title").innerHTML = `Happy Birthday ${name}!!! :)`;
             document.querySelector(".song").src = `./music/${messages["audio"]}`;
+            document.querySelector("#musicLink").href = messages["musicLink"];
             }
             catch(error) {
                 console.error(error);
