@@ -5,7 +5,8 @@
         "sixh5": "Abhi kar to diya wish ye bhi poora padhna hai? Abhi khatam content poora ;)"
     },
     "img": {
-        "oneimg": "gj1.gif",
-        "siximg": "gj2.jpg"
-    }
+        "oneimg": ["gj1.gif"],
+        "siximg": ["gj2.jpg"]
+    },
+    "audio": "Immigrant_Song-Led_Zeppelin.mp3"
 }

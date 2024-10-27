@@ -6,7 +6,8 @@
         "sixh5": "May the js.prototypes always be with you! ;)"
     },
     "img": {
-        "oneimg": "doga1.webp",
-        "siximg": "20210824_114724.jpg"
-    }
+        "oneimg": ["doga1.webp"],
+        "siximg": ["20210824_114724.jpg"]
+    },
+    "audio": "Immigrant_Song_Led_Zeppelin.mp3"
 }

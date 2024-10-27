@@ -5,7 +5,8 @@
         "sixh5": "Jai maa kaali happy birthday ;)"
     },
     "img": {
-        "oneimg": "karen.gif",
-        "siximg": "sh1.webp"
-    }
+        "oneimg": ["karen.gif"],
+        "siximg": ["sh1.webp"]
+    },
+    "audio": "Immigrant_Song_Led_Zeppelin.mp3"
 }

@@ -17,9 +17,7 @@
 
 <body>
 
-    <audio class="song" loop autoplay>
-        <source src="./music/immigrant_song.mp3">
-        </source>
+    <audio class="song" src="./music/Immigrant_Song_Led_Zeppelin.mp3" loop autoplay preload="auto">
         Your browser isn't invited for super fun audio time.
     </audio>
 
@@ -160,8 +158,9 @@
                     document.querySelector(`.${mes}`).innerHTML = `${messages["text"][mes]}`;
                 }
                 for (let mes in messages["img"]){
-                    document.querySelector(`.${mes}`).src = `./img/${messages["img"][mes]}`;
+                    document.querySelector(`.${mes}`).src = `./img/${messages["img"][mes][0]}`;
                 }
+            document.querySelector(".song").src = `./music/${messages["audio"]}`;
             }
             catch(error) {
                 console.error(error);

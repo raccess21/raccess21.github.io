@@ -7,7 +7,8 @@
         "ninep2": "Ya dobara dekhne ke liye yaha <strong>; click</strong>, kro."
     },
     "img": {
-        "oneimg": "doga1.webp",
-        "siximg": "20210824_114724.jpg"
-    }
+        "oneimg": ["doga1.webp"],
+        "siximg": ["20210824_114724.jpg"]
+    },
+    "audio": "Immigrant_Song_Led_Zeppelin.mp3"
 }
