@@ -1,7 +1,22 @@
+let tries = 0;
+let hints = [
+    "Enter secret password to access",
+    "Teacher ko hindi me kya bolte hain",
+    "Gurukul me lady teacher ko kya bolte hain",
+    "Ma kaali ki pooja ki vidhi btane wali guru",
+    "guruma"
+]
+
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
+    askPassword();
+})
+        
+const askPassword = () =>   {
     Swal.fire({
-        title: 'Do you want to play music in the background?',
+        title: hints[tries],
+        input: 'password',  // Change input type to password
+        inputPlaceholder: 'Enter your password here',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -10,13 +25,44 @@ window.addEventListener('load', () => {
         cancelButtonText: 'No',
     }).then((result) => {
         if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
+            const password = result.value;  // Get the input value
+            const correctPassword = 'guruma';  // Replace with your actual password
+            
+            if (password === correctPassword) {
+                Swal.fire({
+                    title: 'Do you want to play music in the background?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'No',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        document.querySelector('.song').play();
+                        animationTimeline();
+                    } else {
+                        animationTimeline();
+                    }
+                });
+            } else {
+                tries = tries === 4 ? 4 : tries + 1;
+                Swal.fire({
+                    title: 'Incorrect Password!',
+                    text: 'Please try again.',
+                    icon: 'error',
+                });
+                askPassword();  // You might want to call this anyway
+            }
         } else {
-            animationTimeline();
+            animationTimeline();  // Call this function if the user cancels
         }
     });
-});
+}
+
+// window.addEventListener('load', () => {
+    
+// });
 
 
 // animation timeline
