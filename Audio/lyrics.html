@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRC Viewer</title>
+    <style>
+        :root {
+            --background-dark: #121212;
+            --text-dark: #ffffff;
+            --background-light: #ffffff;
+            --text-light: #000000;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+
+        body.light {
+            background-color: var(--background-light);
+            color: var(--text-light);
+        }
+
+        header {
+            padding: 1rem;
+            text-align: center;
+            background-color: var(--text-dark);
+            color: var(--background-dark);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: var(--background-light);
+            color: var(--text-light);
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button.dark-mode {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+        }
+
+        button.light-mode {
+            background-color: var(--background-light);
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body class="light">
+    <header>
+        <h1>LRC Viewer</h1>
+        <button id="themeToggle">Switch to Dark Mode</button>
+    </header>
+    <div class="container">
+        <h2 id="title"></h2>
+        <pre id="lyrics">Loading...</pre>
+    </div>
+
+    <script>
+        // Get 'title' parameter from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const title = urlParams.get('title');
+        const repoBaseUrl = "https://github.com/Audio/lossy/";
+
+        const titleElement = document.getElementById("title");
+        const lyricsElement = document.getElementById("lyrics");
+        const themeToggleButton = document.getElementById("themeToggle");
+        const bodyElement = document.body;
+
+        // Update title
+        if (title) {
+            titleElement.textContent = `Lyrics for: ${title}`;
+            const lrcFileUrl = `${repoBaseUrl}${title}.lrc`;
+
+            // Fetch the .lrc file
+            fetch(lrcFileUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("LRC file not found");
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    lyricsElement.textContent = data;
+                })
+                .catch(error => {
+                    lyricsElement.textContent = "Error loading lyrics: " + error.message;
+                });
+        } else {
+            titleElement.textContent = "No title provided";
+            lyricsElement.textContent = "Please specify a title in the URL as ?title=your_song";
+        }
+
+        // Theme toggle
+        themeToggleButton.addEventListener("click", () => {
+            const isDarkMode = bodyElement.classList.contains("dark");
+            if (isDarkMode) {
+                bodyElement.classList.replace("dark", "light");
+                themeToggleButton.textContent = "Switch to Dark Mode";
+            } else {
+                bodyElement.classList.replace("light", "dark");
+                themeToggleButton.textContent = "Switch to Light Mode";
+            }
+        });
+    </script>
+</body>
+</html>
